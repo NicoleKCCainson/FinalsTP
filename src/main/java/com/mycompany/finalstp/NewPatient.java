@@ -1,6 +1,5 @@
 package com.mycompany.finalstp;
 
-
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,23 +22,26 @@ import javax.swing.JOptionPane;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author nicol
  */
 public class NewPatient extends javax.swing.JFrame {
+
     String fileName;
     String docN;
-boolean error = false;
+    String Department;
+
+    boolean error = false;
 // new patient
     String m; //PatientAge
     String fileLoc = "C:\\Users\\nicol\\Desktop\\Database\\Patient";
-    
+
     public NewPatient() {
         initComponents();
         jButton2.setEnabled(false);
-        jButton4.setEnabled(false);
+        jComboBox6.setEnabled(false);
+        jComboBox7.setEnabled(false);
     }
 
     /**
@@ -55,6 +57,8 @@ boolean error = false;
         menu4 = new java.awt.Menu();
         menu5 = new java.awt.Menu();
         jPanel1 = new javax.swing.JPanel();
+        namelabel11 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         namelabel = new javax.swing.JLabel();
@@ -65,7 +69,6 @@ boolean error = false;
         jTextField4 = new javax.swing.JTextField();
         namelabel1 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         namelabel2 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         namelabel3 = new javax.swing.JLabel();
@@ -87,7 +90,6 @@ boolean error = false;
         jLabel5 = new javax.swing.JLabel();
         namelabel9 = new javax.swing.JLabel();
         namelabel10 = new javax.swing.JLabel();
-        namelabel11 = new javax.swing.JLabel();
         namelabel12 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
@@ -102,10 +104,13 @@ boolean error = false;
         jLabel6 = new javax.swing.JLabel();
         jToggleButton1 = new javax.swing.JToggleButton();
         namelabel17 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jTextField14 = new javax.swing.JTextField();
         namelabel19 = new javax.swing.JLabel();
+        jComboBox6 = new javax.swing.JComboBox<>();
+        jComboBox7 = new javax.swing.JComboBox<>();
+        namelabel18 = new javax.swing.JLabel();
+        checkbox1 = new java.awt.Checkbox();
 
         menu4.setLabel("File");
         menu4.addActionListener(new java.awt.event.ActionListener() {
@@ -125,6 +130,18 @@ boolean error = false;
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1092, 702));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        namelabel11.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        namelabel11.setForeground(new java.awt.Color(0, 0, 0));
+        namelabel11.setText("Please Confirm/Submit the neccessary information first.");
+        jPanel1.add(namelabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 510, 330, 50));
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("    Ready to Choose a doctor?  Please ensure that the above information have been filled.");
+        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
+        jLabel4.setOpaque(true);
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 1080, 40));
 
         jLabel1.setBackground(new java.awt.Color(51, 51, 51));
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
@@ -161,9 +178,9 @@ boolean error = false;
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 500, 70, 30));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 630, 70, 30));
 
-        jTextField1.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField1.setBackground(new java.awt.Color(149, 148, 151));
         jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 51, 153), null));
         jTextField1.setMinimumSize(new java.awt.Dimension(64, 24));
@@ -173,28 +190,28 @@ boolean error = false;
                 jTextField1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 200, 24));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 200, 24));
         jTextField1.getAccessibleContext().setAccessibleName("FirstName");
         jTextField1.getAccessibleContext().setAccessibleParent(jTextField1);
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Age:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, -1, 50));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, -1, 50));
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Illness / Concern:  ");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, -1, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 100, 30));
 
         jTextField4.setBackground(new java.awt.Color(165, 165, 165));
         jTextField4.setForeground(new java.awt.Color(0, 0, 0));
         jTextField4.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 51, 153), null));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 200, 24));
+        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 200, 24));
         jTextField4.getAccessibleContext().setAccessibleName("LastName");
 
         namelabel1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel1.setForeground(new java.awt.Color(0, 0, 0));
         namelabel1.setText("Last Name:");
-        jPanel1.add(namelabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 65, -1));
+        jPanel1.add(namelabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 65, 20));
 
         jTextField2.setBackground(new java.awt.Color(165, 165, 165));
         jTextField2.setForeground(new java.awt.Color(0, 0, 0));
@@ -204,20 +221,13 @@ boolean error = false;
                 jTextField2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 60, 20));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 60, 20));
         jTextField2.getAccessibleContext().setAccessibleName("age");
-
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("    Ready to Choose a doctor? Please ensure that the above information have been filled.");
-        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
-        jLabel4.setOpaque(true);
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 1080, 40));
 
         namelabel2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel2.setForeground(new java.awt.Color(0, 0, 0));
         namelabel2.setText("Civil Status:");
-        jPanel1.add(namelabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 120, -1, -1));
+        jPanel1.add(namelabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 130, -1, -1));
 
         jComboBox1.setBackground(new java.awt.Color(165, 165, 165));
         jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
@@ -228,28 +238,28 @@ boolean error = false;
                 jComboBox1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 106, -1));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 106, -1));
         jComboBox1.getAccessibleContext().setAccessibleName("Sex");
 
         namelabel3.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel3.setForeground(new java.awt.Color(0, 0, 0));
         namelabel3.setText("Sex: ");
-        jPanel1.add(namelabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, -1, 30));
+        jPanel1.add(namelabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, -1, 30));
 
         namelabel4.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel4.setForeground(new java.awt.Color(0, 0, 0));
         namelabel4.setText("kg.");
-        jPanel1.add(namelabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, -1, 30));
+        jPanel1.add(namelabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, -1, 30));
 
         namelabel5.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel5.setForeground(new java.awt.Color(0, 0, 0));
         namelabel5.setText("Birthdate: ");
-        jPanel1.add(namelabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 160, -1, 50));
+        jPanel1.add(namelabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 150, -1, 50));
 
         namelabel6.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel6.setForeground(new java.awt.Color(0, 0, 0));
         namelabel6.setText("cm.");
-        jPanel1.add(namelabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 40, 30));
+        jPanel1.add(namelabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 40, 30));
 
         jComboBox2.setBackground(new java.awt.Color(165, 165, 165));
         jComboBox2.setForeground(new java.awt.Color(0, 0, 0));
@@ -260,7 +270,7 @@ boolean error = false;
                 jComboBox2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 110, -1, 26));
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 120, -1, 26));
         jComboBox2.getAccessibleContext().setAccessibleName("CiStatus");
 
         jComboBox3.setBackground(new java.awt.Color(165, 165, 165));
@@ -273,7 +283,7 @@ boolean error = false;
                 jComboBox3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 170, -1, -1));
+        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 160, -1, -1));
         jComboBox3.getAccessibleContext().setAccessibleName("BdYear");
 
         jComboBox4.setBackground(new java.awt.Color(165, 165, 165));
@@ -286,7 +296,7 @@ boolean error = false;
                 jComboBox4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 170, 80, -1));
+        jPanel1.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 160, 80, -1));
         jComboBox4.getAccessibleContext().setAccessibleName("BdMonth");
 
         jComboBox5.setBackground(new java.awt.Color(165, 165, 165));
@@ -299,7 +309,7 @@ boolean error = false;
                 jComboBox5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 170, 60, -1));
+        jPanel1.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 160, 60, -1));
         jComboBox5.getAccessibleContext().setAccessibleName("BdDay");
 
         jTextField5.setBackground(new java.awt.Color(165, 165, 165));
@@ -310,7 +320,7 @@ boolean error = false;
                 jTextField5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 110, 24));
+        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 200, 110, 24));
         jTextField5.getAccessibleContext().setAccessibleName("Weight");
 
         jTextField6.setBackground(new java.awt.Color(165, 165, 165));
@@ -321,7 +331,7 @@ boolean error = false;
                 jTextField6ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 110, 24));
+        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 110, 24));
         jTextField6.getAccessibleContext().setAccessibleName("Height");
 
         jTextPane1.setBackground(new java.awt.Color(153, 153, 153));
@@ -330,12 +340,12 @@ boolean error = false;
         jScrollPane1.setViewportView(jTextPane1);
         jTextPane1.getAccessibleContext().setAccessibleName("Textillness");
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 420, 60));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 420, 60));
 
         namelabel7.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel7.setForeground(new java.awt.Color(0, 0, 0));
         namelabel7.setText("Address: ");
-        jPanel1.add(namelabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, -1, 50));
+        jPanel1.add(namelabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, 50));
 
         jTextField7.setBackground(new java.awt.Color(165, 165, 165));
         jTextField7.setForeground(new java.awt.Color(0, 0, 0));
@@ -351,7 +361,7 @@ boolean error = false;
         namelabel8.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel8.setForeground(new java.awt.Color(0, 0, 0));
         namelabel8.setText("Email: ");
-        jPanel1.add(namelabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 260, -1, 50));
+        jPanel1.add(namelabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 230, -1, 50));
 
         jTextField8.setBackground(new java.awt.Color(165, 165, 165));
         jTextField8.setForeground(new java.awt.Color(0, 0, 0));
@@ -361,7 +371,7 @@ boolean error = false;
                 jTextField8ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 800, 24));
+        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 800, 24));
         jTextField8.getAccessibleContext().setAccessibleName("Address");
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
@@ -374,22 +384,17 @@ boolean error = false;
         namelabel9.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel9.setForeground(new java.awt.Color(0, 0, 0));
         namelabel9.setText("First Name:");
-        jPanel1.add(namelabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, -1, -1));
+        jPanel1.add(namelabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
 
         namelabel10.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel10.setForeground(new java.awt.Color(0, 0, 0));
         namelabel10.setText("Name: ");
         jPanel1.add(namelabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, -1, 30));
 
-        namelabel11.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        namelabel11.setForeground(new java.awt.Color(0, 0, 0));
-        namelabel11.setText("Please Confirm/Submit the neccessary information first.");
-        jPanel1.add(namelabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 630, 130, 30));
-
         namelabel12.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel12.setForeground(new java.awt.Color(0, 0, 0));
-        namelabel12.setText("Relationship with the Patient: ");
-        jPanel1.add(namelabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 460, 210, 30));
+        namelabel12.setText("Relation: ");
+        jPanel1.add(namelabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 440, 210, 30));
 
         jTextField9.setBackground(new java.awt.Color(165, 165, 165));
         jTextField9.setForeground(new java.awt.Color(0, 0, 0));
@@ -399,7 +404,7 @@ boolean error = false;
                 jTextField9ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 270, 260, 24));
+        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 240, 240, 24));
         jTextField9.getAccessibleContext().setAccessibleName("Email");
 
         jTextField10.setBackground(new java.awt.Color(165, 165, 165));
@@ -421,7 +426,7 @@ boolean error = false;
                 jTextField11ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 500, 260, 24));
+        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, 260, 24));
         jTextField11.getAccessibleContext().setAccessibleName("conContact");
 
         jTextField12.setBackground(new java.awt.Color(165, 165, 165));
@@ -432,7 +437,7 @@ boolean error = false;
                 jTextField12ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 460, 300, 24));
+        jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 440, 300, 24));
         jTextField12.getAccessibleContext().setAccessibleName("Rela");
 
         jButton3.setBackground(new java.awt.Color(153, 204, 255));
@@ -449,22 +454,22 @@ boolean error = false;
         namelabel13.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel13.setForeground(new java.awt.Color(0, 0, 0));
         namelabel13.setText("Height: ");
-        jPanel1.add(namelabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, 50));
+        jPanel1.add(namelabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, -1, 50));
 
         namelabel14.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel14.setForeground(new java.awt.Color(0, 0, 0));
         namelabel14.setText("cm.");
-        jPanel1.add(namelabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 40, 30));
+        jPanel1.add(namelabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 40, 30));
 
         namelabel15.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel15.setForeground(new java.awt.Color(0, 0, 0));
         namelabel15.setText("Weight: ");
-        jPanel1.add(namelabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, -1, 30));
+        jPanel1.add(namelabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, -1, 30));
 
         namelabel16.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel16.setForeground(new java.awt.Color(0, 0, 0));
         namelabel16.setText("Contact no. :");
-        jPanel1.add(namelabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, -1, 50));
+        jPanel1.add(namelabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 190, -1, 50));
 
         jTextField13.setBackground(new java.awt.Color(165, 165, 165));
         jTextField13.setForeground(new java.awt.Color(0, 0, 0));
@@ -474,7 +479,7 @@ boolean error = false;
                 jTextField13ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 220, 260, 24));
+        jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 200, 240, 24));
         jTextField13.getAccessibleContext().setAccessibleName("contactNum");
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
@@ -491,25 +496,16 @@ boolean error = false;
                 jToggleButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 630, -1, -1));
+        jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 470, -1, -1));
 
         namelabel17.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel17.setForeground(new java.awt.Color(0, 0, 0));
         namelabel17.setText("Email: ");
-        jPanel1.add(namelabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 500, -1, 30));
-
-        jButton4.setBackground(new java.awt.Color(68, 114, 196));
-        jButton4.setText("Choose Doctor");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 600, 150, -1));
+        jPanel1.add(namelabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 470, -1, 30));
 
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("  ");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 110, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 110, -1));
 
         jTextField14.setBackground(new java.awt.Color(165, 165, 165));
         jTextField14.setForeground(new java.awt.Color(0, 0, 0));
@@ -519,14 +515,44 @@ boolean error = false;
                 jTextField14ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 460, 260, 24));
+        jPanel1.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 260, 24));
 
         namelabel19.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel19.setForeground(new java.awt.Color(0, 0, 0));
         namelabel19.setText("Contact No. :");
-        jPanel1.add(namelabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, -1, 30));
+        jPanel1.add(namelabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 440, -1, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 702));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No Doctor Selected" }));
+        jComboBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, 190, -1));
+
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No Department Selected", "General Medicine", "Cardiology", "Neurology", "Pediatrics", "Orthopedics", "Dermatology", "Gynecology", "Urology", "Nephrology", "Pulmonology", "Endocrinology", "Psychiatry", "Gastroenterology", "Hematology", "Oncology", "Radiology", "Anesthesiology", "Ophthalmology", "Otolaryngology (ENT)", "Dentistry", "Rheumatology", "Geriatrics", "Emergency Medicine", "Pathology", "Plastic Surgery", "General Surgery", "Neurosurgery", "Obstetrics", "Sports Medicine", "Palliative Care" }));
+        jComboBox7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox7ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 190, -1));
+
+        namelabel18.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        namelabel18.setForeground(new java.awt.Color(0, 0, 0));
+        namelabel18.setText("Schedule: ");
+        jPanel1.add(namelabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 570, 260, 40));
+
+        checkbox1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
+        checkbox1.setLabel(" Choose this doctor");
+        checkbox1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                checkbox1ItemStateChanged(evt);
+            }
+        });
+        jPanel1.add(checkbox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 640, 170, 30));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 680));
         jPanel1.getAccessibleContext().setAccessibleDescription("");
 
         pack();
@@ -534,16 +560,16 @@ boolean error = false;
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-     
-       
-        
-     sub sub = new sub();
-       sub.setVisible(true);
-       sub.setLocationRelativeTo(null);
-       sub.setResizable(false);
-       this.dispose();
-       
- /*            
+
+        ifSubmit();
+
+        sub sub = new sub();
+        sub.setVisible(true);
+        sub.setLocationRelativeTo(null);
+        sub.setResizable(false);
+        this.dispose();
+
+        /*            
      Timer timer = new Timer(3000, new ActionListener(){
     public void actionPerformed(ActionEvent evt) {
      
@@ -556,13 +582,12 @@ boolean error = false;
 
        timer.setRepeats(false);
        timer.start();*/
- 
- 
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-      
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -578,14 +603,6 @@ boolean error = false;
         this.dispose();
 
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
@@ -642,176 +659,211 @@ boolean error = false;
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
 //  JOptionPane.showMessageDialog(null, "Note that after clicking yes, you will not be able to edit the set information. \n Continue?", "Confirm Submmision: ", JOptionPane.WARNING_MESSAGE);
-    ifSubmit();
-if(error == false){
-    int  response = JOptionPane.showConfirmDialog(null,"         After clicking confirm, the information will be submitted. \n                                      Are you sure? ", "Confirm",JOptionPane.YES_NO_OPTION);
-        
-        if ( response == JOptionPane.YES_OPTION){  
-            
-            ifSubmit();
-            jToggleButton1.setEnabled(false);
-            jButton2.setEnabled(true);
-            jButton4.setEnabled(true);
-            
-            jTextField1.setEditable(false);
-            jTextField1.setFocusable(false);
-            
-            jTextField2.setEditable(false);
-            jTextField2.setFocusable(false);
-            
-            jTextField4.setEditable(false);
-           jTextField4. setFocusable(false);
-            
-           jTextPane1.setEditable(false);
-           jTextPane1.setFocusable(false);
-           
-          jComboBox1.setEditable(false);
-          jComboBox1.setEnabled(false);
-           
-            jTextField6.setEditable(false);
-           jTextField6.setFocusable(false);
-           
-            jTextField5.setEditable(false);
-           jTextField5.setFocusable(false);
-           
-            jTextField8.setEditable(false);
-           jTextField8.setFocusable(false);
-           
-            jComboBox2.setEditable(false);
-           jComboBox2.setEnabled(false);
-           
-            jComboBox4.setEditable(false);
-           jComboBox4.setEnabled(false);
-           
-           jComboBox3 .setEditable(false);
-           jComboBox3.setEnabled(false);
-           
-           jComboBox5 .setEditable(false);
-           jComboBox5.setEnabled(false);
-           
-            jTextField13.setEditable(false);
-          jTextField13.setFocusable(false);
-           
-           jTextField9.setEditable(false);
-          jTextField9.setFocusable(false);
-           
-            jTextField10.setEditable(false);
-           jTextField10.setFocusable(false);
-           
-            jTextField11.setEditable(false);
-           jTextField11.setFocusable(false);
-           
-            jTextField12.setEditable(false);
-           jTextField12.setFocusable(false);
-           
-            jTextField7.setEditable(false);
-            jTextField7.setFocusable(false);
-           
-        }else{
-        jButton4.setEnabled(false);
-        jButton2.setEnabled(false);
-        } }else{
-        jButton4.setEnabled(false);
-        jButton2.setEnabled(false);}
-}
-        
+        ifSubmit();
+        if (error == false) {
+            int response = JOptionPane.showConfirmDialog(null, "         After clicking confirm, the information will be submitted. \n                                      Are you sure? ", "Confirm", JOptionPane.YES_NO_OPTION);
 
-    
-    
-    public void ifSubmit(){      
+            if (response == JOptionPane.YES_OPTION) {
+
+                jToggleButton1.setEnabled(false);
+
+                jButton2.setEnabled(true);
+                jComboBox6.setEnabled(true);
+                jComboBox7.setEnabled(true);
+
+                jTextField1.setEditable(false);
+                jTextField1.setFocusable(false);
+
+                jTextField2.setEditable(false);
+                jTextField2.setFocusable(false);
+
+                jTextField4.setEditable(false);
+                jTextField4.setFocusable(false);
+
+                jTextPane1.setEditable(false);
+                jTextPane1.setFocusable(false);
+
+                jComboBox1.setEditable(false);
+                jComboBox1.setEnabled(false);
+
+                jTextField6.setEditable(false);
+                jTextField6.setFocusable(false);
+
+                jTextField5.setEditable(false);
+                jTextField5.setFocusable(false);
+
+                jTextField8.setEditable(false);
+                jTextField8.setFocusable(false);
+
+                jComboBox2.setEditable(false);
+                jComboBox2.setEnabled(false);
+
+                jComboBox4.setEditable(false);
+                jComboBox4.setEnabled(false);
+
+                jComboBox3.setEditable(false);
+                jComboBox3.setEnabled(false);
+
+                jComboBox5.setEditable(false);
+                jComboBox5.setEnabled(false);
+
+                jTextField13.setEditable(false);
+                jTextField13.setFocusable(false);
+
+                jTextField9.setEditable(false);
+                jTextField9.setFocusable(false);
+
+                jTextField10.setEditable(false);
+                jTextField10.setFocusable(false);
+
+                jTextField11.setEditable(false);
+                jTextField11.setFocusable(false);
+
+                jTextField12.setEditable(false);
+                jTextField12.setFocusable(false);
+
+                jTextField7.setEditable(false);
+                jTextField7.setFocusable(false);
+
+                jTextField14.setEditable(false);
+                jTextField14.setFocusable(false);
+
+//Choose Doctor ComboBox
+                /*         File path = new File("C:\\Users\\nicol\\Desktop\\Database\\Doctor");
+        File[] files = path.listFiles();
+        ArrayList<String> fileArray = new ArrayList<>();
         
-             String FirstName = jTextField1.getText();
+        for (int i = 0 ; i < files.length;){
+            if(files[i].isFile()){
+                
+                try{
+                    
+                int n = 0;
+                String fileA = files[i].getName().toString().replace(".txt","");
+                
+                fileArray.add(fileA);
+                String aa = fileA.split(",")[n];
+                jComboBox6.addItem(aa);
+                n++;
+             }
+                
+                catch(Exception e){
+                
+                }
+            }i++;
+    }                     */
+            } else {
+                jComboBox6.setEnabled(false);
+                jButton2.setEnabled(false);
+                jComboBox7.setFocusable(false);
+                jComboBox7.setEditable(false);
+            }
+        } else {
+            jComboBox6.setEnabled(false);
+            jButton2.setEnabled(false);
+            jComboBox7.setEnabled(false);
+
+        }
+
+    }
+
+    public void ifSubmit() {
+
+        String FirstName = jTextField1.getText();
         String LastName = jTextField4.getText();
         String age = jTextField2.getText();
         String illness = jTextPane1.getText();
-        String  Sex = jComboBox1.getSelectedItem().toString();
+        String Sex = jComboBox1.getSelectedItem().toString();
         String Height = jTextField6.getText();
         String Weight = jTextField5.getText();
         String address = jTextField8.getText();
         String civilStat = jComboBox2.getSelectedItem().toString();
         String month = jComboBox4.getSelectedItem().toString();
         String year = jComboBox3.getSelectedItem().toString();
-        String day= jComboBox5.getSelectedItem().toString();
+        String day = jComboBox5.getSelectedItem().toString();
         String ContactNo = jTextField13.getText();
         String email = jTextField9.getText();
-        
-        if(!age.isEmpty()){ 
-            
-            try{
-            error = false;
-            jLabel7.setText("");
-        int age1 = Integer.parseInt(age);
-         
-         if (age1 < 18){
-             String m = "Patient is minor";
-                setPatientAge(m);
-         } if (age1 >= 18 && age1 <= 60){
-             String m = "Patient is an adult";
-                setPatientAge(m);
-         } if (age1 >= 60){
-             String m = "Patient is a Senior Citizen";
-             setPatientAge(m);
-         }
-                        }catch(NumberFormatException e){
-                            error = true;
-                            jLabel7.setText("Incorrect Age");
-                            jLabel7.setForeground(Color.red);
-                            Path fileToDeletePath = Paths.get(getFileName());
-                                        try {
-                                        Files.delete(fileToDeletePath);
-                                        } catch (IOException ex) {
-                                                }
-            
-                        }
-        }   
+
+        if (!age.isEmpty()) {
+            try {
+
+                jLabel7.setText("");
+                int age1 = Integer.parseInt(age);
+
+                if (age1 < 18) {
+                    String m = "Patient is minor";
+                    setPatientAge(m);
+                }
+                if (age1 >= 18 && age1 <= 60) {
+                    String m = "Patient is an adult";
+                    setPatientAge(m);
+                }
+                if (age1 >= 60) {
+                    String m = "Patient is a Senior Citizen";
+                    setPatientAge(m);
+                    error = false;
+                }
+            } catch (NumberFormatException e) {
+                error = true;
+                jLabel7.setText("Incorrect Age");
+                jLabel7.setForeground(Color.red);
+                Path fileToDeletePath = Paths.get(getFileName());
+                try {
+                    Files.delete(fileToDeletePath);
+                } catch (IOException ex) {
+                }
+
+            }
+        }
+
         //Relative info
         String conName = jTextField10.getText();
         String conNum = jTextField11.getText();
         String rela = jTextField12.getText();
         String ConAddress = jTextField7.getText();
         String rEmail = jTextField11.getText();
-        
-        String FileName = LastName + FirstName+ ".txt";
-        setFileName(FileName);
-      
-        try{
-        File parentDir = new File (fileLoc);
-        parentDir.mkdir();
 
-        File file = new File (parentDir, FileName);
-       file.createNewFile();
-       
-       
-         FileWriter writer = new FileWriter(fileLoc +"\\" + FileName);
-         
-         writer.write("-------------------Patient Information------------------");
-         writer.write("\nName: " + FirstName + " " + LastName);
-         writer.write("\nAge: " + age);
-         writer.write("\nIllness: " + illness);
-         writer.write("\nSex: " + Sex);
-         writer.write("\nHeight: "+Height);
-         writer.write("\nWeight: "+Weight);
-         writer.write("\nAddress: "+address);
-         writer.write("\nCivil Status: "+civilStat);
-         writer.write("\nBirthday: " +month + " " +day + " "+year);
-         writer.write("\nContact Number: " + ContactNo);
-         writer.write("\nEmail: " + email);
-         writer.write("\n-------------------Emergency Contact------------------");
-         writer.write("\nName: " +conName);
-         writer.write("\nContact Number: " + conNum);
-         writer.write("\nRelationship with the Patient: " + rela);
-         writer.write("\nAddress: "+ConAddress);
-         writer.write("\nDoctor: " + getDoctorName());
-         writer.write("\nEmail: " + rEmail);
-         writer.write("\n" + getPatientAge());
-       
-      
-         writer.close();
-        }catch(Exception e){
-        
+        String FileName = LastName + FirstName + ".txt";
+        setFileName(FileName);
+
+        try {
+            File parentDir = new File(fileLoc);
+            parentDir.mkdir();
+
+            File file = new File(parentDir, FileName);
+            file.createNewFile();
+
+            FileWriter writer = new FileWriter(fileLoc + "\\" + FileName);
+
+            writer.write("-------------------Patient Information------------------");
+            writer.write("\nName: " + FirstName + " " + LastName);
+            writer.write("\nAge: " + age);
+            writer.write("\nIllness: " + illness);
+            writer.write("\nSex: " + Sex);
+            writer.write("\nHeight: " + Height);
+            writer.write("\nWeight: " + Weight);
+            writer.write("\nAddress: " + address);
+            writer.write("\nCivil Status: " + civilStat);
+            writer.write("\nBirthday: " + month + " " + day + " " + year);
+            writer.write("\nContact Number: " + ContactNo);
+            writer.write("\nEmail: " + email);
+            writer.write("\n" + getPatientAge());
+
+            writer.write("\n-------------------Emergency Contact------------------");
+            writer.write("\nName: " + conName);
+            writer.write("\nContact Number: " + conNum);
+            writer.write("\nRelation: " + rela);
+            writer.write("\nEmail: " + rEmail);
+            writer.write("\nAddress: " + ConAddress);
+            writer.write("\nDoctor: " + getDoctorName());
+
+            writer.close();
+
+        } catch (Exception e) {
+
         }
-        
- 
+
+
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -825,51 +877,140 @@ if(error == false){
         jTextField5.setText("");
         jTextField8.setText("");
         jComboBox2.setSelectedIndex(0);
-}
-    
-    
-    public void setFileName(String fileName){
-    
-    this.fileName = fileName;
-    
-    } 
-    public String getFileName(){
+    }
+
+    public void setFileName(String fileName) {
+
+        this.fileName = fileName;
+
+    }
+
+    public String getFileName() {
 
         return fileName;
 
- }
-    public void setPatientAge(String m){
-        
-        
+    }
+
+    public void setPatientAge(String m) {
+
         this.m = m;
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        
-        NewDoctor nd = new NewDoctor();
-        nd.setVisible(true);
-        nd.setLocationRelativeTo(null);
-        nd.setResizable(false);
-        
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField14ActionPerformed
-    
-     public String getPatientAge(){
-         return m;
-     
-     }
-     
-     public void setDoctorName(String docN){
-         this.docN = docN;
-}
-     public String getDoctorName(){
-     
-         return docN;
-     }
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
+        // TODO add your handling code here:
+
+        try {
+            File path2 = new File("C:\\Users\\nicol\\Desktop\\Database\\Doctor\\" + jComboBox6.getSelectedItem().toString() + ".txt");
+            String paths = path2.toString();
+            BufferedReader br = new BufferedReader(new FileReader(paths));
+            String s;
+            ArrayList<String> files = new ArrayList<>();
+
+            while ((s = br.readLine()) != null) {
+                files.add(s);
+
+            }
+
+            String c = files.toString();
+            namelabel18.setText(c);
+
+        } catch (Exception e) {
+
+        }
+
+    }//GEN-LAST:event_jComboBox6ActionPerformed
+
+    private void jComboBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox7ActionPerformed
+        // TODO add your handling code here:
+        //Department Chosen
+
+        String word = jComboBox7.getSelectedItem().toString();
+        setDepartment(word);
+        dep();
+        System.out.println(getDepartment() + 1);
+        System.out.println(word + 2);
+
+    }//GEN-LAST:event_jComboBox7ActionPerformed
+
+    private void checkbox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_checkbox1ItemStateChanged
+        // TODO add your handling code here:
+
+        String docN = jComboBox6.getSelectedItem().toString();
+
+        setDoctorName(docN);
+
+    }//GEN-LAST:event_checkbox1ItemStateChanged
+
+    public String getPatientAge() {
+        return m;
+
+    }
+
+    public void setDoctorName(String docN) {
+        this.docN = docN;
+    }
+
+    public String getDoctorName() {
+
+        return docN;
+    }
+
+    public void setDepartment(String Department) {
+        this.Department = Department;
+    }
+
+    public String getDepartment() {
+        return Department;
+    }
+
+    public void dep() {
+
+        File path = new File("C:\\Users\\nicol\\Desktop\\Database\\Doctor");
+        File[] files = path.listFiles();
+        ArrayList<String> fileArray = new ArrayList<>();
+
+        for (int i = 0; i < files.length;) {
+
+            if (files[i].isFile()) {
+                try {
+                    BufferedReader br = new BufferedReader(new FileReader(files[i]));
+                    String s;
+                    Arrays.sort(files);
+
+                    while ((s = br.readLine()) != null) {
+                        if (s.trim().contains(getDepartment())) {
+                            int num = 0;
+                            String n = files[i].getName().toString();
+                            fileArray.add(n);
+                            String aa = n.split(",")[num].replace(".txt", "");
+                            jComboBox6.addItem(aa);
+                            num++;
+                            System.out.println(n);
+                        }
+
+                    }
+                    br.close();
+
+                } catch (Exception e) {
+
+                }
+            }
+            i++;
+        }
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -902,21 +1043,23 @@ if(error == false){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new NewPatient().setVisible(true);
-                
+
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Checkbox checkbox1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JComboBox<String> jComboBox6;
+    private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -954,6 +1097,7 @@ if(error == false){
     private javax.swing.JLabel namelabel15;
     private javax.swing.JLabel namelabel16;
     private javax.swing.JLabel namelabel17;
+    private javax.swing.JLabel namelabel18;
     private javax.swing.JLabel namelabel19;
     private javax.swing.JLabel namelabel2;
     private javax.swing.JLabel namelabel3;

@@ -43,7 +43,6 @@ public class FindPatient extends javax.swing.JFrame  {
         Name4 = new javax.swing.JLabel();
         Name5 = new javax.swing.JLabel();
         Name6 = new javax.swing.JLabel();
-        Name7 = new javax.swing.JLabel();
         Name8 = new javax.swing.JLabel();
         Name9 = new javax.swing.JLabel();
         Name10 = new javax.swing.JLabel();
@@ -56,6 +55,9 @@ public class FindPatient extends javax.swing.JFrame  {
         jButton7 = new javax.swing.JButton();
         Name16 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        Name18 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
 
         jButton1.setText("back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -83,10 +85,12 @@ public class FindPatient extends javax.swing.JFrame  {
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
         jPanel1.setToolTipText("");
         jPanel1.setPreferredSize(new java.awt.Dimension(1092, 702));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Find Patient Information");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 33, -1, -1));
 
         jButton2.setText("Done");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -94,6 +98,7 @@ public class FindPatient extends javax.swing.JFrame  {
                 jButton2ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 680, -1, -1));
 
         jButton4.setText("Copy");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -101,6 +106,7 @@ public class FindPatient extends javax.swing.JFrame  {
                 jButton4ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 630, -1, -1));
 
         jButton5.setText("back");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -108,18 +114,21 @@ public class FindPatient extends javax.swing.JFrame  {
                 jButton5ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 33, -1, -1));
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("        To  Look For a Patient's File Enter Patient's Name:");
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
         jLabel5.setOpaque(true);
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 90, 1258, 37));
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("    Emergency Contact Information: ");
         jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
         jLabel6.setOpaque(true);
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 478, 1314, 37));
 
         Name.setBackground(new java.awt.Color(51, 51, 51));
         Name.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -127,6 +136,7 @@ public class FindPatient extends javax.swing.JFrame  {
         Name.setText(" Illness:");
         Name.setAlignmentX(0.5F);
         Name.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 254, 47));
 
         Name1.setBackground(new java.awt.Color(51, 51, 51));
         Name1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -134,6 +144,7 @@ public class FindPatient extends javax.swing.JFrame  {
         Name1.setText("  Address: ");
         Name1.setAlignmentX(0.5F);
         Name1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 640, 617, 34));
 
         Name2.setBackground(new java.awt.Color(51, 51, 51));
         Name2.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -141,6 +152,7 @@ public class FindPatient extends javax.swing.JFrame  {
         Name2.setText("  Age: ");
         Name2.setAlignmentX(0.5F);
         Name2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 254, 34));
 
         Name3.setBackground(new java.awt.Color(51, 51, 51));
         Name3.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -148,6 +160,7 @@ public class FindPatient extends javax.swing.JFrame  {
         Name3.setText("  Sex: ");
         Name3.setAlignmentX(0.5F);
         Name3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 254, 34));
 
         Name4.setBackground(new java.awt.Color(51, 51, 51));
         Name4.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -155,6 +168,7 @@ public class FindPatient extends javax.swing.JFrame  {
         Name4.setText("  Height:");
         Name4.setAlignmentX(0.5F);
         Name4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 254, 34));
 
         Name5.setBackground(new java.awt.Color(51, 51, 51));
         Name5.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -162,6 +176,7 @@ public class FindPatient extends javax.swing.JFrame  {
         Name5.setText("  Address:");
         Name5.setAlignmentX(0.5F);
         Name5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 860, 34));
 
         Name6.setBackground(new java.awt.Color(51, 51, 51));
         Name6.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -169,13 +184,7 @@ public class FindPatient extends javax.swing.JFrame  {
         Name6.setText("  Weight:");
         Name6.setAlignmentX(0.5F);
         Name6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
-
-        Name7.setBackground(new java.awt.Color(51, 51, 51));
-        Name7.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Name7.setForeground(new java.awt.Color(0, 0, 0));
-        Name7.setText("  Civil Status: ");
-        Name7.setAlignmentX(0.5F);
-        Name7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 254, 33));
 
         Name8.setBackground(new java.awt.Color(51, 51, 51));
         Name8.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -183,6 +192,7 @@ public class FindPatient extends javax.swing.JFrame  {
         Name8.setText(" Birthday: ");
         Name8.setAlignmentX(0.5F);
         Name8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name8, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, 254, 34));
 
         Name9.setBackground(new java.awt.Color(51, 51, 51));
         Name9.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -190,6 +200,7 @@ public class FindPatient extends javax.swing.JFrame  {
         Name9.setText("  Contact Number:");
         Name9.setAlignmentX(0.5F);
         Name9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name9, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 230, 254, 34));
 
         Name10.setBackground(new java.awt.Color(51, 51, 51));
         Name10.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -197,6 +208,7 @@ public class FindPatient extends javax.swing.JFrame  {
         Name10.setText("  Email:");
         Name10.setAlignmentX(0.5F);
         Name10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name10, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 290, 254, 34));
 
         Name11.setBackground(new java.awt.Color(51, 51, 51));
         Name11.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -204,6 +216,7 @@ public class FindPatient extends javax.swing.JFrame  {
         Name11.setText("  Doctor:");
         Name11.setAlignmentX(0.5F);
         Name11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name11, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 254, 34));
 
         Name12.setBackground(new java.awt.Color(51, 51, 51));
         Name12.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -211,6 +224,7 @@ public class FindPatient extends javax.swing.JFrame  {
         Name12.setText(" Name:");
         Name12.setAlignmentX(0.5F);
         Name12.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name12, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 158, 254, 34));
 
         Name13.setBackground(new java.awt.Color(51, 51, 51));
         Name13.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -218,6 +232,7 @@ public class FindPatient extends javax.swing.JFrame  {
         Name13.setText("  Name: ");
         Name13.setAlignmentX(0.5F);
         Name13.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name13, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 568, 254, 34));
 
         Name14.setBackground(new java.awt.Color(51, 51, 51));
         Name14.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -225,13 +240,15 @@ public class FindPatient extends javax.swing.JFrame  {
         Name14.setText("  Contact Number: ");
         Name14.setAlignmentX(0.5F);
         Name14.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name14, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 647, 305, 34));
 
         Name15.setBackground(new java.awt.Color(51, 51, 51));
         Name15.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         Name15.setForeground(new java.awt.Color(0, 0, 0));
-        Name15.setText("  Relationship to Patient: ");
+        Name15.setText("  Relation: ");
         Name15.setAlignmentX(0.5F);
         Name15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name15, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 570, 254, 34));
 
         jComboBox2.setEditable(true);
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
@@ -239,6 +256,7 @@ public class FindPatient extends javax.swing.JFrame  {
                 jComboBox2ActionPerformed(evt);
             }
         });
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(949, 193, 233, -1));
 
         jButton7.setText("Find");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -246,6 +264,7 @@ public class FindPatient extends javax.swing.JFrame  {
                 jButton7ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1188, 193, -1, -1));
 
         Name16.setBackground(new java.awt.Color(51, 51, 51));
         Name16.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -253,147 +272,27 @@ public class FindPatient extends javax.swing.JFrame  {
         Name16.setText("Email: ");
         Name16.setAlignmentX(0.5F);
         Name16.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name16, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 570, 290, 34));
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Enter Patient Name:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(949, 171, 236, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(35, 35, 35)
-                                    .addComponent(jButton5)
-                                    .addGap(384, 384, 384)
-                                    .addComponent(jLabel1))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                        .addGap(46, 46, 46)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(1048, 1048, 1048)
-                                                .addComponent(jButton4)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jButton2))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(Name13, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(Name14, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(140, 140, 140)
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addComponent(Name15, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(83, 83, 83)
-                                                        .addComponent(Name16, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addComponent(Name1, javax.swing.GroupLayout.PREFERRED_SIZE, 617, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(58, 58, 58)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(Name12, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(Name2, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                                .addComponent(Name3, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(37, 37, 37)
-                                                .addComponent(Name8, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(Name6, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(Name7, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(37, 37, 37)
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(Name10, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(Name11, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                                .addComponent(Name4, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(37, 37, 37)
-                                                .addComponent(Name9, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(31, 31, 31)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jButton7))
-                                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(Name5, javax.swing.GroupLayout.PREFERRED_SIZE, 1138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE)))))
-                        .addGap(0, 50, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jLabel1))
-                .addGap(27, 27, 27)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Name3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Name8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(33, 33, 33)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Name4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Name9, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Name6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Name10, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Name7, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Name11, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Name12, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(37, 37, 37)
-                        .addComponent(Name2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addComponent(Name5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Name13, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Name15, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Name16, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Name14, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Name1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(jButton2))
-                .addGap(22, 22, 22))
-        );
+        Name18.setBackground(new java.awt.Color(51, 51, 51));
+        Name18.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        Name18.setForeground(new java.awt.Color(0, 0, 0));
+        Name18.setText("  Civil Status: ");
+        Name18.setAlignmentX(0.5F);
+        Name18.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
+        jPanel1.add(Name18, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 254, 34));
+
+        jTextPane1.setBackground(new java.awt.Color(153, 204, 255));
+        jTextPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(165, 165, 165), 2));
+        jTextPane1.setForeground(new java.awt.Color(0, 0, 0));
+        jTextPane1.setEnabled(false);
+        jScrollPane2.setViewportView(jTextPane1);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 260, 80));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1320, 750));
         jPanel1.getAccessibleContext().setAccessibleName("copy");
@@ -425,6 +324,49 @@ public class FindPatient extends javax.swing.JFrame  {
     //copy
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
+         try{
+        File path2 = new File(fileLoc + "\\" + jComboBox2.getSelectedItem().toString() + ".txt");
+        String fileName = path2.toString();
+        
+        BufferedReader b = new BufferedReader(new FileReader(fileName));
+        String s;
+        
+        ArrayList<String> files = new ArrayList<>();
+
+        while((s=b.readLine())!=null){
+        files.add(s);
+        }
+        
+        String c = files.toString();   
+
+       String name = c.split(",")[1];
+       String age = c.split(",")[2];
+       String illness = c.split(",")[3];
+       String Sex = c.split(",")[4];
+       String Height = c.split(",")[5];
+       String Weight = c.split(",")[6];
+       String address = c.split(",")[7];
+       String CivilStatus = c.split(",")[8];
+       String Birthday = c.split(",")[9];
+       String ContactNo = c.split(",")[10];
+       String email = c.split(",")[11];
+       
+       String rName = c.split(",")[14];
+       String rContact = c.split(",")[15];
+       String Relationship = c.split(",")[16];
+       String rEmail = c.split(",")[17].replace("]", ""); 
+        String rAddress = c.split(",")[18];
+       String DocTor = c.split(",")[19].replace("]", "");
+    
+              StringSelection copier = new StringSelection( name + "\n" +age + "\n" + illness + "\n" + Sex + "\n" + Height + "\n" + Weight + "\n" + address + "\n" + CivilStatus + "\n" + Birthday + "\n" + ContactNo+ 
+        "\n" + email + "\n" + rName + "\n" + rContact + "\n" + Relationship + "\n" + rEmail + "\n" + rAddress + "\n" + DocTor );
+        Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
+          cb.setContents(copier, null);  
+        }catch(Exception e){
+        
+        }
+        
+        
        /*  try{
               String LFfileName = jTextField1.getText();
             File path = new File(fileLoc+"\\" + LFfileName +".txt");
@@ -539,12 +481,13 @@ public class FindPatient extends javax.swing.JFrame  {
        String ContactNo = c.split(",")[10];
        String email = c.split(",")[11];
        
-       String rName = c.split(",")[13];
-       String rContact = c.split(",")[14];
-       String Relationship = c.split(",")[15];
-       String rAddress = c.split(",")[16];
-       String DocTor = c.split(",")[17];
-       String rEmail = c.split(",")[18].replace("]", "");
+       String rName = c.split(",")[14];
+       String rContact = c.split(",")[15];
+       String Relationship = c.split(",")[16];
+       String rEmail = c.split(",")[17].replace("]", ""); 
+        String rAddress = c.split(",")[18];
+       String DocTor = c.split(",")[19];
+     
        
             Name12.setText(name);
             Name2.setText(age);
@@ -553,7 +496,7 @@ public class FindPatient extends javax.swing.JFrame  {
             Name4.setText(Height);
             Name6.setText(Weight);
             Name5.setText(address);
-            Name7.setText(CivilStatus);
+          //  Name7.setText(CivilStatus);
             Name8.setText(Birthday);
             Name9.setText(ContactNo);
             Name10.setText(email);
@@ -563,6 +506,8 @@ public class FindPatient extends javax.swing.JFrame  {
             Name1.setText(rAddress);
            Name11.setText(DocTor);
            Name16.setText(rEmail);
+        //   Name7.setText("\nA \nB");
+           jTextPane1.setText("aaa");
             
             
         }catch(Exception e){
@@ -597,12 +542,12 @@ public class FindPatient extends javax.swing.JFrame  {
     private javax.swing.JLabel Name14;
     private javax.swing.JLabel Name15;
     private javax.swing.JLabel Name16;
+    private javax.swing.JLabel Name18;
     private javax.swing.JLabel Name2;
     private javax.swing.JLabel Name3;
     private javax.swing.JLabel Name4;
     private javax.swing.JLabel Name5;
     private javax.swing.JLabel Name6;
-    private javax.swing.JLabel Name7;
     private javax.swing.JLabel Name8;
     private javax.swing.JLabel Name9;
     private javax.swing.JButton jButton1;
@@ -618,6 +563,8 @@ public class FindPatient extends javax.swing.JFrame  {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTree jTree1;
     // End of variables declaration//GEN-END:variables
 }
