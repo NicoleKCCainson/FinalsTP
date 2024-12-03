@@ -13,6 +13,7 @@ import java.util.Arrays;
 
 public class FindPatient extends javax.swing.JFrame  {
     String Doctor;
+    String PatientF;
     String fileLoc = "C:\\Users\\nicol\\Desktop\\Database\\Patient";
     public FindPatient() {
 
@@ -58,6 +59,8 @@ public class FindPatient extends javax.swing.JFrame  {
         Name18 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
+        jButton3 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         jButton1.setText("back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -250,6 +253,7 @@ public class FindPatient extends javax.swing.JFrame  {
         Name15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(165, 165, 165), 2, true));
         jPanel1.add(Name15, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 570, 254, 34));
 
+        jComboBox2.setBackground(new java.awt.Color(204, 204, 204));
         jComboBox2.setEditable(true);
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -289,10 +293,23 @@ public class FindPatient extends javax.swing.JFrame  {
         jTextPane1.setBackground(new java.awt.Color(153, 204, 255));
         jTextPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(165, 165, 165), 2));
         jTextPane1.setForeground(new java.awt.Color(0, 0, 0));
+        jTextPane1.setText(" Allergies: ");
+        jTextPane1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextPane1.setEnabled(false);
         jScrollPane2.setViewportView(jTextPane1);
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 260, 80));
+
+        jButton3.setText("Add Patient File");
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 290, 280, 30));
+
+        jButton6.setText("View Patient Files");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 240, 280, 30));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1320, 750));
         jPanel1.getAccessibleContext().setAccessibleName("copy");
@@ -401,6 +418,12 @@ public class FindPatient extends javax.swing.JFrame  {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        
+        MainFrame mf = new MainFrame();
+        mf.setVisible(true);
+        mf.setResizable(false);
+        this.dispose();
+        
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -453,7 +476,7 @@ public class FindPatient extends javax.swing.JFrame  {
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
-        
+     
         try{
         File path2 = new File(fileLoc + "\\" + jComboBox2.getSelectedItem().toString() + ".txt");
         String fileName = path2.toString();
@@ -519,6 +542,27 @@ public class FindPatient extends javax.swing.JFrame  {
         
         
     }//GEN-LAST:event_jComboBox2ActionPerformed
+    
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+         PatientFile pf = new PatientFile();
+        pf.setVisible(true);
+        pf.setResizable(false);
+        String n = jComboBox2.getEditor().getItem().toString();
+        pf.jLabel1.setText(n);
+        setPatientF(jComboBox2.getSelectedItem().toString());
+       
+       // this.dispose();
+}
+       public void setPatientF(String PatientF){
+        this.PatientF = PatientF;
+    
+    }
+    public String getPatientF(){
+        return PatientF;
+    
+    
+    }//GEN-LAST:event_jButton6ActionPerformed
     public static void main(String[] args) {
     
          java.awt.EventQueue.invokeLater(new Runnable() {
@@ -552,10 +596,12 @@ public class FindPatient extends javax.swing.JFrame  {
     private javax.swing.JLabel Name9;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JComboBox<String> jComboBox2;
+    public javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
