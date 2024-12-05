@@ -410,11 +410,6 @@ public class NewPatient extends javax.swing.JFrame {
         jTextField10.setBackground(new java.awt.Color(165, 165, 165));
         jTextField10.setForeground(new java.awt.Color(0, 0, 0));
         jTextField10.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, 260, 24));
         jTextField10.getAccessibleContext().setAccessibleName("conName");
 
@@ -510,11 +505,6 @@ public class NewPatient extends javax.swing.JFrame {
         jTextField14.setBackground(new java.awt.Color(165, 165, 165));
         jTextField14.setForeground(new java.awt.Color(0, 0, 0));
         jTextField14.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jTextField14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField14ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 260, 24));
 
         namelabel19.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
@@ -541,7 +531,7 @@ public class NewPatient extends javax.swing.JFrame {
         namelabel18.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel18.setForeground(new java.awt.Color(0, 0, 0));
         namelabel18.setText("Schedule: ");
-        jPanel1.add(namelabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 570, 260, 40));
+        jPanel1.add(namelabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 560, 260, 40));
 
         checkbox1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
         checkbox1.setLabel(" Choose this doctor");
@@ -568,20 +558,6 @@ public class NewPatient extends javax.swing.JFrame {
         sub.setLocationRelativeTo(null);
         sub.setResizable(false);
         this.dispose();
-
-        /*            
-     Timer timer = new Timer(3000, new ActionListener(){
-    public void actionPerformed(ActionEvent evt) {
-     
-        sub.dispose();
-    MainFrame dr = new MainFrame();
-    dr.setVisible(true);
-
-}
-});
-
-       timer.setRepeats(false);
-       timer.start();*/
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -635,10 +611,6 @@ public class NewPatient extends javax.swing.JFrame {
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField9ActionPerformed
-
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
 
     private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
         // TODO add your handling code here:
@@ -896,10 +868,6 @@ public class NewPatient extends javax.swing.JFrame {
         this.m = m;
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField14ActionPerformed
-
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
@@ -924,7 +892,8 @@ public class NewPatient extends javax.swing.JFrame {
             }
 
             String c = files.toString();
-            namelabel18.setText(c);
+            String a = c.split(",")[8];
+            namelabel18.setText(a);
 
         } catch (Exception e) {
 
