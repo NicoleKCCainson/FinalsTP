@@ -116,6 +116,8 @@ public class NewPatient extends javax.swing.JFrame {
         Allergies = new javax.swing.JTextPane();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        mi = new javax.swing.JTextField();
 
         menu4.setLabel("File");
         menu4.addActionListener(new java.awt.event.ActionListener() {
@@ -195,28 +197,28 @@ public class NewPatient extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 200, 24));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 200, 24));
         jTextField1.getAccessibleContext().setAccessibleName("FirstName");
         jTextField1.getAccessibleContext().setAccessibleParent(jTextField1);
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Age:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, 50));
+        jLabel2.setText("M.I.");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, -1, 40));
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Address:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 50, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 50, 30));
 
         jTextField4.setBackground(new java.awt.Color(165, 165, 165));
         jTextField4.setForeground(new java.awt.Color(0, 0, 0));
         jTextField4.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 51, 153), null));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 200, 24));
+        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 150, 24));
         jTextField4.getAccessibleContext().setAccessibleName("LastName");
 
         namelabel1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel1.setForeground(new java.awt.Color(0, 0, 0));
         namelabel1.setText("Last Name:");
-        jPanel1.add(namelabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 65, 20));
+        jPanel1.add(namelabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 65, 20));
 
         jTextField2.setBackground(new java.awt.Color(165, 165, 165));
         jTextField2.setForeground(new java.awt.Color(0, 0, 0));
@@ -226,7 +228,7 @@ public class NewPatient extends javax.swing.JFrame {
                 jTextField2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 60, 20));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 60, 20));
         jTextField2.getAccessibleContext().setAccessibleName("age");
 
         namelabel2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
@@ -243,18 +245,18 @@ public class NewPatient extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 106, -1));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 120, 106, -1));
         jComboBox1.getAccessibleContext().setAccessibleName("Sex");
 
         namelabel3.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel3.setForeground(new java.awt.Color(0, 0, 0));
         namelabel3.setText("Sex: ");
-        jPanel1.add(namelabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, -1, 30));
+        jPanel1.add(namelabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, -1, 30));
 
         namelabel4.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel4.setForeground(new java.awt.Color(0, 0, 0));
         namelabel4.setText("kg.");
-        jPanel1.add(namelabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, -1, 30));
+        jPanel1.add(namelabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 180, -1, 30));
 
         namelabel5.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel5.setForeground(new java.awt.Color(0, 0, 0));
@@ -264,7 +266,7 @@ public class NewPatient extends javax.swing.JFrame {
         namelabel6.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel6.setForeground(new java.awt.Color(0, 0, 0));
         namelabel6.setText("cm.");
-        jPanel1.add(namelabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 40, 30));
+        jPanel1.add(namelabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 150, 40, 30));
 
         jComboBox2.setBackground(new java.awt.Color(165, 165, 165));
         jComboBox2.setForeground(new java.awt.Color(0, 0, 0));
@@ -325,7 +327,7 @@ public class NewPatient extends javax.swing.JFrame {
                 jTextField5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 110, 24));
+        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 110, 24));
         jTextField5.getAccessibleContext().setAccessibleName("Weight");
 
         jTextField6.setBackground(new java.awt.Color(165, 165, 165));
@@ -336,7 +338,7 @@ public class NewPatient extends javax.swing.JFrame {
                 jTextField6ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 110, 24));
+        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, 110, 24));
         jTextField6.getAccessibleContext().setAccessibleName("Height");
 
         jTextPane1.setBackground(new java.awt.Color(153, 153, 153));
@@ -345,7 +347,7 @@ public class NewPatient extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextPane1);
         jTextPane1.getAccessibleContext().setAccessibleName("Textillness");
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 420, 50));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 420, 50));
 
         jTextField7.setBackground(new java.awt.Color(165, 165, 165));
         jTextField7.setForeground(new java.awt.Color(0, 0, 0));
@@ -371,7 +373,7 @@ public class NewPatient extends javax.swing.JFrame {
                 jTextField8ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 800, 24));
+        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 800, 24));
         jTextField8.getAccessibleContext().setAccessibleName("Address");
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
@@ -384,7 +386,7 @@ public class NewPatient extends javax.swing.JFrame {
         namelabel9.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel9.setForeground(new java.awt.Color(0, 0, 0));
         namelabel9.setText("First Name:");
-        jPanel1.add(namelabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+        jPanel1.add(namelabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, -1, -1));
 
         namelabel10.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel10.setForeground(new java.awt.Color(0, 0, 0));
@@ -432,7 +434,7 @@ public class NewPatient extends javax.swing.JFrame {
                 jTextField12ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 440, 300, 24));
+        jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 440, 300, 24));
         jTextField12.getAccessibleContext().setAccessibleName("Rela");
 
         jButton3.setBackground(new java.awt.Color(153, 204, 255));
@@ -449,17 +451,17 @@ public class NewPatient extends javax.swing.JFrame {
         namelabel13.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel13.setForeground(new java.awt.Color(0, 0, 0));
         namelabel13.setText("Height: ");
-        jPanel1.add(namelabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, -1, 30));
+        jPanel1.add(namelabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, -1, 30));
 
         namelabel14.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel14.setForeground(new java.awt.Color(0, 0, 0));
         namelabel14.setText("cm.");
-        jPanel1.add(namelabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 40, 30));
+        jPanel1.add(namelabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 150, 40, 30));
 
         namelabel15.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel15.setForeground(new java.awt.Color(0, 0, 0));
         namelabel15.setText("Weight: ");
-        jPanel1.add(namelabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, 30));
+        jPanel1.add(namelabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, -1, 30));
 
         namelabel16.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel16.setForeground(new java.awt.Color(0, 0, 0));
@@ -500,7 +502,7 @@ public class NewPatient extends javax.swing.JFrame {
 
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("  ");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 110, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 110, -1));
 
         jTextField14.setBackground(new java.awt.Color(165, 165, 165));
         jTextField14.setForeground(new java.awt.Color(0, 0, 0));
@@ -564,15 +566,29 @@ public class NewPatient extends javax.swing.JFrame {
         Allergies.setForeground(new java.awt.Color(0, 0, 0));
         jScrollPane2.setViewportView(Allergies);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 420, 30));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 420, 30));
 
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Illness / Concern:  ");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 100, 30));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 100, 30));
 
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Allergies:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 60, 30));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 60, 30));
+
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("Age:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, -1, 50));
+
+        mi.setBackground(new java.awt.Color(165, 165, 165));
+        mi.setForeground(new java.awt.Color(0, 0, 0));
+        mi.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 51, 153), null));
+        mi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miActionPerformed(evt);
+            }
+        });
+        jPanel1.add(mi, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 60, 20));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 680));
         jPanel1.getAccessibleContext().setAccessibleDescription("");
@@ -677,6 +693,9 @@ public class NewPatient extends javax.swing.JFrame {
 
                 jTextField1.setEditable(false);
                 jTextField1.setFocusable(false);
+                
+                mi.setEditable(false);
+                mi.setFocusable(false);
 
                 jTextField2.setEditable(false);
                 jTextField2.setFocusable(false);
@@ -778,6 +797,7 @@ public class NewPatient extends javax.swing.JFrame {
 
         String FirstName = jTextField1.getText().toUpperCase();
         String LastName = jTextField4.getText().toUpperCase().replace(" ","");
+        String middle = mi.getText().toUpperCase();
         String age = jTextField2.getText().toUpperCase();
         String illness = jTextPane1.getText().toUpperCase();
         String Sex = jComboBox1.getSelectedItem().toString().toUpperCase();
@@ -832,9 +852,10 @@ public class NewPatient extends javax.swing.JFrame {
         String ConAddress = jTextField7.getText().toUpperCase().replace(",", "|");
         String rEmail = jTextField11.getText().toUpperCase();
 
-        String FileName = FirstName+" " + LastName + ".txt";
-        String fullName = FirstName + " " + LastName;
-        String doc = FirstName+" " + LastName.replace(" ","") ;
+       
+        String fullName = FirstName + " " +middle+" "+ LastName;
+        String FileName = fullName.replace("  "," ") + ".txt";
+        String docName = fullName.replace("  "," ") ;
         setFileName(FileName);
         
         try {
@@ -844,7 +865,7 @@ public class NewPatient extends javax.swing.JFrame {
             File parentDir = new File(fileLoc);
             parentDir.mkdir();
             
-           new File(fileLoc + "\\" +doc).mkdirs();
+           new File(fileLoc + "\\" +docName).mkdirs();
             
             
             File file = new File(parentDir, FileName);
@@ -973,6 +994,10 @@ public class NewPatient extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox8ActionPerformed
 
+    private void miActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_miActionPerformed
+
     public String getPatientAge() {
         return m;
 
@@ -1083,6 +1108,7 @@ public class NewPatient extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1112,6 +1138,7 @@ public class NewPatient extends javax.swing.JFrame {
     private java.awt.Menu menu4;
     private java.awt.Menu menu5;
     private java.awt.MenuBar menuBar2;
+    private javax.swing.JTextField mi;
     private javax.swing.JLabel namelabel;
     private javax.swing.JLabel namelabel1;
     private javax.swing.JLabel namelabel10;

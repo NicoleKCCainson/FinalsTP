@@ -368,65 +368,38 @@ public class FindPatient extends javax.swing.JFrame {
             while ((s = b.readLine()) != null) {
                 files.add(s);
             }
-
-            String c = files.toString();
+    String c = files.toString();
 
             String name = c.split(",")[1];
             String age = c.split(",")[2];
-            String illness = c.split(",")[3];
-            String Sex = c.split(",")[4];
-            String Height = c.split(",")[5];
-            String Weight = c.split(",")[6];
-            String address = c.split(",")[7];
-            String CivilStatus = c.split(",")[8];
-            String Birthday = c.split(",")[9];
-            String ContactNo = c.split(",")[10];
-            String email = c.split(",")[11];
+            String illnesss = c.split(",")[3];
+            String Allergies = c.split(",")[4].replace("|", ",");
+            String Sex = c.split(",")[5];
+            String Height = c.split(",")[6];
+            String BloodType = c.split(",")[7];
+            String Weight = c.split(",")[8];
+            String Address = c.split(",")[9].replace("|", ",");
+            String CivilStatus = c.split(",")[10];
+            String Birthday = c.split(",")[11];
+            String ContactNum = c.split(",")[12];
+            String Email = c.split(",")[13];
+            String patientAgeState = c.split(",")[14];
+       
+            String rName = c.split(",")[16];
+            String rContactNum= c.split(",")[17];
+            String rRelation= c.split(",")[18];
+            String rEmail = c.split(",")[19];
+            String rAddress = c.split(",")[20];
+            String Doc = c.split(",")[21].replace("]","");
 
-            String rName = c.split(",")[14];
-            String rContact = c.split(",")[15];
-            String Relationship = c.split(",")[16];
-            String rEmail = c.split(",")[17].replace("]", "");
-            String rAddress = c.split(",")[18];
-            String DocTor = c.split(",")[19].replace("]", "");
-
-            StringSelection copier = new StringSelection(name + "\n" + age + "\n" + illness + "\n" + Sex + "\n" + Height + "\n" + Weight + "\n" + address + "\n" + CivilStatus + "\n" + Birthday + "\n" + ContactNo
-                    + "\n" + email + "\n" + rName + "\n" + rContact + "\n" + Relationship + "\n" + rEmail + "\n" + rAddress + "\n" + DocTor);
+            StringSelection copier = new StringSelection(
+                    name + "\n" + age + "\n" + illnesss + "\n" + Allergies +"\n" + Sex + "\n" + Height + "\n" +BloodType+"\n" + Weight + "\n" + Address + "\n" + CivilStatus + "\n" + Birthday + "\n" + ContactNum
+                    + "\n" + Email + "\n"+ patientAgeState + "\n" + rName + "\n" + rContactNum + "\n" + rRelation + "\n" + rEmail + "\n" + rAddress + "\n" + Doc);
             Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
             cb.setContents(copier, null);
-        } catch (Exception e) {
+            } catch (Exception e) {
 
         }
-
-        /*  try{
-              String LFfileName = jTextField1.getText();
-            File path = new File(fileLoc+"\\" + LFfileName +".txt");
-
-                BufferedReader b = new BufferedReader(new FileReader(path));
-                String s;
-                ArrayList<String> content = new ArrayList<String>();
-
-                while((s=b.readLine())!=null){
-                    content.add(s);
-                }
-                String cont = content.toString();
-                String txtDisName= cont.split(",")[0];
-
-                txtDisName = txtDisName.replace("[","");
-                String txtDisAge= cont.split(",")[1];
-
-                String txtDisIllness= cont.split(",")[2];
-                txtDisIllness = txtDisIllness.replace("]", "");
-                
-                String data = txtDisName + "\n" +txtDisAge; 
-                
-        StringSelection copier = new StringSelection(data);
-        Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
-          cb.setContents(copier, null);  
-            }catch(Exception c){
-
-            }*/
-
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -615,6 +588,7 @@ public class FindPatient extends javax.swing.JFrame {
        
         PatientFile pf = new PatientFile();
         pf.setVisible(true);
+        pf.setLocationRelativeTo(null);
         pf.setResizable(false);
         
         String n = jComboBox2.getEditor().getItem().toString();

@@ -73,7 +73,7 @@ public class NewDoctor extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        age1 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
@@ -108,6 +108,8 @@ public class NewDoctor extends javax.swing.JFrame {
         jTextField17 = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel18 = new javax.swing.JLabel();
+        mi = new javax.swing.JTextField();
 
         jButton2.setText("back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +131,7 @@ public class NewDoctor extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jTextField1.setBackground(new java.awt.Color(165, 165, 165));
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
@@ -138,7 +140,7 @@ public class NewDoctor extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 150, 190, -1));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 190, -1));
         jTextField1.getAccessibleContext().setAccessibleName("thisName");
 
         namelabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -210,7 +212,7 @@ public class NewDoctor extends javax.swing.JFrame {
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Age:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 30, 20));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 30, 20));
 
         jButton1.setText("Submit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -227,12 +229,12 @@ public class NewDoctor extends javax.swing.JFrame {
                 jTextField4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 190, -1));
+        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 130, -1));
         jTextField4.getAccessibleContext().setAccessibleName("file");
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Last Name:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 193, 80, -1));
+        jLabel3.setText("M.I.");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 20, -1));
 
         jLabel1.setBackground(new java.awt.Color(51, 51, 51));
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
@@ -292,10 +294,10 @@ public class NewDoctor extends javax.swing.JFrame {
         jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 146, -1));
 
-        jTextField6.setBackground(new java.awt.Color(165, 165, 165));
-        jTextField6.setText(" ");
-        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 50, 20));
+        age1.setBackground(new java.awt.Color(165, 165, 165));
+        age1.setText(" ");
+        age1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
+        jPanel1.add(age1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 50, 20));
 
         jTextField8.setBackground(new java.awt.Color(165, 165, 165));
         jTextField8.setText(" ");
@@ -354,8 +356,8 @@ public class NewDoctor extends javax.swing.JFrame {
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 70, 26));
 
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel15.setText("Contact Number:");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, -1, 26));
+        jLabel15.setText("Contact No.:");
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, 26));
 
         checkbox1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
         checkbox1.setForeground(new java.awt.Color(7, 11, 26));
@@ -452,6 +454,20 @@ public class NewDoctor extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 120, 30));
+
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel18.setText("Last Name:");
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 193, 80, -1));
+
+        mi.setBackground(new java.awt.Color(165, 165, 165));
+        mi.setText(" ");
+        mi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
+        mi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miActionPerformed(evt);
+            }
+        });
+        jPanel1.add(mi, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 50, 20));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 680));
 
@@ -593,6 +609,10 @@ public class NewDoctor extends javax.swing.JFrame {
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void miActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_miActionPerformed
 
     public void isSubmit() {
         
@@ -740,7 +760,8 @@ public class NewDoctor extends javax.swing.JFrame {
         
         String firstName = jTextField1.getText();
         String lastName = jTextField4.getText();
-        String age = jTextField6.getText();
+        String middle = mi.getText();
+        String age = age1.getText();
         String Gender = jComboBox2.getSelectedItem().toString();
         String Department = jComboBox1.getSelectedItem().toString();
         String contactNum = jTextField8.getText();
@@ -753,7 +774,10 @@ public class NewDoctor extends javax.swing.JFrame {
         String secNum = jTextField9.getText();
         String secEmail = jTextField17.getText();
         
-        String FileName = lastName + firstName + ".txt";
+        String fullname = firstName+" "+middle+" "+ lastName;
+        
+        String FileName = fullname.replace("  "," ")+ ".txt";
+        
            try{
         File parentDir = new File (fileLoc);
         parentDir.mkdir();
@@ -763,7 +787,7 @@ public class NewDoctor extends javax.swing.JFrame {
   
          FileWriter writer = new FileWriter(fileLoc +"\\" + FileName);
          writer.write("\n ---------------------Doctor Information-------------------");
-        writer.write("\nName: "+firstName +" "+ lastName);
+        writer.write("\nName: "+ fullname.replace("  ", " "));
          writer.write("\nAge: " + age);
         writer.write("\nDepartment: "+ Department);
          writer.write("\nGender: "+ Gender);
@@ -824,6 +848,7 @@ public class NewDoctor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField age1;
     private java.awt.Checkbox checkbox1;
     private java.awt.Checkbox checkbox10;
     private java.awt.Checkbox checkbox11;
@@ -861,6 +886,7 @@ public class NewDoctor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -882,10 +908,10 @@ public class NewDoctor extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField mi;
     private javax.swing.JLabel namelabel1;
     // End of variables declaration//GEN-END:variables
 }
