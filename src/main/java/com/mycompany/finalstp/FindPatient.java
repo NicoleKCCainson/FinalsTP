@@ -10,6 +10,7 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.util.Arrays;
 import javax.swing.BorderFactory;
+import javax.swing.DefaultListModel;
 
 public class FindPatient extends javax.swing.JFrame {
 
@@ -19,6 +20,10 @@ public class FindPatient extends javax.swing.JFrame {
 
     public FindPatient() {
         initComponents();
+        jButton3.setEnabled(false);
+        jButton8.setEnabled(false);
+        jButton6.setEnabled(false);
+        jLabel3.setVisible(false);
 
     }
 
@@ -37,31 +42,34 @@ public class FindPatient extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        concern = new javax.swing.JLabel();
-        Name1 = new javax.swing.JLabel();
-        Age = new javax.swing.JLabel();
-        Name3 = new javax.swing.JLabel();
-        Name4 = new javax.swing.JLabel();
-        Name5 = new javax.swing.JLabel();
-        Name6 = new javax.swing.JLabel();
-        Name8 = new javax.swing.JLabel();
-        Name9 = new javax.swing.JLabel();
-        bloodtype = new javax.swing.JLabel();
-        Name11 = new javax.swing.JLabel();
-        nameFull = new javax.swing.JLabel();
-        Name13 = new javax.swing.JLabel();
-        Name14 = new javax.swing.JLabel();
-        Name15 = new javax.swing.JLabel();
+        Allergies1 = new javax.swing.JLabel();
+        rAddress1 = new javax.swing.JLabel();
+        Age1 = new javax.swing.JLabel();
+        Sex1 = new javax.swing.JLabel();
+        Height1 = new javax.swing.JLabel();
+        Address1 = new javax.swing.JLabel();
+        Weight1 = new javax.swing.JLabel();
+        CivilStatus1 = new javax.swing.JLabel();
+        Birthday1 = new javax.swing.JLabel();
+        ContactNum1 = new javax.swing.JLabel();
+        PatientIS = new javax.swing.JLabel();
+        nameFull1 = new javax.swing.JLabel();
+        rName1 = new javax.swing.JLabel();
+        rContactNum1 = new javax.swing.JLabel();
+        rEmail1 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
         jButton7 = new javax.swing.JButton();
-        Name16 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        Name18 = new javax.swing.JLabel();
+        BloodType1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         illness1 = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
+        jLabel3 = new javax.swing.JLabel();
+        rRelation1 = new javax.swing.JLabel();
+        Email1 = new javax.swing.JLabel();
+        Doctor1 = new javax.swing.JLabel();
 
         jButton1.setText("back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -132,111 +140,111 @@ public class FindPatient extends javax.swing.JFrame {
         jLabel6.setText("    Emergency Contact Information: ");
         jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
         jLabel6.setOpaque(true);
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 480, 1310, 37));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 540, 1310, 37));
 
-        concern.setBackground(new java.awt.Color(51, 51, 51));
-        concern.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        concern.setForeground(new java.awt.Color(0, 0, 0));
-        concern.setText(" ");
-        concern.setAlignmentX(0.5F);
-        jPanel1.add(concern, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 254, 47));
+        Allergies1.setBackground(new java.awt.Color(51, 51, 51));
+        Allergies1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        Allergies1.setForeground(new java.awt.Color(0, 0, 0));
+        Allergies1.setText(" ");
+        Allergies1.setAlignmentX(0.5F);
+        jPanel1.add(Allergies1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 254, 47));
 
-        Name1.setBackground(new java.awt.Color(51, 51, 51));
-        Name1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Name1.setForeground(new java.awt.Color(0, 0, 0));
-        Name1.setText(" ");
-        Name1.setAlignmentX(0.5F);
-        jPanel1.add(Name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 640, 617, 34));
+        rAddress1.setBackground(new java.awt.Color(51, 51, 51));
+        rAddress1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        rAddress1.setForeground(new java.awt.Color(0, 0, 0));
+        rAddress1.setText(" ");
+        rAddress1.setAlignmentX(0.5F);
+        jPanel1.add(rAddress1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 680, 617, 34));
 
-        Age.setBackground(new java.awt.Color(51, 51, 51));
-        Age.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Age.setForeground(new java.awt.Color(0, 0, 0));
-        Age.setText(" ");
-        Age.setAlignmentX(0.5F);
-        jPanel1.add(Age, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 254, 34));
+        Age1.setBackground(new java.awt.Color(51, 51, 51));
+        Age1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        Age1.setForeground(new java.awt.Color(0, 0, 0));
+        Age1.setText(" ");
+        Age1.setAlignmentX(0.5F);
+        jPanel1.add(Age1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 254, 34));
 
-        Name3.setBackground(new java.awt.Color(51, 51, 51));
-        Name3.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Name3.setForeground(new java.awt.Color(0, 0, 0));
-        Name3.setText(" ");
-        Name3.setAlignmentX(0.5F);
-        jPanel1.add(Name3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 254, 34));
+        Sex1.setBackground(new java.awt.Color(51, 51, 51));
+        Sex1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        Sex1.setForeground(new java.awt.Color(0, 0, 0));
+        Sex1.setText(" ");
+        Sex1.setAlignmentX(0.5F);
+        jPanel1.add(Sex1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 254, 34));
 
-        Name4.setBackground(new java.awt.Color(51, 51, 51));
-        Name4.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Name4.setForeground(new java.awt.Color(0, 0, 0));
-        Name4.setText(" ");
-        Name4.setAlignmentX(0.5F);
-        jPanel1.add(Name4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 254, 34));
+        Height1.setBackground(new java.awt.Color(51, 51, 51));
+        Height1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        Height1.setForeground(new java.awt.Color(0, 0, 0));
+        Height1.setText(" ");
+        Height1.setAlignmentX(0.5F);
+        jPanel1.add(Height1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 254, 34));
 
-        Name5.setBackground(new java.awt.Color(51, 51, 51));
-        Name5.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Name5.setForeground(new java.awt.Color(0, 0, 0));
-        Name5.setText(" ");
-        Name5.setAlignmentX(0.5F);
-        jPanel1.add(Name5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 860, 34));
+        Address1.setBackground(new java.awt.Color(51, 51, 51));
+        Address1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        Address1.setForeground(new java.awt.Color(0, 0, 0));
+        Address1.setText(" ");
+        Address1.setAlignmentX(0.5F);
+        jPanel1.add(Address1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 570, 34));
 
-        Name6.setBackground(new java.awt.Color(51, 51, 51));
-        Name6.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Name6.setForeground(new java.awt.Color(0, 0, 0));
-        Name6.setText(" ");
-        Name6.setAlignmentX(0.5F);
-        jPanel1.add(Name6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 254, 33));
+        Weight1.setBackground(new java.awt.Color(51, 51, 51));
+        Weight1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        Weight1.setForeground(new java.awt.Color(0, 0, 0));
+        Weight1.setText(" ");
+        Weight1.setAlignmentX(0.5F);
+        jPanel1.add(Weight1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 254, 33));
 
-        Name8.setBackground(new java.awt.Color(51, 51, 51));
-        Name8.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Name8.setForeground(new java.awt.Color(0, 0, 0));
-        Name8.setText(" ");
-        Name8.setAlignmentX(0.5F);
-        jPanel1.add(Name8, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, 254, 34));
+        CivilStatus1.setBackground(new java.awt.Color(51, 51, 51));
+        CivilStatus1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        CivilStatus1.setForeground(new java.awt.Color(0, 0, 0));
+        CivilStatus1.setText(" ");
+        CivilStatus1.setAlignmentX(0.5F);
+        jPanel1.add(CivilStatus1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, 254, 34));
 
-        Name9.setBackground(new java.awt.Color(51, 51, 51));
-        Name9.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Name9.setForeground(new java.awt.Color(0, 0, 0));
-        Name9.setText(" ");
-        Name9.setAlignmentX(0.5F);
-        jPanel1.add(Name9, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 230, 254, 34));
+        Birthday1.setBackground(new java.awt.Color(51, 51, 51));
+        Birthday1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        Birthday1.setForeground(new java.awt.Color(0, 0, 0));
+        Birthday1.setText(" ");
+        Birthday1.setAlignmentX(0.5F);
+        jPanel1.add(Birthday1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 230, 254, 34));
 
-        bloodtype.setBackground(new java.awt.Color(51, 51, 51));
-        bloodtype.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        bloodtype.setForeground(new java.awt.Color(0, 0, 0));
-        bloodtype.setText(" ");
-        bloodtype.setAlignmentX(0.5F);
-        jPanel1.add(bloodtype, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 290, 254, 34));
+        ContactNum1.setBackground(new java.awt.Color(51, 51, 51));
+        ContactNum1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        ContactNum1.setForeground(new java.awt.Color(0, 0, 0));
+        ContactNum1.setText(" ");
+        ContactNum1.setAlignmentX(0.5F);
+        jPanel1.add(ContactNum1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 290, 254, 34));
 
-        Name11.setBackground(new java.awt.Color(51, 51, 51));
-        Name11.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Name11.setForeground(new java.awt.Color(0, 0, 0));
-        Name11.setText(" ");
-        Name11.setAlignmentX(0.5F);
-        jPanel1.add(Name11, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 254, 34));
+        PatientIS.setBackground(new java.awt.Color(51, 51, 51));
+        PatientIS.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        PatientIS.setForeground(new java.awt.Color(0, 0, 0));
+        PatientIS.setText(" ");
+        PatientIS.setAlignmentX(0.5F);
+        jPanel1.add(PatientIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 410, 254, 34));
 
-        nameFull.setBackground(new java.awt.Color(51, 51, 51));
-        nameFull.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        nameFull.setForeground(new java.awt.Color(0, 0, 0));
-        nameFull.setAlignmentX(0.5F);
-        jPanel1.add(nameFull, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 158, 254, 34));
+        nameFull1.setBackground(new java.awt.Color(51, 51, 51));
+        nameFull1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        nameFull1.setForeground(new java.awt.Color(0, 0, 0));
+        nameFull1.setAlignmentX(0.5F);
+        jPanel1.add(nameFull1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 254, 34));
 
-        Name13.setBackground(new java.awt.Color(51, 51, 51));
-        Name13.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Name13.setForeground(new java.awt.Color(0, 0, 0));
-        Name13.setText(" ");
-        Name13.setAlignmentX(0.5F);
-        jPanel1.add(Name13, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 568, 254, 34));
+        rName1.setBackground(new java.awt.Color(51, 51, 51));
+        rName1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        rName1.setForeground(new java.awt.Color(0, 0, 0));
+        rName1.setText(" ");
+        rName1.setAlignmentX(0.5F);
+        jPanel1.add(rName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 620, 254, 34));
 
-        Name14.setBackground(new java.awt.Color(51, 51, 51));
-        Name14.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Name14.setForeground(new java.awt.Color(0, 0, 0));
-        Name14.setText(" ");
-        Name14.setAlignmentX(0.5F);
-        jPanel1.add(Name14, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 647, 305, 34));
+        rContactNum1.setBackground(new java.awt.Color(51, 51, 51));
+        rContactNum1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        rContactNum1.setForeground(new java.awt.Color(0, 0, 0));
+        rContactNum1.setText(" ");
+        rContactNum1.setAlignmentX(0.5F);
+        jPanel1.add(rContactNum1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 680, 305, 34));
 
-        Name15.setBackground(new java.awt.Color(51, 51, 51));
-        Name15.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Name15.setForeground(new java.awt.Color(0, 0, 0));
-        Name15.setText(" ");
-        Name15.setAlignmentX(0.5F);
-        jPanel1.add(Name15, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 570, 254, 34));
+        rEmail1.setBackground(new java.awt.Color(51, 51, 51));
+        rEmail1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        rEmail1.setForeground(new java.awt.Color(0, 0, 0));
+        rEmail1.setText(" ");
+        rEmail1.setAlignmentX(0.5F);
+        jPanel1.add(rEmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 620, 254, 34));
 
         jComboBox2.setBackground(new java.awt.Color(204, 204, 204));
         jComboBox2.setEditable(true);
@@ -255,23 +263,16 @@ public class FindPatient extends javax.swing.JFrame {
         });
         jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1188, 193, -1, -1));
 
-        Name16.setBackground(new java.awt.Color(51, 51, 51));
-        Name16.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Name16.setForeground(new java.awt.Color(0, 0, 0));
-        Name16.setText(" ");
-        Name16.setAlignmentX(0.5F);
-        jPanel1.add(Name16, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 570, 290, 34));
-
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Enter Patient Name:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(949, 171, 236, -1));
 
-        Name18.setBackground(new java.awt.Color(51, 51, 51));
-        Name18.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        Name18.setForeground(new java.awt.Color(0, 0, 0));
-        Name18.setText(" ");
-        Name18.setAlignmentX(0.5F);
-        jPanel1.add(Name18, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 254, 34));
+        BloodType1.setBackground(new java.awt.Color(51, 51, 51));
+        BloodType1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        BloodType1.setForeground(new java.awt.Color(0, 0, 0));
+        BloodType1.setText(" ");
+        BloodType1.setAlignmentX(0.5F);
+        jPanel1.add(BloodType1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 254, 34));
 
         jButton3.setText("Edit Patient Information");
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 340, 280, 30));
@@ -299,6 +300,32 @@ public class FindPatient extends javax.swing.JFrame {
         illness1.setAlignmentX(0.5F);
         jPanel1.add(illness1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 254, 47));
         jPanel1.add(filler1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, -1, -1));
+
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel3.setText("Please select a Patient.");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 380, -1, 20));
+
+        rRelation1.setBackground(new java.awt.Color(51, 51, 51));
+        rRelation1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        rRelation1.setForeground(new java.awt.Color(0, 0, 0));
+        rRelation1.setText(" ");
+        rRelation1.setAlignmentX(0.5F);
+        jPanel1.add(rRelation1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 620, 254, 34));
+
+        Email1.setBackground(new java.awt.Color(51, 51, 51));
+        Email1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        Email1.setForeground(new java.awt.Color(0, 0, 0));
+        Email1.setText(" ");
+        Email1.setAlignmentX(0.5F);
+        jPanel1.add(Email1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 254, 34));
+
+        Doctor1.setBackground(new java.awt.Color(51, 51, 51));
+        Doctor1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        Doctor1.setForeground(new java.awt.Color(0, 0, 0));
+        Doctor1.setText(" ");
+        Doctor1.setAlignmentX(0.5F);
+        jPanel1.add(Doctor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, 254, 34));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1320, 750));
         jPanel1.getAccessibleContext().setAccessibleName("copy");
@@ -414,8 +441,19 @@ public class FindPatient extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-
-        String word = jComboBox2.getEditor().getItem().toString();
+        
+      
+        String word = jComboBox2.getEditor().getItem().toString().toUpperCase();
+        
+        if(!word.isEmpty()){ 
+        jButton3.setEnabled(true);
+        jButton8.setEnabled(true);
+        jButton6.setEnabled(true);
+        
+        }else{
+        jLabel3.setVisible(true);
+        }
+        
         File path = new File(fileLoc);
         File[] files = path.listFiles();
         ArrayList<String> arr = new ArrayList();
@@ -480,77 +518,91 @@ public class FindPatient extends javax.swing.JFrame {
             String name = c.split(",")[1];
             String age = c.split(",")[2];
             String illnesss = c.split(",")[3];
-            String Sex = c.split(",")[4];
-            String Height = c.split(",")[5];
-            String Weight = c.split(",")[6];
-            String address = c.split(",")[7];
-            String CivilStatus = c.split(",")[8];
-            String Birthday = c.split(",")[9];
-            String ContactNo = c.split(",")[10];
-            String email = c.split(",")[11];
+            String Allergies = c.split(",")[4].replace("|", ",");
+            String Sex = c.split(",")[5];
+            String Height = c.split(",")[6];
+            String BloodType = c.split(",")[7];
+            String Weight = c.split(",")[8];
+            String Address = c.split(",")[9].replace("|", ",");
+            String CivilStatus = c.split(",")[10];
+            String Birthday = c.split(",")[11];
+            String ContactNum = c.split(",")[12];
+            String Email = c.split(",")[13];
+            String patientAgeState = c.split(",")[14];
+       
+            String rName = c.split(",")[16];
+            String rContactNum= c.split(",")[17];
+            String rRelation= c.split(",")[18];
+            String rEmail = c.split(",")[19];
+            String rAddress = c.split(",")[20];
+            String Doc = c.split(",")[21].replace("]","");
 
-            String rName = c.split(",")[14];
-            String rContact = c.split(",")[15];
-            String Relationship = c.split(",")[16];
-            String rEmail = c.split(",")[17].replace("]", "");
-            String rAddress = c.split(",")[18];
-            String DocTor = c.split(",")[19];
+            nameFull1.setText(name);
+            nameFull1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
 
-            nameFull.setText(name);
-            nameFull.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
-
-            Age.setText(age);
-            Age.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            Age1.setText(age);
+            Age1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
 
             illness1.setText(illnesss);
             illness1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            
+             Allergies1.setText(Allergies);
+            Allergies1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
 
-            Name3.setText(Sex);
-            Name3.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            Sex1.setText(Sex);
+            Sex1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
 
-            Name4.setText(Height);
-            Name4.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            Height1.setText(Height);
+            Height1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
 
-            Name6.setText(Weight);
-            Name6.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            Weight1.setText(Weight);
+            Weight1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
 
-            Name5.setText(address);
-            Name5.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            Address1.setText(Address);
+            Address1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
 
             //  Name7.setText(CivilStatus);
-            Name8.setText(Birthday);
-            Name8.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            CivilStatus1.setText(CivilStatus);
+            CivilStatus1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
 
-            Name9.setText(ContactNo);
-            Name9.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            Birthday1.setText(Birthday);
+            Birthday1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
 
-            nameFull.setText(email);
-            nameFull.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            rAddress1.setText(rAddress);
+            rAddress1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
 
-            Name13.setText(rName);
-            Name13.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            rName1.setText(rName);
+            rName1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            rRelation1.setText(rRelation);
+            rRelation1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
 
-            Name14.setText(rContact);
-            Name14.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            rAddress1.setText(rAddress);
+            rAddress1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
 
-            nameFull.setText(Relationship);
-            nameFull.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
-
-            Name1.setText(rAddress);
-            Name1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
-
-            Name11.setText(DocTor);
-            Name11.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            PatientIS.setText(patientAgeState);
+            PatientIS.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
             
-            bloodtype.setText(email);
-
-            Name16.setText(rEmail);
-            Name16.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            ContactNum1.setText(ContactNum);
+            ContactNum1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
             
-            //   Name7.setText("\nA \nB");
-            concern.setText("aaa");
-            concern.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            rEmail1.setText(rEmail);
+            rEmail1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+        
+            Allergies1.setText(Allergies);
+            Allergies1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
 
+            rContactNum1.setText(rContactNum);
+            rContactNum1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            
+             Email1.setText(Email);
+            Email1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            
+               Doctor1.setText(Doc);
+            Doctor1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+               BloodType1.setText(BloodType);
+            BloodType1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+             Email1.setText(Email);
+            Email1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
         } catch (Exception e) {
 
         }
@@ -560,14 +612,19 @@ public class FindPatient extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+       
         PatientFile pf = new PatientFile();
         pf.setVisible(true);
         pf.setResizable(false);
+        
         String n = jComboBox2.getEditor().getItem().toString();
-        pf.jLabel1.setText(n);
+       
+        System.out.println(n);
         setPatientF(jComboBox2.getSelectedItem().toString());
-
-        // this.dispose();
+          pf.jLabel1.setText(n);
+           pf.jLabel1.setText(getPatientF());
+           
+         this.dispose();
     }
 
     public void setPatientF(String PatientF) {
@@ -580,9 +637,17 @@ public class FindPatient extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jButton6ActionPerformed
-
+ public void patFile(){
+ 
+ }
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+// TODO add your handling code here:
+    newRecord nr = new newRecord();
+        nr.setVisible(true);
+        nr.setResizable(false);
+        nr.namelabel1.setText(jComboBox2.getSelectedItem().toString());
+        
+        
     }//GEN-LAST:event_jButton8ActionPerformed
     public static void main(String[] args) {
 
@@ -598,22 +663,19 @@ public class FindPatient extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Age;
-    private javax.swing.JLabel Name1;
-    private javax.swing.JLabel Name11;
-    private javax.swing.JLabel Name13;
-    private javax.swing.JLabel Name14;
-    private javax.swing.JLabel Name15;
-    private javax.swing.JLabel Name16;
-    private javax.swing.JLabel Name18;
-    private javax.swing.JLabel Name3;
-    private javax.swing.JLabel Name4;
-    private javax.swing.JLabel Name5;
-    private javax.swing.JLabel Name6;
-    private javax.swing.JLabel Name8;
-    private javax.swing.JLabel Name9;
-    private javax.swing.JLabel bloodtype;
-    private javax.swing.JLabel concern;
+    private javax.swing.JLabel Address1;
+    private javax.swing.JLabel Age1;
+    private javax.swing.JLabel Allergies1;
+    private javax.swing.JLabel Birthday1;
+    private javax.swing.JLabel BloodType1;
+    private javax.swing.JLabel CivilStatus1;
+    private javax.swing.JLabel ContactNum1;
+    private javax.swing.JLabel Doctor1;
+    private javax.swing.JLabel Email1;
+    private javax.swing.JLabel Height1;
+    private javax.swing.JLabel PatientIS;
+    private javax.swing.JLabel Sex1;
+    private javax.swing.JLabel Weight1;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel illness1;
     private javax.swing.JButton jButton1;
@@ -628,11 +690,17 @@ public class FindPatient extends javax.swing.JFrame {
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTree jTree1;
-    private javax.swing.JLabel nameFull;
+    private javax.swing.JLabel nameFull1;
+    private javax.swing.JLabel rAddress1;
+    private javax.swing.JLabel rContactNum1;
+    private javax.swing.JLabel rEmail1;
+    private javax.swing.JLabel rName1;
+    private javax.swing.JLabel rRelation1;
     // End of variables declaration//GEN-END:variables
 }
