@@ -38,7 +38,6 @@ public class FindDoctor extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         Demail = new javax.swing.JLabel();
-        lastname = new javax.swing.JLabel();
         age = new javax.swing.JLabel();
         DocNum = new javax.swing.JLabel();
         availability = new javax.swing.JLabel();
@@ -53,6 +52,7 @@ public class FindDoctor extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         hmo = new javax.swing.JLabel();
         roomnum = new javax.swing.JLabel();
+        jComboBox7 = new javax.swing.JComboBox<>();
 
         jButton1.setText("back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -93,7 +93,7 @@ public class FindDoctor extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 710, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 700, -1, -1));
 
         jButton4.setText("Copy");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +101,7 @@ public class FindDoctor extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 710, -1, -1));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 700, -1, -1));
 
         jButton5.setText("back");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -130,49 +130,42 @@ public class FindDoctor extends javax.swing.JFrame {
         Demail.setForeground(new java.awt.Color(0, 0, 0));
         Demail.setText(" ");
         Demail.setAlignmentX(0.5F);
-        jPanel1.add(Demail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 140, 34));
-
-        lastname.setBackground(new java.awt.Color(51, 51, 51));
-        lastname.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        lastname.setForeground(new java.awt.Color(0, 0, 0));
-        lastname.setText(" ");
-        lastname.setAlignmentX(0.5F);
-        jPanel1.add(lastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 260, 34));
+        jPanel1.add(Demail, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, 140, 40));
 
         age.setBackground(new java.awt.Color(51, 51, 51));
         age.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         age.setForeground(new java.awt.Color(0, 0, 0));
         age.setText(" ");
         age.setAlignmentX(0.5F);
-        jPanel1.add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 70, 30));
+        jPanel1.add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 70, 30));
 
         DocNum.setBackground(new java.awt.Color(51, 51, 51));
         DocNum.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         DocNum.setForeground(new java.awt.Color(0, 0, 0));
         DocNum.setText("  ");
         DocNum.setAlignmentX(0.5F);
-        jPanel1.add(DocNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 260, 34));
+        jPanel1.add(DocNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, 260, 40));
 
         availability.setBackground(new java.awt.Color(51, 51, 51));
         availability.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         availability.setForeground(new java.awt.Color(0, 0, 0));
         availability.setText(" ");
         availability.setAlignmentX(0.5F);
-        jPanel1.add(availability, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 340, 40));
+        jPanel1.add(availability, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, 610, 40));
 
         department.setBackground(new java.awt.Color(51, 51, 51));
         department.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         department.setForeground(new java.awt.Color(0, 0, 0));
         department.setText(" ");
         department.setAlignmentX(0.5F);
-        jPanel1.add(department, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 260, 40));
+        jPanel1.add(department, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 260, 40));
 
         firstname.setBackground(new java.awt.Color(51, 51, 51));
         firstname.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         firstname.setForeground(new java.awt.Color(0, 0, 0));
         firstname.setText(" ");
         firstname.setAlignmentX(0.5F);
-        jPanel1.add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 254, 34));
+        jPanel1.add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 254, 34));
 
         Secname.setBackground(new java.awt.Color(51, 51, 51));
         Secname.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -193,7 +186,7 @@ public class FindDoctor extends javax.swing.JFrame {
         gender.setForeground(new java.awt.Color(0, 0, 0));
         gender.setText(" ");
         gender.setAlignmentX(0.5F);
-        jPanel1.add(gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 140, 30));
+        jPanel1.add(gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 140, 30));
 
         jComboBox2.setEditable(true);
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
@@ -227,14 +220,27 @@ public class FindDoctor extends javax.swing.JFrame {
         hmo.setForeground(new java.awt.Color(0, 0, 0));
         hmo.setText(" ");
         hmo.setAlignmentX(0.5F);
-        jPanel1.add(hmo, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, 340, 40));
+        jPanel1.add(hmo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 680, 40));
 
         roomnum.setBackground(new java.awt.Color(51, 51, 51));
         roomnum.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         roomnum.setForeground(new java.awt.Color(0, 0, 0));
         roomnum.setText(" ");
         roomnum.setAlignmentX(0.5F);
-        jPanel1.add(roomnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 420, 140, 34));
+        jPanel1.add(roomnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 234, 140, 40));
+
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NO DEPARTMENT SELECTED", "GENERAL MEDICINE", "CARDIOLOGY", "NEUROLOGY", "PEDIATRICS", "ORTHOPEDICS", "DERMATOLOGY", "GYNECOLOGY", "UROLOGY", "NEPHROLOGY", "PULMONOLOGY", "ENDOCRINOLOGY", "PSYCHIATRY", "GASTROENTEROLOGY", "HEMATOLOGY", "ONCOLOGY", "RADIOLOGY", "ANESTHESIOLOGY", "OPHTHALMOLOGY", "OTOLARYNGOLOGY (ENT)", "DENTISTRY", "RHEUMATOLOGY", "GERIATRICS", "EMERGENCY MEDICINE", "PATHOLOGY", "PLASTIC SURGERY", "GENERAL SURGERY", "NEUROSURGERY", "OBSTETRICS", "SPORTS MEDICINE", "PALLIATIVE CARE" }));
+        jComboBox7.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox7ItemStateChanged(evt);
+            }
+        });
+        jComboBox7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox7ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 230, 230, 30));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1320, 750));
         jPanel1.getAccessibleContext().setAccessibleName("copy");
@@ -313,7 +319,7 @@ public class FindDoctor extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         
-            String word = jComboBox2.getEditor().getItem().toString();
+            String word = jComboBox2.getEditor().getItem().toString().toUpperCase();
         File path = new File(fileLoc);
         File[] files = path.listFiles();
         ArrayList<String> arr = new ArrayList();
@@ -337,7 +343,7 @@ public class FindDoctor extends javax.swing.JFrame {
                                 arr.add(fileName);
                                 String nn = fileName.split(",")[n];
 
-                                jComboBox2.addItem(nn);
+                                jComboBox2.addItem(nn.replace("-", " "));
                                 n++;
 
                             }
@@ -370,7 +376,7 @@ public class FindDoctor extends javax.swing.JFrame {
             ArrayList<String> files = new ArrayList<>();
 
             while ((s = b.readLine()) != null) {
-                files.add(s);
+                files.add(s.replace(",", " "));
             }
 
             String c = files.toString();
@@ -386,7 +392,7 @@ public class FindDoctor extends javax.swing.JFrame {
             String email = c.split(",")[9];
             String secName = c.split(",")[11];
             String secNum = c.split(",")[12];
-            String secEmail2 = c.split(",")[13];
+            String secEmail2 = c.split(",")[13].replace("]","");
             
             Demail.setText(email);
             Demail.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"),2));
@@ -395,7 +401,7 @@ public class FindDoctor extends javax.swing.JFrame {
             DocNum.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"),2));
             
             Secname.setText(secName);
-            DocNum.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"),2));
+            Secname.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"),2));
             
             Secnum.setText(secNum);
             Secnum.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"),2));
@@ -428,6 +434,57 @@ public class FindDoctor extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jComboBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox7ActionPerformed
+        // TODO add your handling code here:
+        //Department Chosen
+
+  
+    }//GEN-LAST:event_jComboBox7ActionPerformed
+
+    private void jComboBox7ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox7ItemStateChanged
+        // TODO add your handling code here:
+        dep();
+       
+    }//GEN-LAST:event_jComboBox7ItemStateChanged
+    
+      public void dep() {
+
+        File path = new File("C:\\Users\\nicol\\Desktop\\Database\\Doctor");
+        File[] files = path.listFiles();
+        ArrayList<String> fileArray = new ArrayList<>();
+        jComboBox2.removeAllItems();
+        for (int i = 0; i < files.length;) {
+
+            if (files[i].isFile()) {
+                try {
+                    BufferedReader br = new BufferedReader(new FileReader(files[i]));
+                    String s;
+                    Arrays.sort(files);
+
+                    while ((s = br.readLine()) != null) {
+                        if (s.trim().contains(jComboBox7.getSelectedItem().toString())) {
+                            int num = 0;
+                            String n = files[i].getName().toString().replace("-", " ");
+                            fileArray.add(n);
+                            String aa = n.split(",")[num].replace(".txt", "");
+                            jComboBox2.addItem(aa);
+                            num++;
+                            System.out.println(n);
+                        }
+
+                    }
+                    br.close();
+
+                } catch (Exception e) {
+
+                }
+            }
+            i++;
+        }
+      }
+    
+    
     public static void main(String[] args) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -459,6 +516,7 @@ public class FindDoctor extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -467,7 +525,6 @@ public class FindDoctor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTree jTree1;
-    private javax.swing.JLabel lastname;
     private javax.swing.JLabel roomnum;
     // End of variables declaration//GEN-END:variables
 }

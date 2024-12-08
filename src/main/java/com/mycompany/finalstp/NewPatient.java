@@ -238,7 +238,7 @@ public class NewPatient extends javax.swing.JFrame {
 
         jComboBox1.setBackground(new java.awt.Color(165, 165, 165));
         jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "N/A", "Female", "Male", "Everyday" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "N/A", "Female", "Male" }));
         jComboBox1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 102), null));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -522,7 +522,7 @@ public class NewPatient extends javax.swing.JFrame {
         });
         jPanel1.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, 190, -1));
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No Department Selected", "General Medicine", "Cardiology", "Neurology", "Pediatrics", "Orthopedics", "Dermatology", "Gynecology", "Urology", "Nephrology", "Pulmonology", "Endocrinology", "Psychiatry", "Gastroenterology", "Hematology", "Oncology", "Radiology", "Anesthesiology", "Ophthalmology", "Otolaryngology (ENT)", "Dentistry", "Rheumatology", "Geriatrics", "Emergency Medicine", "Pathology", "Plastic Surgery", "General Surgery", "Neurosurgery", "Obstetrics", "Sports Medicine", "Palliative Care" }));
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NO DEPARTMENT SELECTED", "GENERAL MEDICINE", "CARDIOLOGY", "NEUROLOGY", "PEDIATRICS", "ORTHOPEDICS", "DERMATOLOGY", "GYNECOLOGY", "UROLOGY", "NEPHROLOGY", "PULMONOLOGY", "ENDOCRINOLOGY", "PSYCHIATRY", "GASTROENTEROLOGY", "HEMATOLOGY", "ONCOLOGY", "RADIOLOGY", "ANESTHESIOLOGY", "OPHTHALMOLOGY", "OTOLARYNGOLOGY (ENT)", "DENTISTRY", "RHEUMATOLOGY", "GERIATRICS", "EMERGENCY MEDICINE", "PATHOLOGY", "PLASTIC SURGERY", "GENERAL SURGERY", "NEUROSURGERY", "OBSTETRICS", "SPORTS MEDICINE", "PALLIATIVE CARE" }));
         jComboBox7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox7ActionPerformed(evt);
@@ -847,7 +847,7 @@ public class NewPatient extends javax.swing.JFrame {
 
         //Relative info
         String conName = jTextField10.getText().toUpperCase();
-        String conNum = jTextField11.getText().toUpperCase();
+        String conNum = jTextField14.getText().toUpperCase();
         String rela = jTextField12.getText().toUpperCase();
         String ConAddress = jTextField7.getText().toUpperCase().replace(",", "|");
         String rEmail = jTextField11.getText().toUpperCase();
@@ -907,6 +907,7 @@ public class NewPatient extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         //Clear
+        
         jTextField1.setText("");
         jTextField4.setText("");
         jTextField2.setText("");
@@ -915,9 +916,22 @@ public class NewPatient extends javax.swing.JFrame {
         jTextField6.setText("");
         jTextField5.setText("");
         jTextField8.setText("");
+        Allergies.setText("");
         jComboBox2.setSelectedIndex(0);
-        
-        
+        jComboBox4.setSelectedIndex(0);
+        jComboBox3.setSelectedIndex(0);
+        jComboBox8.setSelectedIndex(0);
+        jComboBox5.setSelectedIndex(0);
+        jTextField11.setText("");
+        jTextField10.setText("");
+        jTextField9.setText("");
+        jTextField13.setText("");
+        jTextField14.setText("");
+        jTextField7.setText("");
+        jTextField12.setText("");
+        mi.setText("");
+        jComboBox7.setSelectedIndex(0);
+        jComboBox6.setSelectedIndex(0);
     }
 
     public void setFileName(String fileName) {

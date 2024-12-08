@@ -75,7 +75,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         button3.setActionCommand("button2");
-        button3.setBackground(new java.awt.Color(0, 102, 255));
+        button3.setBackground(new java.awt.Color(117, 194, 248));
         button3.setLabel("New Doctor");
         button3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,7 +84,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         button4.setActionCommand("button3");
-        button4.setBackground(new java.awt.Color(0, 102, 255));
+        button4.setBackground(new java.awt.Color(117, 194, 248));
         button4.setLabel("Find Patient");
         button4.setName(""); // NOI18N
         button4.addActionListener(new java.awt.event.ActionListener() {

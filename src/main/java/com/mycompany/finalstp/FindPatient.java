@@ -474,7 +474,7 @@ public class FindPatient extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         try {
-            File path2 = new File(fileLoc + "\\" + jComboBox2.getSelectedItem().toString() + ".txt");
+            File path2 = new File(fileLoc + "\\" + jComboBox2.getSelectedItem().toString().toUpperCase() + ".txt");
             String fileName = path2.toString();
 
             BufferedReader b = new BufferedReader(new FileReader(fileName));
@@ -483,7 +483,7 @@ public class FindPatient extends javax.swing.JFrame {
             ArrayList<String> files = new ArrayList<>();
 
             while ((s = b.readLine()) != null) {
-                files.add(s);
+                files.add(s.replace(",", "|"));
             }
 
             String c = files.toString();
@@ -494,7 +494,7 @@ public class FindPatient extends javax.swing.JFrame {
             String Allergies = c.split(",")[4].replace("|", ",");
             String Sex = c.split(",")[5];
             String Height = c.split(",")[6];
-            String BloodType = c.split(",")[7];
+            String BloodType1 = c.split(",")[7];
             String Weight = c.split(",")[8];
             String Address = c.split(",")[9].replace("|", ",");
             String CivilStatus = c.split(",")[10];
@@ -507,9 +507,11 @@ public class FindPatient extends javax.swing.JFrame {
             String rContactNum= c.split(",")[17];
             String rRelation= c.split(",")[18];
             String rEmail = c.split(",")[19];
-            String rAddress = c.split(",")[20];
+            String rAddress = c.split(",")[20].replace("|", ",");
             String Doc = c.split(",")[21].replace("]","");
-
+            
+            
+            
             nameFull1.setText(name);
             nameFull1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
 
@@ -572,8 +574,8 @@ public class FindPatient extends javax.swing.JFrame {
             
                Doctor1.setText(Doc);
             Doctor1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
-            //   BloodType.setText(BloodType);
-          //  BloodType.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            BloodType.setText(BloodType1);
+          BloodType.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
              Email1.setText(Email);
             Email1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
         } catch (Exception e) {

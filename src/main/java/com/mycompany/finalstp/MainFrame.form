@@ -190,7 +190,7 @@
               <Properties>
                 <Property name="actionCommand" type="java.lang.String" value="button2"/>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="66" red="0" type="rgb"/>
+                  <Color blue="f8" green="c2" red="75" type="rgb"/>
                 </Property>
                 <Property name="label" type="java.lang.String" value="New Doctor"/>
               </Properties>
@@ -202,7 +202,7 @@
               <Properties>
                 <Property name="actionCommand" type="java.lang.String" value="button3"/>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="66" red="0" type="rgb"/>
+                  <Color blue="f8" green="c2" red="75" type="rgb"/>
                 </Property>
                 <Property name="label" type="java.lang.String" value="Find Patient"/>
                 <Property name="name" type="java.lang.String" value="" noResource="true"/>

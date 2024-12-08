@@ -363,11 +363,10 @@
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
+              <StringArray count="3">
                 <StringItem index="0" value="N/A"/>
                 <StringItem index="1" value="Female"/>
                 <StringItem index="2" value="Male"/>
-                <StringItem index="3" value="Everyday"/>
               </StringArray>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1342,37 +1341,37 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="31">
-                <StringItem index="0" value="No Department Selected"/>
-                <StringItem index="1" value="General Medicine"/>
-                <StringItem index="2" value="Cardiology"/>
-                <StringItem index="3" value="Neurology"/>
-                <StringItem index="4" value="Pediatrics"/>
-                <StringItem index="5" value="Orthopedics"/>
-                <StringItem index="6" value="Dermatology"/>
-                <StringItem index="7" value="Gynecology"/>
-                <StringItem index="8" value="Urology"/>
-                <StringItem index="9" value="Nephrology"/>
-                <StringItem index="10" value="Pulmonology"/>
-                <StringItem index="11" value="Endocrinology"/>
-                <StringItem index="12" value="Psychiatry"/>
-                <StringItem index="13" value="Gastroenterology"/>
-                <StringItem index="14" value="Hematology"/>
-                <StringItem index="15" value="Oncology"/>
-                <StringItem index="16" value="Radiology"/>
-                <StringItem index="17" value="Anesthesiology"/>
-                <StringItem index="18" value="Ophthalmology"/>
-                <StringItem index="19" value="Otolaryngology (ENT)"/>
-                <StringItem index="20" value="Dentistry"/>
-                <StringItem index="21" value="Rheumatology"/>
-                <StringItem index="22" value="Geriatrics"/>
-                <StringItem index="23" value="Emergency Medicine"/>
-                <StringItem index="24" value="Pathology"/>
-                <StringItem index="25" value="Plastic Surgery"/>
-                <StringItem index="26" value="General Surgery"/>
-                <StringItem index="27" value="Neurosurgery"/>
-                <StringItem index="28" value="Obstetrics"/>
-                <StringItem index="29" value="Sports Medicine"/>
-                <StringItem index="30" value="Palliative Care"/>
+                <StringItem index="0" value="NO DEPARTMENT SELECTED"/>
+                <StringItem index="1" value="GENERAL MEDICINE"/>
+                <StringItem index="2" value="CARDIOLOGY"/>
+                <StringItem index="3" value="NEUROLOGY"/>
+                <StringItem index="4" value="PEDIATRICS"/>
+                <StringItem index="5" value="ORTHOPEDICS"/>
+                <StringItem index="6" value="DERMATOLOGY"/>
+                <StringItem index="7" value="GYNECOLOGY"/>
+                <StringItem index="8" value="UROLOGY"/>
+                <StringItem index="9" value="NEPHROLOGY"/>
+                <StringItem index="10" value="PULMONOLOGY"/>
+                <StringItem index="11" value="ENDOCRINOLOGY"/>
+                <StringItem index="12" value="PSYCHIATRY"/>
+                <StringItem index="13" value="GASTROENTEROLOGY"/>
+                <StringItem index="14" value="HEMATOLOGY"/>
+                <StringItem index="15" value="ONCOLOGY"/>
+                <StringItem index="16" value="RADIOLOGY"/>
+                <StringItem index="17" value="ANESTHESIOLOGY"/>
+                <StringItem index="18" value="OPHTHALMOLOGY"/>
+                <StringItem index="19" value="OTOLARYNGOLOGY (ENT)"/>
+                <StringItem index="20" value="DENTISTRY"/>
+                <StringItem index="21" value="RHEUMATOLOGY"/>
+                <StringItem index="22" value="GERIATRICS"/>
+                <StringItem index="23" value="EMERGENCY MEDICINE"/>
+                <StringItem index="24" value="PATHOLOGY"/>
+                <StringItem index="25" value="PLASTIC SURGERY"/>
+                <StringItem index="26" value="GENERAL SURGERY"/>
+                <StringItem index="27" value="NEUROSURGERY"/>
+                <StringItem index="28" value="OBSTETRICS"/>
+                <StringItem index="29" value="SPORTS MEDICINE"/>
+                <StringItem index="30" value="PALLIATIVE CARE"/>
               </StringArray>
             </Property>
           </Properties>
