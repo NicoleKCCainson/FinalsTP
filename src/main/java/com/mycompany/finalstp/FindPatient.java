@@ -60,7 +60,7 @@ public class FindPatient extends javax.swing.JFrame {
         jComboBox2 = new javax.swing.JComboBox<>();
         jButton7 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        BloodType1 = new javax.swing.JLabel();
+        BloodType = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
@@ -133,7 +133,7 @@ public class FindPatient extends javax.swing.JFrame {
         jLabel5.setText("        To  Look For a Patient's File Enter Patient's Name:");
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
         jLabel5.setOpaque(true);
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 90, 1258, 37));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 90, 1310, 37));
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
@@ -267,12 +267,12 @@ public class FindPatient extends javax.swing.JFrame {
         jLabel2.setText("Enter Patient Name:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(949, 171, 236, -1));
 
-        BloodType1.setBackground(new java.awt.Color(51, 51, 51));
-        BloodType1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
-        BloodType1.setForeground(new java.awt.Color(0, 0, 0));
-        BloodType1.setText(" ");
-        BloodType1.setAlignmentX(0.5F);
-        jPanel1.add(BloodType1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 254, 34));
+        BloodType.setBackground(new java.awt.Color(51, 51, 51));
+        BloodType.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
+        BloodType.setForeground(new java.awt.Color(0, 0, 0));
+        BloodType.setText(" ");
+        BloodType.setAlignmentX(0.5F);
+        jPanel1.add(BloodType, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 254, 34));
 
         jButton3.setText("Edit Patient Information");
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 340, 280, 30));
@@ -599,8 +599,8 @@ public class FindPatient extends javax.swing.JFrame {
             
                Doctor1.setText(Doc);
             Doctor1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
-               BloodType1.setText(BloodType);
-            BloodType1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
+            //   BloodType.setText(BloodType);
+          //  BloodType.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
              Email1.setText(Email);
             Email1.setBorder(BorderFactory.createLineBorder(Color.decode("#4472C4"), 2));
         } catch (Exception e) {
@@ -645,6 +645,7 @@ public class FindPatient extends javax.swing.JFrame {
     newRecord nr = new newRecord();
         nr.setVisible(true);
         nr.setResizable(false);
+        nr.setLocationRelativeTo(null);
         nr.namelabel1.setText(jComboBox2.getSelectedItem().toString());
         
         
@@ -667,7 +668,7 @@ public class FindPatient extends javax.swing.JFrame {
     private javax.swing.JLabel Age1;
     private javax.swing.JLabel Allergies1;
     private javax.swing.JLabel Birthday1;
-    private javax.swing.JLabel BloodType1;
+    private javax.swing.JLabel BloodType;
     private javax.swing.JLabel CivilStatus1;
     private javax.swing.JLabel ContactNum1;
     private javax.swing.JLabel Doctor1;
