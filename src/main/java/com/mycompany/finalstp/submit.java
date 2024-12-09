@@ -8,7 +8,7 @@ package com.mycompany.finalstp;
  *
  * @author nicol
  */
-public interface submit {
+public abstract interface submit {
     
  public void afterSub();
  public void ifSubmit();

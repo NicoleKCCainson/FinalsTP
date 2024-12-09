@@ -8,7 +8,7 @@ package com.mycompany.finalstp;
  *
  * @author nicol
  */
-public interface find {
+public abstract interface find {
     public void find();
     public void itemSelect();
     public void copy();

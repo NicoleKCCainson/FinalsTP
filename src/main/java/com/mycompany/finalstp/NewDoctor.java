@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  *
  * @author nicol
  */
-public class NewDoctor extends javax.swing.JFrame {
+public class NewDoctor extends javax.swing.JFrame implements submit {
     //NEW DOCTOR 
 
     //Doctor file
@@ -33,7 +33,6 @@ public class NewDoctor extends javax.swing.JFrame {
         jTextField15.setEditable(false);
         jTextField16.setEditable(false);
         
-       
    
     }
 
@@ -137,11 +136,6 @@ public class NewDoctor extends javax.swing.JFrame {
 
         jTextField1.setBackground(new java.awt.Color(165, 165, 165));
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 190, -1));
         jTextField1.getAccessibleContext().setAccessibleName("thisName");
 
@@ -229,11 +223,6 @@ public class NewDoctor extends javax.swing.JFrame {
 
         jTextField4.setBackground(new java.awt.Color(165, 165, 165));
         jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 130, -1));
         jTextField4.getAccessibleContext().setAccessibleName("file");
 
@@ -453,11 +442,6 @@ public class NewDoctor extends javax.swing.JFrame {
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 530, -1, 20));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Gender", "Male", "Female" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 120, 20));
 
         jLabel18.setForeground(new java.awt.Color(0, 0, 0));
@@ -467,11 +451,6 @@ public class NewDoctor extends javax.swing.JFrame {
         mi.setBackground(new java.awt.Color(165, 165, 165));
         mi.setText(" ");
         mi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        mi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                miActionPerformed(evt);
-            }
-        });
         jPanel1.add(mi, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 30, 20));
 
         jButton4.setBackground(new java.awt.Color(153, 204, 255));
@@ -508,15 +487,10 @@ public class NewDoctor extends javax.swing.JFrame {
         dr.setResizable(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         // TODO add your handling code here:
-        isSubmit();
+        ifSubmit();
         sub2 sub2 = new sub2();
         sub2.setVisible(true);
         sub2.setLocationRelativeTo(null);
@@ -524,15 +498,12 @@ public class NewDoctor extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
     private void checkbox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_checkbox1ItemStateChanged
         // TODO add your handling code here:
 
         if (checkbox1.getState()) {
             jButton1.setEnabled(true);
+            afterSub();
         } else {
             jButton1.setEnabled(false);
         }
@@ -622,65 +593,14 @@ public class NewDoctor extends javax.swing.JFrame {
     }        
     }//GEN-LAST:event_checkbox8ItemStateChanged
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
-
-    private void miActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_miActionPerformed
-
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-         
-        mi.setText("");
-        age1.setText("");
-        jTextField1.setText("");
-        jTextField14.setText("");
-        jComboBox1.setSelectedIndex(0);
-        jComboBox2.setSelectedIndex(0);
-        jTextField3.setText("");
-        jTextField4.setText("");
-        jTextField5.setText("");
-        jTextField7.setText("");
-        jTextField8.setText("");
-        jTextField9.setText("");
-        jTextField10.setText("");
-        jTextField11.setText("");
-        jTextField12.setText("");
-        jTextField13.setText("");
-        jTextField14.setText("");
-        jTextField15.setText("");
-        jTextField16.setText("");
-        jTextField17.setText("");
-        checkbox1.setState(false);
-        checkbox2.setState(false);
-        checkbox3.setState(false);
-        checkbox4.setState(false);
-        checkbox5.setState(false);
-        checkbox6.setState(false);
-        checkbox7.setState(false);
-        checkbox8.setState(false);
-       checkbox9.setState(false);
-        checkbox10.setState(false);
-        checkbox11.setState(false);
-        checkbox12.setState(false);
-        checkbox13.setState(false);
-        checkbox14.setState(false);
-        checkbox15.setState(false);
-        checkbox16.setState(false);
-        checkbox17.setState(false);
-        checkbox18.setState(false);
-        checkbox19.setState(false);
-        checkbox20.setState(false);
-        checkbox21.setState(false);
-        checkbox22.setState(false);
-        checkbox23.setState(false);
+       clear();
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    public void isSubmit() {
-     
+    public void ifSubmit() {
+        
          ArrayList<String> hmo = new ArrayList<>();
         
         if (checkbox9.getState()) {
@@ -874,12 +794,123 @@ public class NewDoctor extends javax.swing.JFrame {
     }
  
 
-
-    /**
+/**
      * @param args the command line arguments
      */
     
- 
+    
+    public void afterSub(){
+        mi.setEnabled(false);
+        mi.setEditable(false);
+        age1.setEnabled(false);
+        age1.setEditable(false);
+        jTextField1.setEnabled(false);
+        jTextField14.setEnabled(false);
+        jComboBox1.setEnabled(false);
+        jComboBox2.setEnabled(false);
+        jTextField3.setEnabled(false);
+        jTextField4.setEnabled(false);
+        jTextField5.setEnabled(false);
+        jTextField7.setEnabled(false);
+        jTextField8.setEnabled(false);
+        jTextField9.setEnabled(false);
+        jTextField10.setEnabled(false);
+        jTextField11.setEnabled(false);
+        jTextField12.setEnabled(false);
+        jTextField13.setEnabled(false);
+        jTextField14.setEnabled(false);
+        jTextField15.setEnabled(false);
+        jTextField16.setEnabled(false);
+        jTextField17.setEnabled(false);
+        jTextField1.setEditable(false);
+        jTextField14.setEditable(false);
+        jTextField3.setEditable(false);
+        jTextField4.setEditable(false);
+        jTextField5.setEditable(false);
+        jTextField7.setEditable(false);
+        jTextField8.setEditable(false);
+        jTextField9.setEditable(false);
+        jTextField10.setEditable(false);
+        jTextField11.setEditable(false);
+        jTextField12.setEditable(false);
+        jTextField13.setEditable(false);
+        jTextField14.setEditable(false);
+        jTextField15.setEditable(false);
+        jTextField16.setEditable(false);
+        jTextField17.setEditable(false);
+        checkbox16.setEnabled(false);
+        checkbox17.setEnabled(false);
+        checkbox2.setEnabled(false);
+        checkbox3.setEnabled(false);
+        checkbox4.setEnabled(false);
+        checkbox5.setEnabled(false);
+        checkbox6.setEnabled(false);
+        checkbox7.setEnabled(false);
+        checkbox8.setEnabled(false);
+        checkbox9.setEnabled(false);
+        checkbox10.setEnabled(false);
+        checkbox11.setEnabled(false);
+        checkbox12.setEnabled(false);
+        checkbox13.setEnabled(false);
+        checkbox14.setEnabled(false);
+        checkbox15.setEnabled(false);
+        checkbox18.setEnabled(false);
+        checkbox19.setEnabled(false);
+        checkbox20.setEnabled(false);
+        checkbox21.setEnabled(false);
+        checkbox22.setEnabled(false);
+        checkbox23.setEnabled(false);
+        
+    }                               
+    
+    public void clear(){
+     
+        mi.setText("");
+        age1.setText("");
+        jTextField1.setText("");
+        jTextField14.setText("");
+        jComboBox1.setSelectedIndex(0);
+        jComboBox2.setSelectedIndex(0);
+        jTextField3.setText("");
+        jTextField4.setText("");
+        jTextField5.setText("");
+        jTextField7.setText("");
+        jTextField8.setText("");
+        jTextField9.setText("");
+        jTextField10.setText("");
+        jTextField11.setText("");
+        jTextField12.setText("");
+        jTextField13.setText("");
+        jTextField14.setText("");
+        jTextField15.setText("");
+        jTextField16.setText("");
+        jTextField17.setText("");
+        checkbox1.setState(false);
+        checkbox2.setState(false);
+        checkbox3.setState(false);
+        checkbox4.setState(false);
+        checkbox5.setState(false);
+        checkbox6.setState(false);
+        checkbox7.setState(false);
+        checkbox8.setState(false);
+        checkbox9.setState(false);
+        checkbox10.setState(false);
+        checkbox11.setState(false);
+        checkbox12.setState(false);
+        checkbox13.setState(false);
+        checkbox14.setState(false);
+        checkbox15.setState(false);
+        checkbox16.setState(false);
+        checkbox17.setState(false);
+        checkbox18.setState(false);
+        checkbox19.setState(false);
+        checkbox20.setState(false);
+        checkbox21.setState(false);
+        checkbox22.setState(false);
+        checkbox23.setState(false);
+    }
+    
+    
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
