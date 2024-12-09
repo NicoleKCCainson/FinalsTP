@@ -26,7 +26,7 @@ import javax.swing.JOptionPane;
  *
  * @author nicol
  */
-public class NewPatient extends javax.swing.JFrame implements submit {
+public class EditPatient extends javax.swing.JFrame {
 
     String fileName;
     String docN;
@@ -37,12 +37,12 @@ public class NewPatient extends javax.swing.JFrame implements submit {
     String m; //PatientAge
     String fileLoc = "C:\\Users\\nicol\\Desktop\\Database\\Patient";
 
-    public NewPatient() {
+    public EditPatient() {
+        
         initComponents();
         jButton2.setEnabled(false);
         jComboBox6.setEnabled(false);
         jComboBox7.setEnabled(false);
-        Schedule.setVisible(true);
     }
 
     /**
@@ -60,7 +60,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jPanel1 = new javax.swing.JPanel();
         namelabel11 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        EpatientName = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         namelabel = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -109,7 +109,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel19 = new javax.swing.JLabel();
         jComboBox6 = new javax.swing.JComboBox<>();
         jComboBox7 = new javax.swing.JComboBox<>();
-        Schedule = new javax.swing.JLabel();
+        namelabel18 = new javax.swing.JLabel();
         checkbox1 = new java.awt.Checkbox();
         namelabel21 = new javax.swing.JLabel();
         jComboBox8 = new javax.swing.JComboBox<>();
@@ -119,8 +119,8 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         mi = new javax.swing.JTextField();
-        assistant = new javax.swing.JLabel();
-        contact = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
 
         menu4.setLabel("File");
         menu4.addActionListener(new java.awt.event.ActionListener() {
@@ -153,11 +153,10 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jLabel4.setOpaque(true);
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 1080, 40));
 
-        jLabel1.setBackground(new java.awt.Color(51, 51, 51));
-        jLabel1.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("New Patient");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, -1, -1));
+        EpatientName.setBackground(new java.awt.Color(51, 51, 51));
+        EpatientName.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
+        EpatientName.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(EpatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 390, 30));
 
         jButton1.setBackground(new java.awt.Color(68, 114, 196));
         jButton1.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
@@ -181,7 +180,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
 
         jButton2.setBackground(new java.awt.Color(68, 114, 196));
         jButton2.setForeground(new java.awt.Color(1, 13, 2));
-        jButton2.setText("Submit");
+        jButton2.setText("Done");
         jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -330,6 +329,11 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jTextField5.setBackground(new java.awt.Color(165, 165, 165));
         jTextField5.setForeground(new java.awt.Color(0, 0, 0));
         jTextField5.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 110, 24));
         jTextField5.getAccessibleContext().setAccessibleName("Weight");
 
@@ -533,10 +537,10 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         });
         jPanel1.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 190, -1));
 
-        Schedule.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        Schedule.setForeground(new java.awt.Color(0, 0, 0));
-        Schedule.setText("Availability: ");
-        jPanel1.add(Schedule, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 560, 700, 30));
+        namelabel18.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        namelabel18.setForeground(new java.awt.Color(0, 0, 0));
+        namelabel18.setText("Schedule: ");
+        jPanel1.add(namelabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 560, 260, 40));
 
         checkbox1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
         checkbox1.setLabel(" Choose this doctor");
@@ -593,15 +597,19 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         });
         jPanel1.add(mi, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 60, 20));
 
-        assistant.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        assistant.setForeground(new java.awt.Color(0, 0, 0));
-        assistant.setText("Assistant: ");
-        jPanel1.add(assistant, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 600, 700, 30));
+        jLabel11.setBackground(new java.awt.Color(51, 51, 51));
+        jLabel11.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Edit Patient: ");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, -1, 50));
 
-        contact.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        contact.setForeground(new java.awt.Color(0, 0, 0));
-        contact.setText("Contact Number: ");
-        jPanel1.add(contact, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 640, 690, 30));
+        jButton4.setText("Show previous information");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, 310, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 680));
         jPanel1.getAccessibleContext().setAccessibleDescription("");
@@ -613,7 +621,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         // TODO add your handling code here:
 
         ifSubmit();
-
+       
         sub sub = new sub();
         sub.setVisible(true);
         sub.setLocationRelativeTo(null);
@@ -624,7 +632,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-
+       
 
     }//GEN-LAST:event_jTextField1ActionPerformed
 
@@ -641,6 +649,10 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         this.dispose();
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
@@ -689,6 +701,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
 //  JOptionPane.showMessageDialog(null, "Note that after clicking yes, you will not be able to edit the set information. \n Continue?", "Confirm Submmision: ", JOptionPane.WARNING_MESSAGE);
+        ifSubmit();
         afterSub();
 
     }
@@ -696,7 +709,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
     public void ifSubmit() {
 
         String FirstName = jTextField1.getText().toUpperCase();
-        String LastName = jTextField4.getText().toUpperCase().replace(" ", "");
+        String LastName = jTextField4.getText().toUpperCase().replace(" ","");
         String middle = mi.getText().toUpperCase();
         String age = jTextField2.getText().toUpperCase();
         String illness = jTextPane1.getText().toUpperCase();
@@ -712,7 +725,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         String email = jTextField9.getText().toUpperCase();
         String bloodT = jComboBox5.getSelectedItem().toString().toUpperCase();
         String Aller = Allergies.getText().toUpperCase().replace(",", "|");
-
+        
         if (!age.isEmpty()) {
             try {
 
@@ -752,32 +765,36 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         String ConAddress = jTextField7.getText().toUpperCase().replace(",", "|");
         String rEmail = jTextField11.getText().toUpperCase();
 
-        String fullName = FirstName + " " + middle + " " + LastName;
-        String FileName = fullName.replace("  ", " ") + ".txt";
-        String docName = fullName.replace("  ", " ");
+       
+        String fullName = FirstName + " " +middle+" "+ LastName;
+        String FileName = fullName.replace("  "," ") + ".txt";
+        String docName = fullName.replace("  "," ") ;
         setFileName(FileName);
-
+        
         try {
-
+            
+           
+            
             File parentDir = new File(fileLoc);
             parentDir.mkdir();
-
-            new File(fileLoc + "\\" + docName).mkdirs();
-
+            
+           new File(fileLoc + "\\" +docName).mkdirs();
+            
+            
             File file = new File(parentDir, FileName);
             file.createNewFile();
 
             FileWriter writer = new FileWriter(fileLoc + "\\" + FileName);
 
             writer.write("-------------------Patient Information------------------");
-            writer.write("\nName: " + fullName.replace("  ", " "));
+            writer.write("\nName: " + fullName.replace("  "," "));
             writer.write("\nAge: " + age);
             writer.write("\nIllness: " + illness);
             writer.write("\nAllergies: " + Aller);
             writer.write("\nSex: " + Sex);
             writer.write("\nHeight: " + Height + " cm");
-            writer.write("\nBlood Type: " + bloodT);
-            writer.write("\nWeight: " + Weight + " kg");
+            writer.write("\nBlood Type: "+bloodT);
+            writer.write("\nWeight: " + Weight +" kg");
             writer.write("\nAddress: " + address);
             writer.write("\nCivil Status: " + civilStat);
             writer.write("\nBirthday: " + month + " " + day + " " + year);
@@ -797,13 +814,131 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         } catch (Exception e) {
 
         }
+}
+        public void afterSub(){
+
+
+           if (error == false) {
+            int response = JOptionPane.showConfirmDialog(null, "         After clicking confirm, the information will be submitted. \n                                      Are you sure? ", "Confirm", JOptionPane.YES_NO_OPTION);
+
+            if (response == JOptionPane.YES_OPTION) {
+
+                jToggleButton1.setEnabled(false);
+
+                jButton2.setEnabled(true);
+                jComboBox6.setEnabled(true);
+                jComboBox7.setEnabled(true);
+
+                jTextField1.setEditable(false);
+                jTextField1.setFocusable(false);
+                
+                mi.setEditable(false);
+                mi.setFocusable(false);
+
+                jTextField2.setEditable(false);
+                jTextField2.setFocusable(false);
+
+                jTextField4.setEditable(false);
+                jTextField4.setFocusable(false);
+
+                jTextPane1.setEditable(false);
+                jTextPane1.setFocusable(false);
+
+                jComboBox1.setEditable(false);
+                jComboBox1.setEnabled(false);
+
+                jTextField6.setEditable(false);
+                jTextField6.setFocusable(false);
+
+                jTextField5.setEditable(false);
+                jTextField5.setFocusable(false);
+
+                jTextField8.setEditable(false);
+                jTextField8.setFocusable(false);
+
+                jComboBox2.setEditable(false);
+                jComboBox2.setEnabled(false);
+
+                jComboBox4.setEditable(false);
+                jComboBox4.setEnabled(false);
+
+                jComboBox3.setEditable(false);
+                jComboBox3.setEnabled(false);
+
+                jComboBox5.setEditable(false);
+                jComboBox5.setEnabled(false);
+                
+                jComboBox8.setEditable(false);
+                jComboBox8.setEnabled(false);
+
+                jTextField13.setEditable(false);
+                jTextField13.setFocusable(false);
+
+                jTextField9.setEditable(false);
+                jTextField9.setFocusable(false);
+
+                jTextField10.setEditable(false);
+                jTextField10.setFocusable(false);
+
+                jTextField11.setEditable(false);
+                jTextField11.setFocusable(false);
+
+                jTextField12.setEditable(false);
+                jTextField12.setFocusable(false);
+
+                jTextField7.setEditable(false);
+                jTextField7.setFocusable(false);
+
+                jTextField14.setEditable(false);
+                jTextField14.setFocusable(false);
+                
+                Allergies.setEditable(false);
+                Allergies.setFocusable(false);
+
+            } else {
+                jComboBox6.setEnabled(false);
+                jButton2.setEnabled(false);
+                jComboBox7.setFocusable(false);
+                jComboBox7.setEditable(false);
+            }
+        } else {
+            jComboBox6.setEnabled(false);
+            jButton2.setEnabled(false);
+            jComboBox7.setEnabled(false);
+
+        }
+
 
 
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         //Clear
-        clear();
+        
+        jTextField1.setText("");
+        jTextField4.setText("");
+        jTextField2.setText("");
+        jTextPane1.setText("");
+        jComboBox1.setSelectedIndex(0);
+        jTextField6.setText("");
+        jTextField5.setText("");
+        jTextField8.setText("");
+        Allergies.setText("");
+        jComboBox2.setSelectedIndex(0);
+        jComboBox4.setSelectedIndex(0);
+        jComboBox3.setSelectedIndex(0);
+        jComboBox8.setSelectedIndex(0);
+        jComboBox5.setSelectedIndex(0);
+        jTextField11.setText("");
+        jTextField10.setText("");
+        jTextField9.setText("");
+        jTextField13.setText("");
+        jTextField14.setText("");
+        jTextField7.setText("");
+        jTextField12.setText("");
+        mi.setText("");
+        jComboBox7.setSelectedIndex(0);
+        jComboBox6.setSelectedIndex(0);
     }
 
     public void setFileName(String fileName) {
@@ -833,9 +968,6 @@ public class NewPatient extends javax.swing.JFrame implements submit {
 
     private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
         // TODO add your handling code here:
-        Schedule.setVisible(true);
-        assistant.setVisible(true);
-        contact.setVisible(true);
 
         try {
             File path2 = new File("C:\\Users\\nicol\\Desktop\\Database\\Doctor\\" + jComboBox6.getSelectedItem().toString() + ".txt");
@@ -845,19 +977,13 @@ public class NewPatient extends javax.swing.JFrame implements submit {
             ArrayList<String> files = new ArrayList<>();
 
             while ((s = br.readLine()) != null) {
-                files.add(s.replaceAll(",", "|"));
+                files.add(s);
 
             }
 
             String c = files.toString();
-            String avail = c.split(",")[8].replace("|", ",");
-            Schedule.setText(avail);
-
-            String as = c.split(",")[11].replace("|", ",");
-            assistant.setText(as);
-
-            String con = c.split(",")[12];
-            contact.setText(con);
+            String a = c.split(",")[8];
+            namelabel18.setText(a);
 
         } catch (Exception e) {
 
@@ -872,7 +998,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         String word = jComboBox7.getSelectedItem().toString();
         setDepartment(word);
         dep();
-
+      
 
     }//GEN-LAST:event_jComboBox7ActionPerformed
 
@@ -880,7 +1006,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         // TODO add your handling code here:
 
         String docN = jComboBox6.getSelectedItem().toString();
-
+        
         setDoctorName(docN);
 
     }//GEN-LAST:event_checkbox1ItemStateChanged
@@ -895,8 +1021,15 @@ public class NewPatient extends javax.swing.JFrame implements submit {
 
     private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
         // TODO add your handling code here:
-
+   
     }//GEN-LAST:event_jTextField1KeyPressed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+        
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     public String getPatientAge() {
         return m;
@@ -956,129 +1089,6 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         }
     }
 
-    public void afterSub() {
-
-        if (error == false) {
-            int response = JOptionPane.showConfirmDialog(null, "         After clicking confirm, the information will be submitted. \n                                      Are you sure? ", "Confirm", JOptionPane.YES_NO_OPTION);
-
-            if (response == JOptionPane.YES_OPTION) {
-
-                jToggleButton1.setEnabled(false);
-
-                jButton2.setEnabled(true);
-                jComboBox6.setEnabled(true);
-                jComboBox7.setEnabled(true);
-
-                jTextField1.setEditable(false);
-                //  jTextField1.setFocusable(false);
-
-                mi.setEditable(false);
-                mi.setFocusable(false);
-
-                jTextField2.setEditable(false);
-                jTextField2.setFocusable(false);
-
-                jTextField4.setEditable(false);
-                jTextField4.setFocusable(false);
-
-                jTextPane1.setEditable(false);
-                jTextPane1.setFocusable(false);
-
-                jComboBox1.setEditable(false);
-                jComboBox1.setEnabled(false);
-
-                jTextField6.setEditable(false);
-                jTextField6.setFocusable(false);
-
-                jTextField5.setEditable(false);
-                jTextField5.setFocusable(false);
-
-                jTextField8.setEditable(false);
-                jTextField8.setFocusable(false);
-
-                jComboBox2.setEditable(false);
-                jComboBox2.setEnabled(false);
-
-                jComboBox4.setEditable(false);
-                jComboBox4.setEnabled(false);
-
-                jComboBox3.setEditable(false);
-                jComboBox3.setEnabled(false);
-
-                jComboBox5.setEditable(false);
-                jComboBox5.setEnabled(false);
-
-                jComboBox8.setEditable(false);
-                jComboBox8.setEnabled(false);
-
-                jTextField13.setEditable(false);
-                jTextField13.setFocusable(false);
-
-                jTextField9.setEditable(false);
-                jTextField9.setFocusable(false);
-
-                jTextField10.setEditable(false);
-                jTextField10.setFocusable(false);
-
-                jTextField11.setEditable(false);
-                jTextField11.setFocusable(false);
-
-                jTextField12.setEditable(false);
-                jTextField12.setFocusable(false);
-
-                jTextField7.setEditable(false);
-                jTextField7.setFocusable(false);
-
-                jTextField14.setEditable(false);
-                jTextField14.setFocusable(false);
-
-                Allergies.setEditable(false);
-                Allergies.setFocusable(false);
-
-            } else {
-                jComboBox6.setEnabled(false);
-                jButton2.setEnabled(false);
-                jComboBox7.setFocusable(false);
-                jComboBox7.setEditable(false);
-            }
-        } else {
-            jComboBox6.setEnabled(false);
-            jButton2.setEnabled(false);
-            jComboBox7.setEnabled(false);
-
-        }
-
-    }
-
-    public void clear() {
-
-        jTextField1.setText("");
-        jTextField4.setText("");
-        jTextField2.setText("");
-        jTextPane1.setText("");
-        jComboBox1.setSelectedIndex(0);
-        jTextField6.setText("");
-        jTextField5.setText("");
-        jTextField8.setText("");
-        Allergies.setText("");
-        jComboBox2.setSelectedIndex(0);
-        jComboBox4.setSelectedIndex(0);
-        jComboBox3.setSelectedIndex(0);
-        jComboBox8.setSelectedIndex(0);
-        jComboBox5.setSelectedIndex(0);
-        jTextField11.setText("");
-        jTextField10.setText("");
-        jTextField9.setText("");
-        jTextField13.setText("");
-        jTextField14.setText("");
-        jTextField7.setText("");
-        jTextField12.setText("");
-        mi.setText("");
-        jComboBox7.setSelectedIndex(0);
-        jComboBox6.setSelectedIndex(0);
-
-    }
-
     /**
      * @param args the command line arguments
      */
@@ -1096,21 +1106,23 @@ public class NewPatient extends javax.swing.JFrame implements submit {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewPatient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditPatient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewPatient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditPatient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewPatient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditPatient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewPatient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditPatient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewPatient().setVisible(true);
+                new EditPatient().setVisible(true);
 
             }
         });
@@ -1118,13 +1130,12 @@ public class NewPatient extends javax.swing.JFrame implements submit {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextPane Allergies;
-    private javax.swing.JLabel Schedule;
-    private javax.swing.JLabel assistant;
+    public javax.swing.JLabel EpatientName;
     private java.awt.Checkbox checkbox1;
-    private javax.swing.JLabel contact;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -1133,8 +1144,8 @@ public class NewPatient extends javax.swing.JFrame implements submit {
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBox8;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1175,6 +1186,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
     private javax.swing.JLabel namelabel15;
     private javax.swing.JLabel namelabel16;
     private javax.swing.JLabel namelabel17;
+    private javax.swing.JLabel namelabel18;
     private javax.swing.JLabel namelabel19;
     private javax.swing.JLabel namelabel2;
     private javax.swing.JLabel namelabel21;

@@ -11,7 +11,7 @@ import java.io.FileWriter;
  *
  * @author nicol
  */
-public class newRecord extends javax.swing.JFrame {
+public class newRecord extends javax.swing.JFrame implements submit{
 
     /**
      * Creates new form newRecord
@@ -390,7 +390,7 @@ public class newRecord extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-
+        ifSubmit();
         String date = month1.getSelectedItem().toString() + " " + day1.getSelectedItem().toString() + " " + year1.getSelectedItem().toString();
         String newAp = month2.getSelectedItem().toString() + " " + day2.getSelectedItem().toString() + " " + year2.getSelectedItem().toString();
 
@@ -434,7 +434,51 @@ public class newRecord extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+  
         
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    
+    
+    public void ifSubmit(){
+    
+        String date = month1.getSelectedItem().toString() + " " + day1.getSelectedItem().toString() + " " + year1.getSelectedItem().toString();
+        String newAp = month2.getSelectedItem().toString() + " " + day2.getSelectedItem().toString() + " " + year2.getSelectedItem().toString();
+
+        try {
+            String FileName = date + ".txt";
+            File parentDir = new File("C:\\Users\\nicol\\Desktop\\Database\\Patient\\" + namelabel1.getText());
+            parentDir.mkdir();
+
+           // new File("C:\\Users\\nicol\\Desktop\\Database\\Patient\\" + namelabel1.getText()).mkdirs();
+
+            File file = new File(parentDir, FileName);
+            file.createNewFile();
+
+            FileWriter writer = new FileWriter("C:\\Users\\nicol\\Desktop\\Database\\Patient\\" + namelabel1.getText() +"\\"+ FileName);
+            writer.write("Date of Visit: " + date);
+            writer.write("\nConcern: " + concern1.getText());
+            writer.write("\nMedical Diagnosis: " + diag1.getText());
+            writer.write("\nPrescription/Medical Advice: " + presc1.getText());
+            writer.write("\nLaboratory Request: " + lab1.getSelectedItem().toString());
+            writer.write("\nNext Appointment: " + newAp);
+            writer.write("\nAgenda: " + agenda1.getText().toString());
+            writer.close();
+            
+        } catch (Exception e) {
+            
+        }
+    }
+    
+    public void afterSub(){
+    
+    }
+    
+    public void clear(){
+          
         concern1.setText("");
         diag1.setText("");
         presc1.setText("");
@@ -447,12 +491,8 @@ public class newRecord extends javax.swing.JFrame {
         day2.setSelectedIndex(0);
         year2.setSelectedIndex(0);
         
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

@@ -33,6 +33,7 @@ public class NewDoctor extends javax.swing.JFrame {
         jTextField15.setEditable(false);
         jTextField16.setEditable(false);
         
+       
    
     }
 
@@ -631,7 +632,7 @@ public class NewDoctor extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        
+         
         mi.setText("");
         age1.setText("");
         jTextField1.setText("");
@@ -660,7 +661,7 @@ public class NewDoctor extends javax.swing.JFrame {
         checkbox6.setState(false);
         checkbox7.setState(false);
         checkbox8.setState(false);
-        checkbox9.setState(false);
+       checkbox9.setState(false);
         checkbox10.setState(false);
         checkbox11.setState(false);
         checkbox12.setState(false);
@@ -679,7 +680,7 @@ public class NewDoctor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     public void isSubmit() {
-        
+     
          ArrayList<String> hmo = new ArrayList<>();
         
         if (checkbox9.getState()) {
@@ -877,6 +878,9 @@ public class NewDoctor extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
+ 
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

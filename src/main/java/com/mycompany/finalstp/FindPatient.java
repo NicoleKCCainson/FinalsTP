@@ -275,6 +275,11 @@ public class FindPatient extends javax.swing.JFrame {
         jPanel1.add(BloodType, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 254, 34));
 
         jButton3.setText("Edit Patient Information");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 340, 280, 30));
 
         jButton6.setText("View Patient Records");
@@ -626,6 +631,17 @@ public class FindPatient extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        
+        EditPatient ep = new EditPatient();
+        ep.EpatientName.setText(jComboBox2.getSelectedItem().toString());
+        ep.setVisible(true);
+        ep.setResizable(false);
+        this.dispose();
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
     public static void main(String[] args) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
