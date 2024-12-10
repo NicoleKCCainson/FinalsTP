@@ -908,6 +908,7 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
         checkbox21.setState(false);
         checkbox22.setState(false);
         checkbox23.setState(false);
+        
     }
     
     
