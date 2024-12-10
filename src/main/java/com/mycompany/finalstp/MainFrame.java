@@ -94,9 +94,9 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jLabel2.setBackground(new java.awt.Color(14, 21, 20));
-        jLabel2.setFont(new java.awt.Font("Sitka Small", 0, 48)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Sitka Small", 0, 44)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(14, 21, 20));
-        jLabel2.setText("Welcome to Hospital ABC! ");
+        jLabel2.setText("Welcome to RUMNICELS Medical Center! ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -118,14 +118,14 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGap(260, 260, 260))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(204, 204, 204))))
+                        .addGap(65, 65, 65))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(237, Short.MAX_VALUE)
+                .addContainerGap(248, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(61, 61, 61)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

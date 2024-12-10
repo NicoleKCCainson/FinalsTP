@@ -688,9 +688,10 @@ public class NewPatient extends javax.swing.JFrame implements submit {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
-//  JOptionPane.showMessageDialog(null, "Note that after clicking yes, you will not be able to edit the set information. \n Continue?", "Confirm Submmision: ", JOptionPane.WARNING_MESSAGE);
+       /// JOptionPane.showMessageDialog(null, "Note that after clicking yes, you will not be able to edit the set information. \n Continue?", "Confirm Submmision: ", JOptionPane.WARNING_MESSAGE);
         afterSub();
-
+        
+        
     }
 
     public void ifSubmit() {

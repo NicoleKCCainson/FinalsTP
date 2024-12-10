@@ -636,11 +636,14 @@ public class FindPatient extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         EditPatient ep = new EditPatient();
-        ep.EpatientName.setText(jComboBox2.getSelectedItem().toString());
-        ep.setVisible(true);
-        ep.setResizable(false);
-        this.dispose();
         
+      
+        ep.patientName.setText(jComboBox2.getSelectedItem().toString());
+        ep.setVisible(true);
+       ep.setResizable(false);
+       ep.setLocationRelativeTo(null);
+
+  
     }//GEN-LAST:event_jButton3ActionPerformed
     public static void main(String[] args) {
 
