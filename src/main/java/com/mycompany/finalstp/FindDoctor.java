@@ -85,151 +85,170 @@ public class FindDoctor extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Find Doctors Information");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 33, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, -1, -1));
 
+        jButton2.setBackground(new java.awt.Color(68, 114, 196));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Done");
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 700, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 640, 60, 30));
 
+        jButton4.setBackground(new java.awt.Color(68, 114, 196));
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Copy");
+        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 700, -1, -1));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 640, 60, 30));
 
+        jButton5.setBackground(new java.awt.Color(68, 114, 196));
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("back");
+        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 33, -1, -1));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 33, 50, -1));
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("        To  Look For a Doctor's File Enter Doctor's Name:");
-        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
+        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel5.setOpaque(true);
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 90, 1300, 37));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1090, 30));
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("    Secretary's Information: ");
-        jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
+        jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel6.setOpaque(true);
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 1314, 37));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 1090, 30));
 
         Demail.setBackground(new java.awt.Color(51, 51, 51));
         Demail.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         Demail.setForeground(new java.awt.Color(0, 0, 0));
         Demail.setText(" ");
         Demail.setAlignmentX(0.5F);
-        jPanel1.add(Demail, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, 140, 40));
+        jPanel1.add(Demail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, 310, 30));
 
         age.setBackground(new java.awt.Color(51, 51, 51));
         age.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         age.setForeground(new java.awt.Color(0, 0, 0));
         age.setText(" ");
         age.setAlignmentX(0.5F);
-        jPanel1.add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 70, 30));
+        jPanel1.add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 70, 30));
 
         DocNum.setBackground(new java.awt.Color(51, 51, 51));
         DocNum.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         DocNum.setForeground(new java.awt.Color(0, 0, 0));
         DocNum.setText("  ");
         DocNum.setAlignmentX(0.5F);
-        jPanel1.add(DocNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, 260, 40));
+        jPanel1.add(DocNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 170, 30));
 
         availability.setBackground(new java.awt.Color(51, 51, 51));
         availability.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         availability.setForeground(new java.awt.Color(0, 0, 0));
         availability.setText(" ");
         availability.setAlignmentX(0.5F);
-        jPanel1.add(availability, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, 610, 40));
+        jPanel1.add(availability, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 270, 400, 30));
 
         department.setBackground(new java.awt.Color(51, 51, 51));
         department.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         department.setForeground(new java.awt.Color(0, 0, 0));
         department.setText(" ");
         department.setAlignmentX(0.5F);
-        jPanel1.add(department, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 260, 40));
+        jPanel1.add(department, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 300, 30));
 
         firstname.setBackground(new java.awt.Color(51, 51, 51));
         firstname.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         firstname.setForeground(new java.awt.Color(0, 0, 0));
         firstname.setText(" ");
         firstname.setAlignmentX(0.5F);
-        jPanel1.add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 254, 34));
+        jPanel1.add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 290, 34));
 
         Secname.setBackground(new java.awt.Color(51, 51, 51));
         Secname.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         Secname.setForeground(new java.awt.Color(0, 0, 0));
         Secname.setText(" ");
         Secname.setAlignmentX(0.5F);
-        jPanel1.add(Secname, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 610, 390, 34));
+        jPanel1.add(Secname, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 520, 310, 30));
 
         Secnum.setBackground(new java.awt.Color(51, 51, 51));
         Secnum.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         Secnum.setForeground(new java.awt.Color(0, 0, 0));
         Secnum.setText(" ");
         Secnum.setAlignmentX(0.5F);
-        jPanel1.add(Secnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 670, 320, 34));
+        jPanel1.add(Secnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 570, 260, 30));
 
         gender.setBackground(new java.awt.Color(51, 51, 51));
         gender.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         gender.setForeground(new java.awt.Color(0, 0, 0));
         gender.setText(" ");
         gender.setAlignmentX(0.5F);
-        jPanel1.add(gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 140, 30));
+        jPanel1.add(gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 130, 30));
 
+        jComboBox2.setBackground(new java.awt.Color(165, 165, 165));
         jComboBox2.setEditable(true);
+        jComboBox2.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox2.setBorder(null);
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(949, 193, 233, -1));
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 170, 230, 20));
 
+        jButton7.setBackground(new java.awt.Color(68, 114, 196));
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Find");
+        jButton7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 255, 255), null, null));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1188, 193, -1, -1));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 170, 40, -1));
 
         SecEmail.setBackground(new java.awt.Color(51, 51, 51));
         SecEmail.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         SecEmail.setForeground(new java.awt.Color(0, 0, 0));
         SecEmail.setText(" ");
         SecEmail.setAlignmentX(0.5F);
-        jPanel1.add(SecEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 670, 350, 34));
+        jPanel1.add(SecEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 620, 350, 30));
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Enter Doctor's Name:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(949, 171, 236, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 150, 230, -1));
 
         hmo.setBackground(new java.awt.Color(51, 51, 51));
         hmo.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         hmo.setForeground(new java.awt.Color(0, 0, 0));
         hmo.setText(" ");
         hmo.setAlignmentX(0.5F);
-        jPanel1.add(hmo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 680, 40));
+        jPanel1.add(hmo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 400, 30));
 
         roomnum.setBackground(new java.awt.Color(51, 51, 51));
         roomnum.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         roomnum.setForeground(new java.awt.Color(0, 0, 0));
         roomnum.setText(" ");
         roomnum.setAlignmentX(0.5F);
-        jPanel1.add(roomnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 234, 140, 40));
+        jPanel1.add(roomnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 80, 30));
 
+        jComboBox7.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox7.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NO DEPARTMENT SELECTED", "GENERAL MEDICINE", "CARDIOLOGY", "NEUROLOGY", "PEDIATRICS", "ORTHOPEDICS", "DERMATOLOGY", "GYNECOLOGY", "UROLOGY", "NEPHROLOGY", "PULMONOLOGY", "ENDOCRINOLOGY", "PSYCHIATRY", "GASTROENTEROLOGY", "HEMATOLOGY", "ONCOLOGY", "RADIOLOGY", "ANESTHESIOLOGY", "OPHTHALMOLOGY", "OTOLARYNGOLOGY (ENT)", "DENTISTRY", "RHEUMATOLOGY", "GERIATRICS", "EMERGENCY MEDICINE", "PATHOLOGY", "PLASTIC SURGERY", "GENERAL SURGERY", "NEUROSURGERY", "OBSTETRICS", "SPORTS MEDICINE", "PALLIATIVE CARE" }));
+        jComboBox7.setBorder(null);
         jComboBox7.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jComboBox7ItemStateChanged(evt);
@@ -240,9 +259,9 @@ public class FindDoctor extends javax.swing.JFrame {
                 jComboBox7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 230, 230, 30));
+        jPanel1.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 210, 230, 20));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1320, 750));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 710));
         jPanel1.getAccessibleContext().setAccessibleName("copy");
 
         pack();
@@ -299,12 +318,12 @@ public class FindDoctor extends javax.swing.JFrame {
             String secNum = c.split(",")[12];
             String secEmail = c.split(",")[13];
 
-            /*
-              StringSelection copier = new StringSelection( name + "\n" +age + "\n" + illness + "\n" + Sex + "\n" + Height + "\n" + Weight + "\n" + address + "\n" + CivilStatus + "\n" + Birthday + "\n" + ContactNo+ 
-        "\n" + email + "\n" + rName + "\n" + rContact + "\n" + Relationship + "\n" + rEmail + "\n" + rAddress + "\n" + DocTor );
+            
+              StringSelection copier = new StringSelection( name + "\n" +age + "\n" + department + "\n" + Gender + "\n" + contactNo + "\n" + Room + "\n" + hmos + "\n" + avail + "\n" + secName + "\n" + secNum+ 
+        "\n" + secEmail  );
         Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
           cb.setContents(copier, null);  
-             */        } catch (Exception e) {
+            } catch (Exception e) {
 
         }
 
@@ -313,6 +332,13 @@ public class FindDoctor extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        
+        MainFrame fd = new MainFrame();
+        fd.setVisible(true);
+        fd.setResizable(false);
+        fd.setLocationRelativeTo(null);
+        this.dispose();
+        
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed

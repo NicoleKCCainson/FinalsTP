@@ -3,6 +3,7 @@ package com.mycompany.finalstp;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -31,6 +32,8 @@ public class NewPatient extends javax.swing.JFrame implements submit {
     String fileName;
     String docN;
     String Department;
+    String pass;
+    String password;
 
     boolean error = false;
 // new patient
@@ -38,11 +41,15 @@ public class NewPatient extends javax.swing.JFrame implements submit {
     String fileLoc = "C:\\Users\\nicol\\Desktop\\Database\\Patient";
 
     public NewPatient() {
+        
         initComponents();
+        
         jButton2.setEnabled(false);
         jComboBox6.setEnabled(false);
         jComboBox7.setEnabled(false);
         Schedule.setVisible(true);
+        pwNoMatch.setVisible(false);
+        confirmed.setVisible(false);
     }
 
     /**
@@ -57,6 +64,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         menuBar2 = new java.awt.MenuBar();
         menu4 = new java.awt.Menu();
         menu5 = new java.awt.Menu();
+        jFileChooser1 = new javax.swing.JFileChooser();
         jPanel1 = new javax.swing.JPanel();
         namelabel11 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -102,7 +110,6 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel16 = new javax.swing.JLabel();
         jTextField13 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
         namelabel17 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jTextField14 = new javax.swing.JTextField();
@@ -121,6 +128,18 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         mi = new javax.swing.JTextField();
         assistant = new javax.swing.JLabel();
         contact = new javax.swing.JLabel();
+        namelabel18 = new javax.swing.JLabel();
+        pass1 = new javax.swing.JPasswordField();
+        pass2 = new javax.swing.JPasswordField();
+        namelabel20 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        showPassCreate = new javax.swing.JLabel();
+        showPassConfirm = new javax.swing.JLabel();
+        butSP2 = new javax.swing.JToggleButton();
+        butSP1 = new javax.swing.JToggleButton();
+        pwNoMatch = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        confirmed = new javax.swing.JLabel();
 
         menu4.setLabel("File");
         menu4.addActionListener(new java.awt.event.ActionListener() {
@@ -177,7 +196,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel.setForeground(new java.awt.Color(0, 0, 0));
         namelabel.setText("Address: ");
-        jPanel1.add(namelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 410, -1, 30));
+        jPanel1.add(namelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 420, -1, 30));
 
         jButton2.setBackground(new java.awt.Color(68, 114, 196));
         jButton2.setForeground(new java.awt.Color(1, 13, 2));
@@ -215,7 +234,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Address:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 50, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 50, 30));
 
         jTextField4.setBackground(new java.awt.Color(165, 165, 165));
         jTextField4.setForeground(new java.awt.Color(0, 0, 0));
@@ -242,7 +261,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel2.setForeground(new java.awt.Color(0, 0, 0));
         namelabel2.setText("Civil Status:");
-        jPanel1.add(namelabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 130, -1, -1));
+        jPanel1.add(namelabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, -1, -1));
 
         jComboBox1.setBackground(new java.awt.Color(165, 165, 165));
         jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
@@ -269,7 +288,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel5.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel5.setForeground(new java.awt.Color(0, 0, 0));
         namelabel5.setText("Birthdate: ");
-        jPanel1.add(namelabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 150, -1, 50));
+        jPanel1.add(namelabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(631, 150, 70, 50));
 
         namelabel6.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel6.setForeground(new java.awt.Color(0, 0, 0));
@@ -285,7 +304,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
                 jComboBox2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 120, -1, 26));
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 120, -1, 26));
         jComboBox2.getAccessibleContext().setAccessibleName("CiStatus");
 
         jComboBox3.setBackground(new java.awt.Color(165, 165, 165));
@@ -298,7 +317,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
                 jComboBox3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 160, -1, -1));
+        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 160, -1, -1));
         jComboBox3.getAccessibleContext().setAccessibleName("BdYear");
 
         jComboBox4.setBackground(new java.awt.Color(165, 165, 165));
@@ -311,7 +330,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
                 jComboBox4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 160, 80, -1));
+        jPanel1.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 160, 80, -1));
         jComboBox4.getAccessibleContext().setAccessibleName("BdMonth");
 
         jComboBox5.setBackground(new java.awt.Color(165, 165, 165));
@@ -324,7 +343,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
                 jComboBox5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 260, 70, -1));
+        jPanel1.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 160, 60, -1));
         jComboBox5.getAccessibleContext().setAccessibleName("BdDay");
 
         jTextField5.setBackground(new java.awt.Color(165, 165, 165));
@@ -360,13 +379,13 @@ public class NewPatient extends javax.swing.JFrame implements submit {
                 jTextField7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 410, 420, 24));
+        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 420, 420, 24));
         jTextField7.getAccessibleContext().setAccessibleName("conAddress");
 
         namelabel8.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel8.setForeground(new java.awt.Color(0, 0, 0));
-        namelabel8.setText("BloodType: ");
-        jPanel1.add(namelabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 250, -1, 50));
+        namelabel8.setText("Create Password: ");
+        jPanel1.add(namelabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 260, 120, 20));
 
         jTextField8.setBackground(new java.awt.Color(165, 165, 165));
         jTextField8.setForeground(new java.awt.Color(0, 0, 0));
@@ -376,15 +395,15 @@ public class NewPatient extends javax.swing.JFrame implements submit {
                 jTextField8ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 800, 24));
+        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 490, 24));
         jTextField8.getAccessibleContext().setAccessibleName("Address");
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("  Hospital Admission: Enter Patient's Information");
+        jLabel5.setText("                          Create a password for accessing your files. (Required)");
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
         jLabel5.setOpaque(true);
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1080, 37));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 220, 470, 30));
 
         namelabel9.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel9.setForeground(new java.awt.Color(0, 0, 0));
@@ -394,12 +413,12 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel10.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel10.setForeground(new java.awt.Color(0, 0, 0));
         namelabel10.setText("Name: ");
-        jPanel1.add(namelabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, -1, 30));
+        jPanel1.add(namelabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, -1, 30));
 
         namelabel12.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel12.setForeground(new java.awt.Color(0, 0, 0));
         namelabel12.setText("Relation: ");
-        jPanel1.add(namelabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 440, 210, 30));
+        jPanel1.add(namelabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, 210, 30));
 
         jTextField9.setBackground(new java.awt.Color(165, 165, 165));
         jTextField9.setForeground(new java.awt.Color(0, 0, 0));
@@ -409,13 +428,13 @@ public class NewPatient extends javax.swing.JFrame implements submit {
                 jTextField9ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 230, 240, 24));
+        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 190, 220, 24));
         jTextField9.getAccessibleContext().setAccessibleName("Email");
 
         jTextField10.setBackground(new java.awt.Color(165, 165, 165));
         jTextField10.setForeground(new java.awt.Color(0, 0, 0));
         jTextField10.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, 260, 24));
+        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 260, 24));
         jTextField10.getAccessibleContext().setAccessibleName("conName");
 
         jTextField11.setBackground(new java.awt.Color(165, 165, 165));
@@ -426,7 +445,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
                 jTextField11ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, 260, 24));
+        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 260, 24));
         jTextField11.getAccessibleContext().setAccessibleName("conContact");
 
         jTextField12.setBackground(new java.awt.Color(165, 165, 165));
@@ -437,7 +456,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
                 jTextField12ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 440, 300, 24));
+        jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 450, 300, 24));
         jTextField12.getAccessibleContext().setAccessibleName("Rela");
 
         jButton3.setBackground(new java.awt.Color(153, 204, 255));
@@ -469,7 +488,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel16.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel16.setForeground(new java.awt.Color(0, 0, 0));
         namelabel16.setText("Contact no. :");
-        jPanel1.add(namelabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 190, -1, 50));
+        jPanel1.add(namelabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, 80, 50));
 
         jTextField13.setBackground(new java.awt.Color(165, 165, 165));
         jTextField13.setForeground(new java.awt.Color(0, 0, 0));
@@ -479,7 +498,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
                 jTextField13ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 200, 240, 24));
+        jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 190, 80, 24));
         jTextField13.getAccessibleContext().setAccessibleName("contactNum");
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
@@ -487,21 +506,12 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jLabel6.setText("  In Case Of Emergency Please Contact: ");
         jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
         jLabel6.setOpaque(true);
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 1080, 37));
-
-        jToggleButton1.setBackground(new java.awt.Color(68, 114, 196));
-        jToggleButton1.setText("Confirm");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 470, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 1080, 37));
 
         namelabel17.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel17.setForeground(new java.awt.Color(0, 0, 0));
         namelabel17.setText("Email: ");
-        jPanel1.add(namelabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 470, -1, 30));
+        jPanel1.add(namelabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 480, -1, 30));
 
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("  ");
@@ -510,12 +520,12 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jTextField14.setBackground(new java.awt.Color(165, 165, 165));
         jTextField14.setForeground(new java.awt.Color(0, 0, 0));
         jTextField14.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jPanel1.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 260, 24));
+        jPanel1.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, 260, 24));
 
         namelabel19.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel19.setForeground(new java.awt.Color(0, 0, 0));
         namelabel19.setText("Contact No. :");
-        jPanel1.add(namelabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 440, -1, 30));
+        jPanel1.add(namelabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, -1, 30));
 
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No Doctor Selected" }));
         jComboBox6.addActionListener(new java.awt.event.ActionListener() {
@@ -550,7 +560,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel21.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         namelabel21.setForeground(new java.awt.Color(0, 0, 0));
         namelabel21.setText("Email: ");
-        jPanel1.add(namelabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 220, -1, 50));
+        jPanel1.add(namelabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 180, -1, 50));
 
         jComboBox8.setBackground(new java.awt.Color(165, 165, 165));
         jComboBox8.setEditable(true);
@@ -562,7 +572,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
                 jComboBox8ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 160, 60, -1));
+        jPanel1.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 160, 60, -1));
 
         Allergies.setBackground(new java.awt.Color(153, 153, 153));
         Allergies.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -603,6 +613,98 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         contact.setText("Contact Number: ");
         jPanel1.add(contact, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 640, 690, 30));
 
+        namelabel18.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        namelabel18.setForeground(new java.awt.Color(0, 0, 0));
+        namelabel18.setText("BloodType: ");
+        jPanel1.add(namelabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(936, 150, 70, 50));
+
+        pass1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pass1ActionPerformed(evt);
+            }
+        });
+        pass1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                pass1KeyReleased(evt);
+            }
+        });
+        jPanel1.add(pass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 260, 130, 20));
+
+        pass2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                pass2KeyReleased(evt);
+            }
+        });
+        jPanel1.add(pass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 310, 130, 20));
+
+        namelabel20.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        namelabel20.setForeground(new java.awt.Color(0, 0, 0));
+        namelabel20.setText("Confirm Password:");
+        jPanel1.add(namelabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 310, 110, 20));
+
+        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("  Hospital Admission: Enter Patient's Information");
+        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
+        jLabel11.setOpaque(true);
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1080, 37));
+
+        showPassCreate.setForeground(new java.awt.Color(102, 102, 102));
+        showPassCreate.setText(" ");
+        jPanel1.add(showPassCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 280, 120, -1));
+
+        showPassConfirm.setForeground(new java.awt.Color(102, 102, 102));
+        showPassConfirm.setText(" ");
+        jPanel1.add(showPassConfirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 330, 110, -1));
+
+        butSP2.setBackground(new java.awt.Color(153, 204, 255));
+        butSP2.setForeground(new java.awt.Color(0, 0, 0));
+        butSP2.setText("👁️");
+        butSP2.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                butSP2StateChanged(evt);
+            }
+        });
+        butSP2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butSP2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(butSP2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 310, -1, 20));
+
+        butSP1.setBackground(new java.awt.Color(153, 204, 255));
+        butSP1.setForeground(new java.awt.Color(0, 0, 0));
+        butSP1.setText("👁️");
+        butSP1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                butSP1StateChanged(evt);
+            }
+        });
+        butSP1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butSP1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(butSP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 260, 50, 20));
+
+        pwNoMatch.setBackground(new java.awt.Color(0, 0, 0));
+        pwNoMatch.setForeground(new java.awt.Color(51, 51, 51));
+        pwNoMatch.setText("Passwords do not match.");
+        jPanel1.add(pwNoMatch, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 310, -1, -1));
+
+        jButton4.setBackground(new java.awt.Color(68, 114, 196));
+        jButton4.setText("Submit");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 340, -1, -1));
+
+        confirmed.setForeground(new java.awt.Color(51, 51, 51));
+        confirmed.setText("Password Confirmed");
+        jPanel1.add(confirmed, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 320, -1, 20));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 680));
         jPanel1.getAccessibleContext().setAccessibleDescription("");
 
@@ -612,6 +714,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
 
+        
         ifSubmit();
 
         sub sub = new sub();
@@ -685,122 +788,6 @@ public class NewPatient extends javax.swing.JFrame implements submit {
     private void menu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_menu4ActionPerformed
-
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
-       /// JOptionPane.showMessageDialog(null, "Note that after clicking yes, you will not be able to edit the set information. \n Continue?", "Confirm Submmision: ", JOptionPane.WARNING_MESSAGE);
-        afterSub();
-        
-        
-    }
-
-    public void ifSubmit() {
-
-        String FirstName = jTextField1.getText().toUpperCase();
-        String LastName = jTextField4.getText().toUpperCase().replace(" ", "");
-        String middle = mi.getText().toUpperCase();
-        String age = jTextField2.getText().toUpperCase();
-        String illness = jTextPane1.getText().toUpperCase();
-        String Sex = jComboBox1.getSelectedItem().toString().toUpperCase();
-        String Height = jTextField6.getText().toUpperCase();
-        String Weight = jTextField5.getText().toUpperCase();
-        String address = jTextField8.getText().toUpperCase().replace(",", "|");
-        String civilStat = jComboBox2.getSelectedItem().toString().toUpperCase();
-        String month = jComboBox4.getSelectedItem().toString().toUpperCase();
-        String year = jComboBox3.getSelectedItem().toString().toUpperCase();
-        String day = jComboBox8.getSelectedItem().toString().toUpperCase();
-        String ContactNo = jTextField13.getText().toUpperCase();
-        String email = jTextField9.getText().toUpperCase();
-        String bloodT = jComboBox5.getSelectedItem().toString().toUpperCase();
-        String Aller = Allergies.getText().toUpperCase().replace(",", "|");
-
-        if (!age.isEmpty()) {
-            try {
-
-                jLabel7.setText("");
-                int age1 = Integer.parseInt(age);
-
-                if (age1 < 18) {
-                    String m = "a minor";
-                    setPatientAge(m);
-                }
-                if (age1 >= 18 && age1 <= 60) {
-                    String m = "an adult";
-                    setPatientAge(m);
-                }
-                if (age1 >= 60) {
-                    String m = "a Senior Citizen";
-                    setPatientAge(m);
-                    error = false;
-                }
-            } catch (NumberFormatException e) {
-                error = true;
-                jLabel7.setText("Incorrect Age");
-                jLabel7.setForeground(Color.red);
-                Path fileToDeletePath = Paths.get(getFileName());
-                try {
-                    Files.delete(fileToDeletePath);
-                } catch (IOException ex) {
-                }
-
-            }
-        }
-
-        //Relative info
-        String conName = jTextField10.getText().toUpperCase();
-        String conNum = jTextField14.getText().toUpperCase();
-        String rela = jTextField12.getText().toUpperCase();
-        String ConAddress = jTextField7.getText().toUpperCase().replace(",", "|");
-        String rEmail = jTextField11.getText().toUpperCase();
-
-        String fullName = FirstName + " " + middle + " " + LastName;
-        String FileName = fullName.replace("  ", " ") + ".txt";
-        String docName = fullName.replace("  ", " ");
-        setFileName(FileName);
-
-        try {
-
-            File parentDir = new File(fileLoc);
-            parentDir.mkdir();
-
-            new File(fileLoc + "\\" + docName).mkdirs();
-
-            File file = new File(parentDir, FileName);
-            file.createNewFile();
-
-            FileWriter writer = new FileWriter(fileLoc + "\\" + FileName);
-
-            writer.write("-------------------Patient Information------------------");
-            writer.write("\nName: " + fullName.replace("  ", " "));
-            writer.write("\nAge: " + age);
-            writer.write("\nIllness: " + illness);
-            writer.write("\nAllergies: " + Aller);
-            writer.write("\nSex: " + Sex);
-            writer.write("\nHeight: " + Height + " cm");
-            writer.write("\nBlood Type: " + bloodT);
-            writer.write("\nWeight: " + Weight + " kg");
-            writer.write("\nAddress: " + address);
-            writer.write("\nCivil Status: " + civilStat);
-            writer.write("\nBirthday: " + month + " " + day + " " + year);
-            writer.write("\nContact Number: " + ContactNo);
-            writer.write("\nEmail: " + email);
-            writer.write("\nPatient is " + getPatientAge());
-            writer.write("\n-------------------Emergency Contact------------------");
-            writer.write("\nName: " + conName);
-            writer.write("\nContact Number: " + conNum);
-            writer.write("\nRelation: " + rela);
-            writer.write("\nEmail: " + rEmail);
-            writer.write("\nAddress: " + ConAddress);
-            writer.write("\nDoctor: " + getDoctorName());
-
-            writer.close();
-
-        } catch (Exception e) {
-
-        }
-
-
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         //Clear
@@ -899,6 +886,113 @@ public class NewPatient extends javax.swing.JFrame implements submit {
 
     }//GEN-LAST:event_jTextField1KeyPressed
 
+    private void butSP2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_butSP2StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_butSP2StateChanged
+
+    private void butSP2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butSP2ActionPerformed
+        // TODO add your handling code here:
+            String passField2 = Arrays.toString(pass2.getPassword());
+        if(butSP2.isSelected()){
+                showPassConfirm.setText(passField2.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""));
+            } else{
+            
+                showPassConfirm.setText("");
+            }
+            
+
+    }//GEN-LAST:event_butSP2ActionPerformed
+
+    private void butSP1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_butSP1StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_butSP1StateChanged
+
+    private void butSP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butSP1ActionPerformed
+        // TODO add your handling code here:
+        
+        String passField1 = Arrays.toString(pass1.getPassword());
+        
+            if(butSP1.isSelected()){
+                showPassCreate.setText(passField1.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""));
+            } else{
+            
+            showPassCreate.setText("");
+            }
+            
+    }//GEN-LAST:event_butSP1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        
+        String p1A = Arrays.toString(pass1.getPassword());
+       String p1= p1A.toString().replace(",", "").replace("[", "").replace("]", "").replace(" ", "");
+       
+       String p2A = Arrays.toString(pass2.getPassword());
+       String p2 = p2A.toString().replace(",", "").replace("[", "").replace("]", "").replace(" ", "");
+       if(!p1.isBlank()&&!p2.isBlank()){
+        
+        if(p1.matches(p2)){
+           setPassword(p2);
+           confirmed.setVisible(true);
+           jButton2.setEnabled(true);
+           
+       }else{
+            pwNoMatch.setForeground(Color.red);
+            pwNoMatch.setVisible(true);
+       }
+       }else{
+       
+           JOptionPane.showMessageDialog(null, "    Password is Required ", "", JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void pass1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pass1KeyReleased
+        // TODO add your handling code here:
+        pwNoMatch.setVisible(false);
+        confirmed.setVisible(false);
+        String passField1 = Arrays.toString(pass1.getPassword());
+        
+            if(butSP1.isSelected()){
+                showPassCreate.setText(passField1.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""));
+            } else{
+            
+            showPassCreate.setText("");
+            }
+            
+            if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+                setPass(passField1.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""));
+                pass2.requestFocus();
+            }
+        
+        
+        
+    }//GEN-LAST:event_pass1KeyReleased
+
+    private void pass1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pass1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pass1ActionPerformed
+
+    private void pass2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pass2KeyReleased
+        // TODO add your handling code here:
+         pwNoMatch.setVisible(false);
+        String passField2 = Arrays.toString(pass2.getPassword());
+        
+            if(butSP2.isSelected()){
+                showPassConfirm.setText(passField2.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""));
+            } else{
+            
+                showPassConfirm.setText("");
+            }
+            
+            if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+                
+                if(!getPass().matches(passField2.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""))){
+                    pwNoMatch.setVisible(true);
+                }
+                
+            }
+        
+    }//GEN-LAST:event_pass2KeyReleased
+
     public String getPatientAge() {
         return m;
 
@@ -963,8 +1057,6 @@ public class NewPatient extends javax.swing.JFrame implements submit {
             int response = JOptionPane.showConfirmDialog(null, "         After clicking confirm, the information will be submitted. \n                                      Are you sure? ", "Confirm", JOptionPane.YES_NO_OPTION);
 
             if (response == JOptionPane.YES_OPTION) {
-
-                jToggleButton1.setEnabled(false);
 
                 jButton2.setEnabled(true);
                 jComboBox6.setEnabled(true);
@@ -1078,12 +1170,137 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jComboBox7.setSelectedIndex(0);
         jComboBox6.setSelectedIndex(0);
 
+    } 
+    
+public void ifSubmit() {
+
+            String FirstName = jTextField1.getText().toUpperCase();
+            String LastName = jTextField4.getText().toUpperCase().replace(" ", "");
+            String middle = mi.getText().toUpperCase();
+            String age = jTextField2.getText().toUpperCase();
+            String illness = jTextPane1.getText().toUpperCase();
+            String Sex = jComboBox1.getSelectedItem().toString().toUpperCase();
+            String Height = jTextField6.getText().toUpperCase();
+            String Weight = jTextField5.getText().toUpperCase();
+            String address = jTextField8.getText().toUpperCase().replace(",", "|");
+            String civilStat = jComboBox2.getSelectedItem().toString().toUpperCase();
+            String month = jComboBox4.getSelectedItem().toString().toUpperCase();
+            String year = jComboBox3.getSelectedItem().toString().toUpperCase();
+            String day = jComboBox8.getSelectedItem().toString().toUpperCase();
+            String ContactNo = jTextField13.getText().toUpperCase();
+            String email = jTextField9.getText().toUpperCase();
+            String bloodT = jComboBox5.getSelectedItem().toString().toUpperCase();
+            String Aller = Allergies.getText().toUpperCase().replace(",", "|");
+
+            if (!age.isEmpty()) {
+                try {
+
+                    jLabel7.setText("");
+                    int age1 = Integer.parseInt(age);
+
+                    if (age1 < 18) {
+                        String m = "a minor";
+                        setPatientAge(m);
+                    }
+                    if (age1 >= 18 && age1 <= 60) {
+                        String m = "an adult";
+                        setPatientAge(m);
+                    }
+                    if (age1 >= 60) {
+                        String m = "a Senior Citizen";
+                        setPatientAge(m);
+                        error = false;
+                    }
+                } catch (NumberFormatException e) {
+                    error = true;
+                    jLabel7.setText("Incorrect Age");
+                    jLabel7.setForeground(Color.red);
+                    Path fileToDeletePath = Paths.get(getFileName());
+                    try {
+                        Files.delete(fileToDeletePath);
+                    } catch (IOException ex) {
+                    }
+
+                }
+            }
+
+            //Relative info
+            String conName = jTextField10.getText().toUpperCase();
+            String conNum = jTextField14.getText().toUpperCase();
+            String rela = jTextField12.getText().toUpperCase();
+            String ConAddress = jTextField7.getText().toUpperCase().replace(",", "|");
+            String rEmail = jTextField11.getText().toUpperCase();
+
+            String fullName = FirstName + " " + middle + " " + LastName;
+            String FileName = fullName.replace("  ", " ") + ".txt";
+            String docName = fullName.replace("  ", " ");
+            setFileName(FileName);
+
+            try {
+
+                File parentDir = new File(fileLoc);
+                parentDir.mkdir();
+
+                new File(fileLoc + "\\" + docName).mkdirs();
+
+                    File file = new File(parentDir, FileName);
+                    file.createNewFile();
+
+                    FileWriter writer = new FileWriter(fileLoc + "\\" + FileName);
+
+                        writer.write("-------------------Patient Information------------------");
+                        writer.write("\nName: " + fullName.replace("  ", " "));
+                        writer.write("\nAge: " + age);
+                        writer.write("\nIllness: " + illness);
+                        writer.write("\nAllergies: " + Aller);
+                        writer.write("\nSex: " + Sex);
+                        writer.write("\nHeight: " + Height + " cm");
+                        writer.write("\nBlood Type: " + bloodT);
+                        writer.write("\nWeight: " + Weight + " kg");
+                        writer.write("\nAddress: " + address);
+                        writer.write("\nCivil Status: " + civilStat);
+                        writer.write("\nBirthday: " + month + " " + day + " " + year);
+                        writer.write("\nContact Number: " + ContactNo);
+                        writer.write("\nEmail: " + email);
+                        writer.write("\nPatient is " + getPatientAge());
+                        writer.write("\n-------------------Emergency Contact------------------");
+                        writer.write("\nName: " + conName);
+                        writer.write("\nContact Number: " + conNum);
+                        writer.write("\nRelation: " + rela);
+                        writer.write("\nEmail: " + rEmail);
+                        writer.write("\nAddress: " + ConAddress);
+                        writer.write("\nDoctor: " + getDoctorName());
+                        writer.write("\nPassword: ");
+                        writer.write(getPassword());
+
+                        writer.close();
+
+                    } catch (Exception e) {
+
+                    }
+    }                                              
+    
+    public void setPass(String pass){
+        this.pass = pass;
+    }
+    
+    public String getPass(){
+        return pass;
+    }
+    
+    public void setPassword(String password){
+        this.password = password;
+    }
+    
+    public String getPassword(){
+        return password;
     }
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+ 
+ public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -1109,23 +1326,26 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new NewPatient().setVisible(true);
+     java.awt.EventQueue.invokeLater(new Runnable() {
+           public void run() {
+             new NewPatient().setVisible(true);
 
             }
-        });
-    }
-
+      });
+    } 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextPane Allergies;
     private javax.swing.JLabel Schedule;
     private javax.swing.JLabel assistant;
+    private javax.swing.JToggleButton butSP1;
+    private javax.swing.JToggleButton butSP2;
     private java.awt.Checkbox checkbox1;
+    private javax.swing.JLabel confirmed;
     private javax.swing.JLabel contact;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -1134,8 +1354,10 @@ public class NewPatient extends javax.swing.JFrame implements submit {
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBox8;
+    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1161,7 +1383,6 @@ public class NewPatient extends javax.swing.JFrame implements submit {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JToggleButton jToggleButton1;
     private java.awt.Menu menu4;
     private java.awt.Menu menu5;
     private java.awt.MenuBar menuBar2;
@@ -1176,8 +1397,10 @@ public class NewPatient extends javax.swing.JFrame implements submit {
     private javax.swing.JLabel namelabel15;
     private javax.swing.JLabel namelabel16;
     private javax.swing.JLabel namelabel17;
+    private javax.swing.JLabel namelabel18;
     private javax.swing.JLabel namelabel19;
     private javax.swing.JLabel namelabel2;
+    private javax.swing.JLabel namelabel20;
     private javax.swing.JLabel namelabel21;
     private javax.swing.JLabel namelabel3;
     private javax.swing.JLabel namelabel4;
@@ -1185,5 +1408,10 @@ public class NewPatient extends javax.swing.JFrame implements submit {
     private javax.swing.JLabel namelabel6;
     private javax.swing.JLabel namelabel8;
     private javax.swing.JLabel namelabel9;
+    private javax.swing.JPasswordField pass1;
+    private javax.swing.JPasswordField pass2;
+    private javax.swing.JLabel pwNoMatch;
+    private javax.swing.JLabel showPassConfirm;
+    private javax.swing.JLabel showPassCreate;
     // End of variables declaration//GEN-END:variables
 }

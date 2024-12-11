@@ -249,7 +249,7 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
 
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Gender");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 40, 20));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 50, 20));
 
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("DAYS:");

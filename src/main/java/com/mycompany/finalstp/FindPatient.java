@@ -10,9 +10,8 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.util.Arrays;
 import javax.swing.BorderFactory;
-import javax.swing.DefaultListModel;
 
-public class FindPatient extends javax.swing.JFrame {
+public class FindPatient extends javax.swing.JFrame implements find{
 
     String Doctor;
     String PatientF;
@@ -140,21 +139,21 @@ public class FindPatient extends javax.swing.JFrame {
         jLabel6.setText("    Emergency Contact Information: ");
         jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
         jLabel6.setOpaque(true);
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 540, 1310, 37));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 540, 1320, 37));
 
         Allergies1.setBackground(new java.awt.Color(51, 51, 51));
         Allergies1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         Allergies1.setForeground(new java.awt.Color(0, 0, 0));
         Allergies1.setText(" ");
         Allergies1.setAlignmentX(0.5F);
-        jPanel1.add(Allergies1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 254, 47));
+        jPanel1.add(Allergies1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 254, 47));
 
         rAddress1.setBackground(new java.awt.Color(51, 51, 51));
         rAddress1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         rAddress1.setForeground(new java.awt.Color(0, 0, 0));
         rAddress1.setText(" ");
         rAddress1.setAlignmentX(0.5F);
-        jPanel1.add(rAddress1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 680, 617, 34));
+        jPanel1.add(rAddress1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 680, 630, 34));
 
         Age1.setBackground(new java.awt.Color(51, 51, 51));
         Age1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -223,28 +222,28 @@ public class FindPatient extends javax.swing.JFrame {
         nameFull1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         nameFull1.setForeground(new java.awt.Color(0, 0, 0));
         nameFull1.setAlignmentX(0.5F);
-        jPanel1.add(nameFull1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 254, 34));
+        jPanel1.add(nameFull1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 254, 34));
 
         rName1.setBackground(new java.awt.Color(51, 51, 51));
         rName1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         rName1.setForeground(new java.awt.Color(0, 0, 0));
         rName1.setText(" ");
         rName1.setAlignmentX(0.5F);
-        jPanel1.add(rName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 620, 254, 34));
+        jPanel1.add(rName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 620, 270, 34));
 
         rContactNum1.setBackground(new java.awt.Color(51, 51, 51));
         rContactNum1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         rContactNum1.setForeground(new java.awt.Color(0, 0, 0));
         rContactNum1.setText(" ");
         rContactNum1.setAlignmentX(0.5F);
-        jPanel1.add(rContactNum1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 680, 305, 34));
+        jPanel1.add(rContactNum1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 680, 320, 34));
 
         rEmail1.setBackground(new java.awt.Color(51, 51, 51));
         rEmail1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
         rEmail1.setForeground(new java.awt.Color(0, 0, 0));
         rEmail1.setText(" ");
         rEmail1.setAlignmentX(0.5F);
-        jPanel1.add(rEmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 620, 254, 34));
+        jPanel1.add(rEmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 620, 270, 34));
 
         jComboBox2.setBackground(new java.awt.Color(204, 204, 204));
         jComboBox2.setEditable(true);
@@ -303,7 +302,7 @@ public class FindPatient extends javax.swing.JFrame {
         illness1.setForeground(new java.awt.Color(0, 0, 0));
         illness1.setText(" ");
         illness1.setAlignmentX(0.5F);
-        jPanel1.add(illness1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 254, 47));
+        jPanel1.add(illness1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 254, 47));
         jPanel1.add(filler1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, -1, -1));
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
@@ -316,7 +315,7 @@ public class FindPatient extends javax.swing.JFrame {
         rRelation1.setForeground(new java.awt.Color(0, 0, 0));
         rRelation1.setText(" ");
         rRelation1.setAlignmentX(0.5F);
-        jPanel1.add(rRelation1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 620, 254, 34));
+        jPanel1.add(rRelation1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 620, 270, 34));
 
         Email1.setBackground(new java.awt.Color(51, 51, 51));
         Email1.setFont(new java.awt.Font("Calibri", 0, 13)); // NOI18N
@@ -358,53 +357,10 @@ public class FindPatient extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    //copy
+  
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-
-        try {
-            File path2 = new File(fileLoc + "\\" + jComboBox2.getSelectedItem().toString() + ".txt");
-            String fileName = path2.toString();
-
-            BufferedReader b = new BufferedReader(new FileReader(fileName));
-            String s;
-
-            ArrayList<String> files = new ArrayList<>();
-
-            while ((s = b.readLine()) != null) {
-                files.add(s);
-            }
-    String c = files.toString();
-
-            String name = c.split(",")[1];
-            String age = c.split(",")[2];
-            String illnesss = c.split(",")[3];
-            String Allergies = c.split(",")[4].replace("|", ",");
-            String Sex = c.split(",")[5];
-            String Height = c.split(",")[6];
-            String BloodType = c.split(",")[7];
-            String Weight = c.split(",")[8];
-            String Address = c.split(",")[9].replace("|", ",");
-            String CivilStatus = c.split(",")[10];
-            String Birthday = c.split(",")[11];
-            String ContactNum = c.split(",")[12];
-            String Email = c.split(",")[13];
-            String patientAgeState = c.split(",")[14];
-       
-            String rName = c.split(",")[16];
-            String rContactNum= c.split(",")[17];
-            String rRelation= c.split(",")[18];
-            String rEmail = c.split(",")[19];
-            String rAddress = c.split(",")[20];
-            String Doc = c.split(",")[21].replace("]","");
-
-            StringSelection copier = new StringSelection(
-                    name + "\n" + age + "\n" + illnesss + "\n" + Allergies +"\n" + Sex + "\n" + Height + "\n" +BloodType+"\n" + Weight + "\n" + Address + "\n" + CivilStatus + "\n" + Birthday + "\n" + ContactNum
-                    + "\n" + Email + "\n"+ patientAgeState + "\n" + rName + "\n" + rContactNum + "\n" + rRelation + "\n" + rEmail + "\n" + rAddress + "\n" + Doc);
-            Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
-            cb.setContents(copier, null);
-            } catch (Exception e) {
-
-        }
+      //copy  
+      copy();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -413,15 +369,69 @@ public class FindPatient extends javax.swing.JFrame {
         MainFrame mf = new MainFrame();
         mf.setVisible(true);
         mf.setResizable(false);
+        mf.setLocationRelativeTo(null);
         this.dispose();
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+      find();
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+        itemSelect();
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+       
+        Password pw = new Password();
+        pw.setVisible(true);
+        pw.setLocationRelativeTo(null);
+        pw.setAlwaysOnTop(true);
+        pw.setResizable(false);
+        pw.setFrame(1);
+    
         
+        String n = jComboBox2.getEditor().getItem().toString();
+       pw.jLabel1.setText(n);
+       
+        System.out.println(n);
+        setPatientF(jComboBox2.getSelectedItem().toString());
       
-        String word = jComboBox2.getEditor().getItem().toString().toUpperCase();
+         this.dispose();
+       
+
+    }
+
+    public void setPatientF(String PatientF) {
+        this.PatientF = PatientF;
+    }
+
+    public String getPatientF() {
+        return PatientF;
+
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+// TODO add your handling code here:
+      Password pw = new Password();
+        pw.setVisible(true);
+        pw.setLocationRelativeTo(null);
+        pw.setAlwaysOnTop(true);
+        pw.setResizable(false);
+        pw.jLabel1.setText(jComboBox2.getSelectedItem().toString());
+         pw.setFrame(2);
+        
+         this.dispose();
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+
+    @Override
+    public void find(){
+         String word = jComboBox2.getEditor().getItem().toString().toUpperCase();
         
         if(!word.isEmpty()){ 
         jButton3.setEnabled(true);
@@ -468,17 +478,13 @@ public class FindPatient extends javax.swing.JFrame {
                     }
                 }
                 i++;
-
             }
-
         }
-
-    }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-
-        try {
+    }
+    
+    @Override
+    public void itemSelect(){
+          try {
             File path2 = new File(fileLoc + "\\" + jComboBox2.getSelectedItem().toString().toUpperCase() + ".txt");
             String fileName = path2.toString();
 
@@ -587,61 +593,67 @@ public class FindPatient extends javax.swing.JFrame {
 
         }
 
-
-    }//GEN-LAST:event_jComboBox2ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-       
-        PatientFile pf = new PatientFile();
-        pf.setVisible(true);
-        pf.setLocationRelativeTo(null);
-        pf.setResizable(false);
-        
-        String n = jComboBox2.getEditor().getItem().toString();
-       
-        System.out.println(n);
-        setPatientF(jComboBox2.getSelectedItem().toString());
-          pf.jLabel1.setText(n);
-           pf.jLabel1.setText(getPatientF());
-           
-         this.dispose();
     }
+    
+    @Override
+    public void copy(){
+        
+        try {
+            File path2 = new File(fileLoc + "\\" + jComboBox2.getSelectedItem().toString() + ".txt");
+            String fileName = path2.toString();
 
-    public void setPatientF(String PatientF) {
-        this.PatientF = PatientF;
+            BufferedReader b = new BufferedReader(new FileReader(fileName));
+            String s;
 
+            ArrayList<String> files = new ArrayList<>();
+
+            while ((s = b.readLine()) != null) {
+                files.add(s);
+            }
+    String c = files.toString();
+
+            String name = c.split(",")[1];
+            String age = c.split(",")[2];
+            String illnesss = c.split(",")[3];
+            String Allergies = c.split(",")[4].replace("|", ",");
+            String Sex = c.split(",")[5];
+            String Height = c.split(",")[6];
+            String BloodType = c.split(",")[7];
+            String Weight = c.split(",")[8];
+            String Address = c.split(",")[9].replace("|", ",");
+            String CivilStatus = c.split(",")[10];
+            String Birthday = c.split(",")[11];
+            String ContactNum = c.split(",")[12];
+            String Email = c.split(",")[13];
+            String patientAgeState = c.split(",")[14];
+       
+            String rName = c.split(",")[16];
+            String rContactNum= c.split(",")[17];
+            String rRelation= c.split(",")[18];
+            String rEmail = c.split(",")[19];
+            String rAddress = c.split(",")[20];
+            String Doc = c.split(",")[21].replace("]","");
+
+            StringSelection copier = new StringSelection(
+                    name + "\n" + age + "\n" + illnesss + "\n" + Allergies +"\n" + Sex + "\n" + Height + "\n" +BloodType+"\n" + Weight + "\n" + Address + "\n" + CivilStatus + "\n" + Birthday + "\n" + ContactNum
+                    + "\n" + Email + "\n"+ patientAgeState + "\n" + rName + "\n" + rContactNum + "\n" + rRelation + "\n" + rEmail + "\n" + rAddress + "\n" + Doc);
+            Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
+            cb.setContents(copier, null);
+            } catch (Exception e) {
+
+        }
     }
-
-    public String getPatientF() {
-        return PatientF;
-
-
-    }//GEN-LAST:event_jButton6ActionPerformed
- public void patFile(){
- 
- }
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-// TODO add your handling code here:
-    newRecord nr = new newRecord();
-        nr.setVisible(true);
-        nr.setResizable(false);
-        nr.setLocationRelativeTo(null);
-        nr.namelabel1.setText(jComboBox2.getSelectedItem().toString());
-        
-        
-    }//GEN-LAST:event_jButton8ActionPerformed
-
+    
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         
-        EditPatient ep = new EditPatient();
-        
-      
-        ep.patientName.setText(jComboBox2.getSelectedItem().toString());
-        ep.setVisible(true);
-       ep.setResizable(false);
-       ep.setLocationRelativeTo(null);
+       
+        Password pw = new Password();
+      pw.setVisible(true);
+      pw.setLocationRelativeTo(null);
+      pw.setResizable(false);
+        pw.jLabel1.setText(jComboBox2.getSelectedItem().toString());
+       pw.setFrame(3);
 
   
     }//GEN-LAST:event_jButton3ActionPerformed

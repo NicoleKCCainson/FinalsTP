@@ -1,45 +1,42 @@
 package com.mycompany.finalstp;
 
 import java.awt.Color;
-import java.awt.Image;
-import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
+
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author nicol
  */
 public class MainFrame extends javax.swing.JFrame {
-    
+
 //MAINFRAME
     /**
      * Creates new form Doctor
      */
     String pass;
     String passLoc = "C:\\Users\\nicol\\Desktop\\Database\\Password.txt";
+
     public MainFrame() {
- 
 
         initComponents();
         jPanel2.setVisible(false);
-           jPanel3.setVisible(false);
+        jPanel3.setVisible(false);
         error.setVisible(false);
+        jLabel4.setVisible(false);
+        jTextField1.setVisible(false);
+        error1.setVisible(false);
+        jButton2.setEnabled(false);
     }
 
     /**
@@ -59,7 +56,10 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jToggleButton3 = new javax.swing.JToggleButton();
+        jButton2 = new javax.swing.JButton();
+        error1 = new javax.swing.JLabel();
+        showPass2 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         button2 = new java.awt.Button();
         button3 = new java.awt.Button();
@@ -72,6 +72,7 @@ public class MainFrame extends javax.swing.JFrame {
         jToggleButton1 = new javax.swing.JToggleButton();
         error = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        button5 = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(100, 100, 100, 100));
@@ -109,7 +110,7 @@ public class MainFrame extends javax.swing.JFrame {
                 jPasswordField2KeyTyped(evt);
             }
         });
-        jPanel3.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 120, -1));
+        jPanel3.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 130, -1));
 
         jToggleButton2.setBackground(new java.awt.Color(153, 204, 255));
         jToggleButton2.setForeground(new java.awt.Color(0, 0, 0));
@@ -124,10 +125,10 @@ public class MainFrame extends javax.swing.JFrame {
                 jToggleButton2ActionPerformed(evt);
             }
         });
-        jPanel3.add(jToggleButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, -1, 26));
+        jPanel3.add(jToggleButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, -1, 26));
 
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("To change admin password, access needed.");
+        jLabel5.setText("To change admin password, access required.");
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 290, 20));
         jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 150, -1));
 
@@ -135,22 +136,31 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel4.setText("Input new Password: ");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 130, -1));
 
-        jToggleButton3.setBackground(new java.awt.Color(153, 204, 255));
-        jToggleButton3.setForeground(new java.awt.Color(0, 0, 0));
-        jToggleButton3.setText("👁️");
-        jToggleButton3.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jToggleButton3StateChanged(evt);
-            }
-        });
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setText("submit");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
-        jPanel3.add(jToggleButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, -1, 26));
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, -1, -1));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 460, 250));
+        error1.setForeground(new java.awt.Color(0, 0, 0));
+        error1.setText("Password Error");
+        jPanel3.add(error1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 100, 20));
+
+        showPass2.setForeground(new java.awt.Color(51, 51, 51));
+        showPass2.setText(" ");
+        jPanel3.add(showPass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 100, 20));
+
+        jButton3.setText("cancel");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 450, 250));
 
         jLabel1.setBackground(new java.awt.Color(14, 21, 20));
         jLabel1.setFont(new java.awt.Font("Sitka Small", 0, 36)); // NOI18N
@@ -166,7 +176,7 @@ public class MainFrame extends javax.swing.JFrame {
                 button2ActionPerformed(evt);
             }
         });
-        jPanel1.add(button2, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 386, 152, 58));
+        jPanel1.add(button2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 152, 58));
         button2.getAccessibleContext().setAccessibleParent(this);
 
         button3.setActionCommand("button2");
@@ -177,7 +187,7 @@ public class MainFrame extends javax.swing.JFrame {
                 button3ActionPerformed(evt);
             }
         });
-        jPanel1.add(button3, new org.netbeans.lib.awtextra.AbsoluteConstraints(473, 386, 152, 58));
+        jPanel1.add(button3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 390, 152, 58));
 
         button4.setActionCommand("button3");
         button4.setBackground(new java.awt.Color(117, 194, 248));
@@ -188,7 +198,7 @@ public class MainFrame extends javax.swing.JFrame {
                 button4ActionPerformed(evt);
             }
         });
-        jPanel1.add(button4, new org.netbeans.lib.awtextra.AbsoluteConstraints(715, 386, 152, 58));
+        jPanel1.add(button4, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 390, 152, 58));
 
         jLabel2.setBackground(new java.awt.Color(14, 21, 20));
         jLabel2.setFont(new java.awt.Font("Sitka Small", 0, 44)); // NOI18N
@@ -205,20 +215,14 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jPasswordField1KeyPressed(evt);
-            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jPasswordField1KeyReleased(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jPasswordField1KeyTyped(evt);
             }
         });
         jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 120, -1));
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Admin access needed.");
+        jLabel3.setText("Admin access required.");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, 140, 20));
 
         showPass.setForeground(new java.awt.Color(102, 102, 102));
@@ -261,6 +265,17 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 40, 70, 25));
 
+        button5.setActionCommand("button3");
+        button5.setBackground(new java.awt.Color(117, 194, 248));
+        button5.setLabel("Find Doctor");
+        button5.setName(""); // NOI18N
+        button5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(button5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 390, 152, 58));
+
         jDesktopPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
@@ -301,27 +316,19 @@ public class MainFrame extends javax.swing.JFrame {
         b1.setLocationRelativeTo(null);
         this.dispose();
         b1.setResizable(false);
-        
+
     }//GEN-LAST:event_button4ActionPerformed
 
     private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
-    checkPass();
+        checkPass();
         //new doctor
-         jPanel2.setVisible(true);
-       //String enter = jPasswordField1.getPassword().toString();   
-     //   System.out.println(enter);
-      /*  NewDoctor b3 = new NewDoctor();
-        b3.setVisible(true);
-        b3.setLocationRelativeTo(null);
-        this.dispose();
-        b3.setResizable(false);
-        */
+        jPanel2.setVisible(true);
+
     }//GEN-LAST:event_button3ActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
         //new patient
-    
-       
+
         NewPatient b2 = new NewPatient();
         b2.setVisible(true);
         b2.setLocationRelativeTo(null);
@@ -335,92 +342,69 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jToggleButton1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jToggleButton1StateChanged
         // TODO add your handling code here:
-        
-        if (jToggleButton1.isSelected()) {
-           
-        }
-        
-        if(!jToggleButton1.isSelected()){
-           
-        }
-        
-        
     }//GEN-LAST:event_jToggleButton1StateChanged
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
-               
+
         if (jToggleButton1.isSelected()) {
-          String pass = Arrays.toString(jPasswordField1.getPassword());
+            String pass = Arrays.toString(jPasswordField1.getPassword());
             System.out.println(pass);
             showPass.setText(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""));
         }
-        
-        if(!jToggleButton1.isSelected()){
-           
+
+        if (!jToggleButton1.isSelected()) {
+            showPass.setText("");
         }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
-    private void jPasswordField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyTyped
-        // TODO add your handling code here:
-         
-    
-    }//GEN-LAST:event_jPasswordField1KeyTyped
-
-    private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
-        // TODO add your handling code here:
-          
-      
-      
-    }//GEN-LAST:event_jPasswordField1KeyPressed
-
     private void jPasswordField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyReleased
         // TODO add your handling code here:
-            
+        error.setVisible(false);
         if (jToggleButton1.isSelected()) {
-          String pass = Arrays.toString(jPasswordField1.getPassword());
+            String pass = Arrays.toString(jPasswordField1.getPassword());
             System.out.println(pass);
             showPass.setText(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""));
-            if( evt.getKeyCode() == KeyEvent.VK_ENTER){
-                if(getPass().equals(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""))){
+            if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+                if (getPass().equals(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""))) {
                     NewDoctor nd = new NewDoctor();
                     nd.setVisible(true);
                     nd.setResizable(false);
                     nd.setLocationRelativeTo(null);
                     this.dispose();
-                }else{
-                error.setForeground(Color.red);
-                error.setVisible(true);
-                
+                } else {
+                    error.setForeground(Color.red);
+                    error.setVisible(true);
+
                 }
             }
         }
-        
-        if(!jToggleButton1.isSelected()){
-           String pass = Arrays.toString(jPasswordField1.getPassword());
-            if( evt.getKeyCode() == KeyEvent.VK_ENTER){
-                if(getPass().equals(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""))){
+
+        if (!jToggleButton1.isSelected()) {
+            String pass = Arrays.toString(jPasswordField1.getPassword());
+            if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+                if (getPass().equals(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""))) {
                     NewDoctor nd = new NewDoctor();
                     nd.setVisible(true);
                     nd.setResizable(false);
                     nd.setLocationRelativeTo(null);
                     this.dispose();
-                    
-                }else{
-                error.setVisible(true);
-                
+
+                } else {
+
+                    error.setForeground(Color.red);
+                    error.setVisible(true);
                 }
             }
-         }
+        }
     }//GEN-LAST:event_jPasswordField1KeyReleased
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-      
-        jPanel3.setVisible(true);
         checkPass();
-        
-        
+        jPanel3.setVisible(true);
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
@@ -433,46 +417,49 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jPasswordField2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField2KeyReleased
         // TODO add your handling code here:
-             
-        if (jToggleButton1.isSelected()) {
-          String pass = Arrays.toString(jPasswordField1.getPassword());
-            System.out.println(pass);
-            showPass.setText(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""));
-            if( evt.getKeyCode() == KeyEvent.VK_ENTER){
-                if(getPass().equals(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""))){
-                   File path = new File(passLoc);
-  
-                    
-                       try{
-                         FileWriter writer = new FileWriter(passLoc);
-                        
-                         writer.write("");
-                       
-                       
-                       }catch(Exception e){
 
-}
-                        }
-                      
-                }else{
-                error.setForeground(Color.red);
-                error.setVisible(true);
-                
+        if (jToggleButton2.isSelected()) {
+            checkPass();
+            String pass = Arrays.toString(jPasswordField2.getPassword());
+            System.out.println(pass);
+            showPass2.setText(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""));
+            if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+                if (getPass().equals(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""))) {
+                    jLabel4.setVisible(true);
+                    jTextField1.setVisible(true);
+                    jButton2.setEnabled(true);
+                } else {
+                    error1.setForeground(Color.red);
+                    error1.setVisible(true);
+
                 }
-        }
-        
-        if(!jToggleButton1.isSelected()){
-           String pass = Arrays.toString(jPasswordField1.getPassword());
-            if( evt.getKeyCode() == KeyEvent.VK_ENTER){
-                if(getPass().equals(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""))){
-                   
-                    
-                }else{
-                error.setVisible(true);
-                
-                }
+
             }
-         }
+        }
+
+        if (!jToggleButton2.isSelected()) {
+            checkPass();
+            String pass = Arrays.toString(jPasswordField2.getPassword());
+            System.out.println(pass);
+            if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+                if (getPass().equals(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""))) {
+                    File path = new File(passLoc);
+                    try {
+                        jLabel4.setVisible(true);
+                        jTextField1.setVisible(true);
+                        jButton2.setEnabled(true);
+                    } catch (Exception e) {
+
+                    }
+                } else {
+                    error1.setForeground(Color.red);
+                    error1.setVisible(true);
+
+                }
+
+            }
+
+        }
     }//GEN-LAST:event_jPasswordField2KeyReleased
 
     private void jPasswordField2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField2KeyTyped
@@ -485,42 +472,73 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         // TODO add your handling code here:
+
+        if (jToggleButton2.isSelected()) {
+            String pass = Arrays.toString(jPasswordField2.getPassword());
+            System.out.println(pass);
+            showPass2.setText(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""));
+        }
+        if (!jToggleButton2.isSelected()) {
+            showPass2.setText("");
+        }
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
-    private void jToggleButton3StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jToggleButton3StateChanged
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton3StateChanged
 
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+        File path = new File(passLoc);
+        try {
+            FileWriter writer = new FileWriter(passLoc);
+            writer.write(jTextField1.getText().toString());
+            writer.close();
+
+        } catch (Exception e) {
+
+        }
+        jPanel3.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton3ActionPerformed
-      
+        jPanel3.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void button5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button5ActionPerformed
+        // TODO add your handling code here:
+        FindDoctor fd = new FindDoctor();
+        fd.setVisible(true);
+        fd.setResizable(false);
+        fd.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_button5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public void checkPass(){
+    public void checkPass() {
         File path = new File(passLoc);
-  
-                    try {
 
-                        BufferedReader buff = new BufferedReader(new FileReader(path));
-                        String s = buff.readLine().toString();
-                        setPass(s);
-                        System.out.println(s);
-                        buff.close();
-                        
-                    } catch (Exception e) {
+        try {
 
-                    
+            BufferedReader buff = new BufferedReader(new FileReader(path));
+            String s = buff.readLine().toString();
+            setPass(s);
+            System.out.println(s);
+            buff.close();
+
+        } catch (Exception e) {
+
         }
     }
-    public void setPass(String pass){
-     this.pass = pass;
+
+    public void setPass(String pass) {
+        this.pass = pass;
     }
-    public String getPass(){
+
+    public String getPass() {
         return pass;
     }
-    
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -545,17 +563,16 @@ public class MainFrame extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-       
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-               MainFrame dr = new MainFrame();
-               dr.setLocationRelativeTo(null);
-               dr.setVisible(true);
-               dr.setResizable(false);
-               
-               //dr.setExtendedState(dr.MAXIMIZED_BOTH);
-             
+                MainFrame dr = new MainFrame();
+                dr.setLocationRelativeTo(null);
+                dr.setVisible(true);
+                dr.setResizable(false);
+
+                //dr.setExtendedState(dr.MAXIMIZED_BOTH);
             }
         });
     }
@@ -564,8 +581,12 @@ public class MainFrame extends javax.swing.JFrame {
     private java.awt.Button button2;
     private java.awt.Button button3;
     private java.awt.Button button4;
+    private java.awt.Button button5;
     private javax.swing.JLabel error;
+    private javax.swing.JLabel error1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -580,7 +601,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JLabel showPass;
+    private javax.swing.JLabel showPass2;
     // End of variables declaration//GEN-END:variables
 }
