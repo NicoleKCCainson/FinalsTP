@@ -58,7 +58,7 @@ public class Password extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
@@ -66,20 +66,21 @@ public class Password extends javax.swing.JFrame {
         jLabel5.setText("                                 Password Required. Enter password for patient");
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
         jLabel5.setOpaque(true);
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 490, 40));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 490, 30));
 
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Patient Name");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 160, 20));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 190, 30));
 
+        jPasswordField1.setBackground(new java.awt.Color(165, 165, 165));
         jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jPasswordField1KeyReleased(evt);
             }
         });
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 180, 100, 30));
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 130, 30));
 
-        butSP1.setBackground(new java.awt.Color(153, 204, 255));
+        butSP1.setBackground(new java.awt.Color(255, 255, 255));
         butSP1.setForeground(new java.awt.Color(0, 0, 0));
         butSP1.setText("👁️");
         butSP1.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -92,26 +93,37 @@ public class Password extends javax.swing.JFrame {
                 butSP1ActionPerformed(evt);
             }
         });
-        jPanel1.add(butSP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 50, 30));
+        jPanel1.add(butSP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 50, 30));
 
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("show password");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 90, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 130, 20));
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("error message");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 130, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 250, -1));
 
+        jButton1.setBackground(new java.awt.Color(68, 114, 196));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Submit");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 250, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 50, 20));
 
+        jButton2.setBackground(new java.awt.Color(68, 114, 196));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Back");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 20));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 300));
 
@@ -136,57 +148,73 @@ public class Password extends javax.swing.JFrame {
 
     private void jPasswordField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyReleased
         // TODO add your handling code here:
-   jLabel3.setVisible(false);
-        try{  String pass = Arrays.toString(jPasswordField1.getPassword());
-        if (butSP1.isSelected()) {
-            jLabel2.setVisible(true);
-            jLabel2.setText(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""));}else{
-        jLabel2.setText("");
-        }
+        jLabel3.setVisible(false);
+        try {
+            String pass = Arrays.toString(jPasswordField1.getPassword());
+            if (butSP1.isSelected()) {
+                jLabel2.setVisible(true);
+                jLabel2.setText(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""));
+            } else {
+                jLabel2.setText("");
+            }
             if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
                 PatientPass();
                 System.out.println(getPpass());
                 AdminPass();
                 System.out.println(getApass());
-                
+
                 String enterPass = pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", "");
                 System.out.println(enterPass);
                 if (enterPass.matches(getApass()) || enterPass.matches(getPpass())) {
-                     PatientPass();
-                AdminPass();
+                    new FindPatient().dispose();
+                    PatientPass();
+                    AdminPass();
                     sCase();
 
                 } else {
                     errorMessages();
                 }
             } else {
-              
 
-            }}catch(Exception e){
-                    errorMessages();
-                    }
-        
+            }
+        } catch (Exception e) {
+            errorMessages();
+        }
+
     }//GEN-LAST:event_jPasswordField1KeyReleased
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-          PatientPass();
-                System.out.println(getPpass());
-                AdminPass();
-                System.out.println(getApass());
-                   String pass = Arrays.toString(jPasswordField1.getPassword());
-                String enterPass = pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", "");
-                System.out.println(enterPass);
-                if (enterPass.matches(getApass()) || enterPass.matches(getPpass())) {
-                     PatientPass();
-                AdminPass();
-                    sCase();
+        PatientPass();
+        System.out.println(getPpass());
+        AdminPass();
+        System.out.println(getApass());
+        String pass = Arrays.toString(jPasswordField1.getPassword());
+        String enterPass = pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", "");
+        System.out.println(enterPass);
+        if (enterPass.matches(getApass()) || enterPass.matches(getPpass())) {
+            PatientPass();
+            AdminPass();
+            sCase();
 
-                } else {
-                    errorMessages();
-                }
-        
+        } else {
+            errorMessages();
+        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+       
+           FindPatient fp = new FindPatient();
+        fp.setVisible(true);
+        fp.setResizable(false);
+        fp.setLocationRelativeTo(null);
+        fp.jComboBox2.getEditor().setItem(jLabel1.getText());
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+    
     public void errorMessages() {
 
         int rnd = (int) (Math.random() * 4);
@@ -222,7 +250,7 @@ public class Password extends javax.swing.JFrame {
             b.close();
             String c = files.toString();
 
-            String patientPW = c.split(",")[22].replace("Password:", "").replace(" ", "").replace("]","");
+            String patientPW = c.split(",")[22].replace("Password:", "").replace(" ", "").replace("]", "");
             setPpass(patientPW);
 
         } catch (Exception e) {
@@ -256,8 +284,6 @@ public class Password extends javax.swing.JFrame {
         }
     }
 
-   
-
     public void sCase() {
 
         switch (getFrame()) {
@@ -267,17 +293,18 @@ public class Password extends javax.swing.JFrame {
                 pf.setVisible(true);
                 pf.setLocationRelativeTo(null);
                 pf.setResizable(false);
-                
+                pf.jLabel1.setText(jLabel1.getText());
                 this.dispose();
+                
                 break;
-
             case 2:
                 newRecord nr = new newRecord();
                 nr.setVisible(true);
                 nr.setResizable(false);
                 nr.setLocationRelativeTo(null);
-               
+                nr.namelabel1.setText(jLabel1.getText());
                 this.dispose();
+                 
                 break;
 
             case 3:
@@ -285,14 +312,16 @@ public class Password extends javax.swing.JFrame {
                 ep.setVisible(true);
                 ep.setResizable(false);
                 ep.setLocationRelativeTo(null);
-
+                ep.patientName.setText(jLabel1.getText());
                 this.dispose();
+                
                 break;
 
         }
 
     }
- public void setApass(String Apass) {
+
+    public void setApass(String Apass) {
         this.Apass = Apass;
     }
 
@@ -308,16 +337,16 @@ public class Password extends javax.swing.JFrame {
     public int getFrame() {
         return frame;
     }
-    
-    public void setName(String pName){
-    this.pName = pName;
-    
+
+    public void setName(String pName) {
+        this.pName = pName;
+
     }
-    
-    public String getName(){
-    return pName;
+
+    public String getName() {
+        return pName;
     }
-    
+
     /**
      * @param args the command line arguments
      */

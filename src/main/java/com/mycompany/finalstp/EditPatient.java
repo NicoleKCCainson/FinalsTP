@@ -83,6 +83,27 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         jTextField2 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1092, 702));
@@ -94,7 +115,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         patientName.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         patientName.setForeground(new java.awt.Color(0, 0, 0));
         patientName.setText("Patient Name ");
-        jPanel1.add(patientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 140, 70));
+        jPanel1.add(patientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 140, 40));
 
         pName.setBackground(new java.awt.Color(165, 165, 165));
         pName.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -103,11 +124,11 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 pNameActionPerformed(evt);
             }
         });
-        jPanel1.add(pName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 420, 20));
+        jPanel1.add(pName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 420, 20));
 
         pAllergies.setBackground(new java.awt.Color(165, 165, 165));
         pAllergies.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jPanel1.add(pAllergies, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 250, 40));
+        jPanel1.add(pAllergies, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, 250, 40));
 
         pAge.setBackground(new java.awt.Color(165, 165, 165));
         pAge.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -116,23 +137,23 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 pAgeActionPerformed(evt);
             }
         });
-        jPanel1.add(pAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 50, 20));
+        jPanel1.add(pAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 50, 20));
 
         pillness.setBackground(new java.awt.Color(165, 165, 165));
         pillness.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jPanel1.add(pillness, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 340, -1));
+        jPanel1.add(pillness, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 340, -1));
 
         pWeight.setBackground(new java.awt.Color(165, 165, 165));
         pWeight.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jPanel1.add(pWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 50, -1));
+        jPanel1.add(pWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 50, -1));
 
         pAddress.setBackground(new java.awt.Color(165, 165, 165));
         pAddress.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jPanel1.add(pAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 350, -1));
+        jPanel1.add(pAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, 350, -1));
 
         pHeight.setBackground(new java.awt.Color(165, 165, 165));
         pHeight.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jPanel1.add(pHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 50, -1));
+        jPanel1.add(pHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 50, -1));
 
         pContact.setBackground(new java.awt.Color(165, 165, 165));
         pContact.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -141,26 +162,26 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 pContactActionPerformed(evt);
             }
         });
-        jPanel1.add(pContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 150, -1));
+        jPanel1.add(pContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 150, -1));
 
         rAddress.setBackground(new java.awt.Color(165, 165, 165));
         rAddress.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jPanel1.add(rAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 590, 400, 20));
+        jPanel1.add(rAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 590, 400, 20));
 
         pEmail.setBackground(new java.awt.Color(165, 165, 165));
         pEmail.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jPanel1.add(pEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 310, -1));
+        jPanel1.add(pEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 310, -1));
 
         jButton1.setBackground(new java.awt.Color(68, 114, 196));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Show Previous Patient Information");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 102, 255), null, null));
+        jButton1.setText("View");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, 250, 20));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 20, 60, 20));
 
         rName.setBackground(new java.awt.Color(165, 165, 165));
         rName.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -169,20 +190,20 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 rNameActionPerformed(evt);
             }
         });
-        jPanel1.add(rName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 460, -1));
+        jPanel1.add(rName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 470, 460, -1));
 
         rContact.setBackground(new java.awt.Color(165, 165, 165));
         rContact.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jPanel1.add(rContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 510, 180, -1));
+        jPanel1.add(rContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 510, 180, -1));
 
         relation.setBackground(new java.awt.Color(165, 165, 165));
         relation.setText(" ");
         relation.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jPanel1.add(relation, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 510, 150, 20));
+        jPanel1.add(relation, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 510, 150, 20));
 
         rEmail.setBackground(new java.awt.Color(165, 165, 165));
         rEmail.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jPanel1.add(rEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 550, 270, 20));
+        jPanel1.add(rEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 550, 270, 20));
 
         month.setBackground(new java.awt.Color(165, 165, 165));
         month.setEditable(true);
@@ -194,7 +215,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 monthActionPerformed(evt);
             }
         });
-        jPanel1.add(month, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 80, 20));
+        jPanel1.add(month, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 80, 20));
 
         year.setBackground(new java.awt.Color(165, 165, 165));
         year.setEditable(true);
@@ -206,7 +227,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 yearActionPerformed(evt);
             }
         });
-        jPanel1.add(year, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 60, 20));
+        jPanel1.add(year, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 60, 20));
 
         day.setBackground(new java.awt.Color(165, 165, 165));
         day.setEditable(true);
@@ -218,7 +239,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 dayActionPerformed(evt);
             }
         });
-        jPanel1.add(day, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 60, 20));
+        jPanel1.add(day, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 60, 20));
 
         pSex.setBackground(new java.awt.Color(165, 165, 165));
         pSex.setForeground(new java.awt.Color(0, 0, 0));
@@ -229,7 +250,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 pSexActionPerformed(evt);
             }
         });
-        jPanel1.add(pSex, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 90, 20));
+        jPanel1.add(pSex, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 80, 20));
 
         pBloodType.setBackground(new java.awt.Color(165, 165, 165));
         pBloodType.setEditable(true);
@@ -241,7 +262,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 pBloodTypeActionPerformed(evt);
             }
         });
-        jPanel1.add(pBloodType, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 70, 20));
+        jPanel1.add(pBloodType, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 70, 20));
 
         pCivilStatus.setBackground(new java.awt.Color(165, 165, 165));
         pCivilStatus.setForeground(new java.awt.Color(0, 0, 0));
@@ -252,7 +273,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 pCivilStatusActionPerformed(evt);
             }
         });
-        jPanel1.add(pCivilStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 120, 20));
+        jPanel1.add(pCivilStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 120, 20));
 
         doc.setBackground(new java.awt.Color(165, 165, 165));
         doc.setForeground(new java.awt.Color(0, 0, 0));
@@ -263,18 +284,18 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 docActionPerformed(evt);
             }
         });
-        jPanel1.add(doc, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 290, 290, -1));
+        jPanel1.add(doc, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 320, 290, -1));
 
         jButton2.setBackground(new java.awt.Color(68, 114, 196));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Submit");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 630, 60, 30));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 630, 60, 30));
 
         jButton3.setBackground(new java.awt.Color(153, 204, 255));
         jButton3.setForeground(new java.awt.Color(0, 0, 0));
@@ -285,7 +306,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 630, 70, 30));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 630, 70, 30));
 
         checkbox1.setLabel("Information are correct");
         checkbox1.setName("Information are correct"); // NOI18N
@@ -294,19 +315,19 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 checkbox1ItemStateChanged(evt);
             }
         });
-        jPanel1.add(checkbox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 640, -1, 20));
+        jPanel1.add(checkbox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 640, -1, 30));
 
         Schedule.setForeground(new java.awt.Color(0, 0, 0));
         Schedule.setText("Schedule");
-        jPanel1.add(Schedule, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 330, 370, -1));
+        jPanel1.add(Schedule, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 360, 370, -1));
 
         assistant.setForeground(new java.awt.Color(0, 0, 0));
         assistant.setText("Assistant");
-        jPanel1.add(assistant, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 360, 360, -1));
+        jPanel1.add(assistant, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 390, 360, -1));
 
         contact.setForeground(new java.awt.Color(0, 0, 0));
         contact.setText("Contact");
-        jPanel1.add(contact, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 390, 360, -1));
+        jPanel1.add(contact, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 420, 360, -1));
 
         depart.setBackground(new java.awt.Color(165, 165, 165));
         depart.setForeground(new java.awt.Color(0, 0, 0));
@@ -317,59 +338,150 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 departActionPerformed(evt);
             }
         });
-        jPanel1.add(depart, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 250, 290, -1));
+        jPanel1.add(depart, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 280, 290, -1));
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Age error message");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, 20));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, -1, 20));
 
         jTextField1.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jTextField1.setText("Choose a department to filter doctors.");
+        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 210, 360, 30));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 240, 360, 30));
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("         You are Editing patient: ");
-        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
+        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jLabel5.setOpaque(true);
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 57, 1360, 40));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1090, 40));
 
         jTextField2.setBackground(new java.awt.Color(255, 255, 255));
         jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField2.setText("In case of Emergency");
+        jTextField2.setText("In case of Emergency:");
+        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 600, 30));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 630, 30));
 
         jButton4.setBackground(new java.awt.Color(68, 114, 196));
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Back");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 60, 30));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 60, 20));
 
+        jButton5.setBackground(new java.awt.Color(68, 114, 196));
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Change Password");
+        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, 130, -1));
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Name:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 40, 20));
+
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Age:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
+
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Birthdate:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Contact No.: ");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, -1));
+
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Illness:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 280, 40, 20));
+
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("Allergies:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
+
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setText("Address:");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
+
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("Civil Status:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, -1, -1));
+
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Height:");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, -1, 20));
+
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setText("Weight: ");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, -1, -1));
+
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("Department:");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 280, 70, 30));
+
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel14.setText("Doctor:");
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 320, -1, 20));
+
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel15.setText("Name:");
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, -1, -1));
+
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel16.setText("Contact:");
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, -1, 20));
+
+        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel17.setText("Email:");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, -1, 20));
+
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel18.setText("Address:");
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 590, -1, 20));
+
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel19.setText("Blood Type:");
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, -1, 20));
+
+        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel20.setText("Sex: ");
+        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, -1, 20));
+
+        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel21.setText("Email:");
+        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, -1, 20));
+
+        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel22.setText("Relation: ");
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 510, -1, -1));
+
+        jLabel23.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel23.setText("Show Previous Patient Information");
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, -1, 20));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 700));
 
@@ -489,10 +601,13 @@ public class EditPatient extends javax.swing.JFrame implements submit{
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        MainFrame mf = new MainFrame();
-        mf.setVisible(true);
-        mf.setResizable(false);
-        mf.setLocationRelativeTo(null);
+         FindPatient fp = new FindPatient();
+       fp.jComboBox2.getEditor().setItem(patientName.getText().toString());
+        
+        fp.setVisible(true);
+        fp.setLocationRelativeTo(null);
+        fp.setResizable(false);
+        this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -836,8 +951,29 @@ public class EditPatient extends javax.swing.JFrame implements submit{
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;

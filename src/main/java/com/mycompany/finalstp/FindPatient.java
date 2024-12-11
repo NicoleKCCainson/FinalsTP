@@ -344,7 +344,7 @@ public class FindPatient extends javax.swing.JFrame implements find{
         dr.pack();
         dr.setLocationRelativeTo(null);
         dr.setResizable(false);
-        this.dispose();
+        
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -354,7 +354,7 @@ public class FindPatient extends javax.swing.JFrame implements find{
         dr.pack();
         dr.setLocationRelativeTo(null);
         dr.setResizable(false);
-        this.dispose();
+       this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
   
@@ -370,8 +370,9 @@ public class FindPatient extends javax.swing.JFrame implements find{
         mf.setVisible(true);
         mf.setResizable(false);
         mf.setLocationRelativeTo(null);
-        this.dispose();
-
+        
+           this.dispose();
+        
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -393,15 +394,15 @@ public class FindPatient extends javax.swing.JFrame implements find{
         pw.setAlwaysOnTop(true);
         pw.setResizable(false);
         pw.setFrame(1);
-    
-        
         String n = jComboBox2.getEditor().getItem().toString();
        pw.jLabel1.setText(n);
        
         System.out.println(n);
         setPatientF(jComboBox2.getSelectedItem().toString());
       
-         this.dispose();
+        this.dispose();
+        
+        
        
 
     }
@@ -424,8 +425,9 @@ public class FindPatient extends javax.swing.JFrame implements find{
         pw.setResizable(false);
         pw.jLabel1.setText(jComboBox2.getSelectedItem().toString());
          pw.setFrame(2);
+           this.dispose();
         
-         this.dispose();
+   
     }//GEN-LAST:event_jButton8ActionPerformed
 
 
@@ -654,7 +656,8 @@ public class FindPatient extends javax.swing.JFrame implements find{
       pw.setResizable(false);
         pw.jLabel1.setText(jComboBox2.getSelectedItem().toString());
        pw.setFrame(3);
-
+          this.dispose();
+        
   
     }//GEN-LAST:event_jButton3ActionPerformed
     public static void main(String[] args) {

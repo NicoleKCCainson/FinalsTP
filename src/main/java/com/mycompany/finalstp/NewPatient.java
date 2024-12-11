@@ -39,14 +39,13 @@ public class NewPatient extends javax.swing.JFrame implements submit {
 // new patient
     String m; //PatientAge
     String fileLoc = "C:\\Users\\nicol\\Desktop\\Database\\Patient";
+    String docTorFile = "C:\\Users\\nicol\\Desktop\\Database\\Doctor";
 
     public NewPatient() {
         
         initComponents();
         
         jButton2.setEnabled(false);
-        jComboBox6.setEnabled(false);
-        jComboBox7.setEnabled(false);
         Schedule.setVisible(true);
         pwNoMatch.setVisible(false);
         confirmed.setVisible(false);
@@ -317,7 +316,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
                 jComboBox3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 160, -1, -1));
+        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 160, 60, -1));
         jComboBox3.getAccessibleContext().setAccessibleName("BdYear");
 
         jComboBox4.setBackground(new java.awt.Color(165, 165, 165));
@@ -583,7 +582,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
 
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Illness / Concern:  ");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 100, 30));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 120, 50));
 
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Allergies:");
@@ -826,7 +825,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         contact.setVisible(true);
 
         try {
-            File path2 = new File("C:\\Users\\nicol\\Desktop\\Database\\Doctor\\" + jComboBox6.getSelectedItem().toString() + ".txt");
+            File path2 = new File(docTorFile+"\\" + jComboBox6.getSelectedItem().toString() + ".txt");
             String paths = path2.toString();
             BufferedReader br = new BufferedReader(new FileReader(paths));
             String s;
@@ -1017,7 +1016,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
 
     public void dep() {
 
-        File path = new File("C:\\Users\\nicol\\Desktop\\Database\\Doctor");
+        File path = new File(docTorFile);
         File[] files = path.listFiles();
         ArrayList<String> fileArray = new ArrayList<>();
 
