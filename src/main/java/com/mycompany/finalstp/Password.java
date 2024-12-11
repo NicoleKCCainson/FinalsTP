@@ -70,7 +70,7 @@ public class Password extends javax.swing.JFrame {
 
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Patient Name");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 190, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 90, 30));
 
         jPasswordField1.setBackground(new java.awt.Color(165, 165, 165));
         jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -78,7 +78,7 @@ public class Password extends javax.swing.JFrame {
                 jPasswordField1KeyReleased(evt);
             }
         });
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 130, 30));
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 130, 30));
 
         butSP1.setBackground(new java.awt.Color(255, 255, 255));
         butSP1.setForeground(new java.awt.Color(0, 0, 0));
@@ -93,15 +93,15 @@ public class Password extends javax.swing.JFrame {
                 butSP1ActionPerformed(evt);
             }
         });
-        jPanel1.add(butSP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 50, 30));
+        jPanel1.add(butSP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 50, 30));
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("show password");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 130, 20));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 100, 20));
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("error message");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 250, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 250, -1));
 
         jButton1.setBackground(new java.awt.Color(68, 114, 196));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));

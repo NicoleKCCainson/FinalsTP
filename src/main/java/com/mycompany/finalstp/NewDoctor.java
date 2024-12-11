@@ -126,22 +126,26 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
         jPanel1.setForeground(new java.awt.Color(153, 204, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton3.setText("back");
+        jButton3.setBackground(new java.awt.Color(68, 114, 196));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Back");
+        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 60, 30));
 
         jTextField1.setBackground(new java.awt.Color(165, 165, 165));
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 190, -1));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 280, -1));
         jTextField1.getAccessibleContext().setAccessibleName("thisName");
 
         namelabel1.setForeground(new java.awt.Color(0, 0, 0));
         namelabel1.setText("First Name:");
-        jPanel1.add(namelabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 80, 20));
+        jPanel1.add(namelabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 80, 20));
 
         checkbox2.setForeground(new java.awt.Color(8, 0, 0));
         checkbox2.setLabel("Monday");
@@ -150,7 +154,7 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
                 checkbox2ItemStateChanged(evt);
             }
         });
-        jPanel1.add(checkbox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 220, -1, -1));
+        jPanel1.add(checkbox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 220, -1, -1));
 
         checkbox3.setForeground(new java.awt.Color(8, 0, 0));
         checkbox3.setLabel("Tuesday");
@@ -159,7 +163,7 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
                 checkbox3ItemStateChanged(evt);
             }
         });
-        jPanel1.add(checkbox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 240, -1, -1));
+        jPanel1.add(checkbox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 240, -1, -1));
 
         checkbox4.setForeground(new java.awt.Color(8, 0, 0));
         checkbox4.setLabel("Wednesday");
@@ -168,7 +172,7 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
                 checkbox4ItemStateChanged(evt);
             }
         });
-        jPanel1.add(checkbox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 260, 90, -1));
+        jPanel1.add(checkbox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 260, 90, -1));
 
         checkbox5.setForeground(new java.awt.Color(8, 0, 0));
         checkbox5.setLabel("Thursday");
@@ -177,7 +181,7 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
                 checkbox5ItemStateChanged(evt);
             }
         });
-        jPanel1.add(checkbox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 280, -1, -1));
+        jPanel1.add(checkbox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 280, -1, -1));
 
         checkbox6.setForeground(new java.awt.Color(8, 0, 0));
         checkbox6.setLabel("Friday");
@@ -186,7 +190,7 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
                 checkbox6ItemStateChanged(evt);
             }
         });
-        jPanel1.add(checkbox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, -1, -1));
+        jPanel1.add(checkbox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 300, -1, -1));
 
         checkbox7.setForeground(new java.awt.Color(8, 0, 0));
         checkbox7.setLabel("Saturday");
@@ -195,7 +199,7 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
                 checkbox7ItemStateChanged(evt);
             }
         });
-        jPanel1.add(checkbox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 320, -1, -1));
+        jPanel1.add(checkbox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 320, -1, -1));
 
         checkbox8.setForeground(new java.awt.Color(8, 0, 0));
         checkbox8.setLabel("Sunday");
@@ -204,16 +208,16 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
                 checkbox8ItemStateChanged(evt);
             }
         });
-        jPanel1.add(checkbox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 340, -1, -1));
+        jPanel1.add(checkbox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 340, -1, -1));
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Age:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 30, 20));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 30, 20));
 
         jButton1.setBackground(new java.awt.Color(68, 114, 196));
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Submit");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -223,12 +227,12 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
 
         jTextField4.setBackground(new java.awt.Color(165, 165, 165));
         jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 130, -1));
+        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 230, -1));
         jTextField4.getAccessibleContext().setAccessibleName("file");
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("M.I.");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 30, 20));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 30, 20));
 
         jLabel1.setBackground(new java.awt.Color(51, 51, 51));
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
@@ -245,31 +249,33 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
 
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Department:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, 20));
 
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("Gender");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 50, 20));
+        jLabel6.setText("Gender:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 50, 20));
 
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("DAYS:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 190, 50, 40));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 190, 50, 40));
 
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Contact Number:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 530, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 560, -1, -1));
 
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("AVAILABILITY");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, -1, 26));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 160, 100, 30));
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("HMO Accredation/s: ");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, -1, 26));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, 26));
 
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Email: ");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 40, 20));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 40, 20));
 
         jLabel13.setBackground(new java.awt.Color(255, 255, 255));
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
@@ -281,177 +287,183 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
         jTextField3.setBackground(new java.awt.Color(165, 165, 165));
         jTextField3.setText(" ");
         jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 150, -1));
+        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 50, -1));
 
         jTextField5.setBackground(new java.awt.Color(165, 165, 165));
         jTextField5.setText(" ");
         jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 146, -1));
+        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, 230, -1));
 
         age1.setBackground(new java.awt.Color(165, 165, 165));
         age1.setText(" ");
         age1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(age1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 50, 20));
+        jPanel1.add(age1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 50, 20));
 
         jTextField8.setBackground(new java.awt.Color(165, 165, 165));
         jTextField8.setText(" ");
         jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 150, -1));
+        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 100, -1));
 
         jTextField9.setBackground(new java.awt.Color(165, 165, 165));
         jTextField9.setText(" ");
         jTextField9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 530, 236, -1));
+        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 560, 120, -1));
 
         jTextField10.setBackground(new java.awt.Color(165, 165, 165));
         jTextField10.setText(" ");
         jTextField10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, 236, -1));
+        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 520, 470, -1));
 
         jTextField7.setBackground(new java.awt.Color(165, 165, 165));
         jTextField7.setText(" ");
         jTextField7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 220, 150, -1));
+        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 220, 150, -1));
 
         jTextField11.setBackground(new java.awt.Color(165, 165, 165));
         jTextField11.setText(" ");
         jTextField11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 240, 150, -1));
+        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 240, 150, -1));
 
         jTextField12.setBackground(new java.awt.Color(165, 165, 165));
         jTextField12.setText(" ");
         jTextField12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 260, 150, -1));
+        jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 260, 150, -1));
 
         jTextField13.setBackground(new java.awt.Color(165, 165, 165));
         jTextField13.setText(" ");
         jTextField13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 280, 150, -1));
+        jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 280, 150, -1));
 
         jTextField14.setBackground(new java.awt.Color(165, 165, 165));
         jTextField14.setText(" ");
         jTextField14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 300, 150, -1));
+        jPanel1.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 300, 150, -1));
 
         jTextField15.setBackground(new java.awt.Color(165, 165, 165));
         jTextField15.setText(" ");
         jTextField15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 320, 150, -1));
+        jPanel1.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 320, 150, -1));
 
+        jComboBox1.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No Department Selected", "General Medicine", "Cardiology", "Neurology", "Pediatrics", "Orthopedics", "Dermatology", "Gynecology", "Urology", "Nephrology", "Pulmonology", "Endocrinology", "Psychiatry", "Gastroenterology", "Hematology", "Oncology", "Radiology", "Anesthesiology", "Ophthalmology", "Otolaryngology (ENT)", "Dentistry", "Rheumatology", "Geriatrics", "Emergency Medicine", "Pathology", "Plastic Surgery", "General Surgery", "Neurosurgery", "Obstetrics", "Sports Medicine", "Palliative Care" }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 170, -1));
+        jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153)));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 220, 20));
 
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Name:");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, -1, -1));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, -1, -1));
 
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Room no. :");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 70, 26));
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, 70, 26));
 
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Contact No.:");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, 26));
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, 26));
 
         checkbox1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
         checkbox1.setForeground(new java.awt.Color(7, 11, 26));
-        checkbox1.setLabel(" Information are correct");
+        checkbox1.setLabel(" Information are correct.");
         checkbox1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 checkbox1ItemStateChanged(evt);
             }
         });
-        jPanel1.add(checkbox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 580, 170, 30));
+        jPanel1.add(checkbox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 540, 170, 30));
 
         checkbox9.setForeground(new java.awt.Color(8, 0, 0));
         checkbox9.setLabel("Maxicare");
-        jPanel1.add(checkbox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, 90, 20));
+        jPanel1.add(checkbox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 190, 90, 20));
 
         checkbox10.setForeground(new java.awt.Color(8, 0, 0));
         checkbox10.setLabel("MediCard");
-        jPanel1.add(checkbox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 90, 20));
+        jPanel1.add(checkbox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 90, 20));
 
         checkbox11.setForeground(new java.awt.Color(8, 0, 0));
         checkbox11.setLabel("Intellicare");
-        jPanel1.add(checkbox11, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, 80, 20));
+        jPanel1.add(checkbox11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, 80, 20));
 
         checkbox12.setForeground(new java.awt.Color(8, 0, 0));
         checkbox12.setLabel("PhilCare");
-        jPanel1.add(checkbox12, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, 90, 20));
+        jPanel1.add(checkbox12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 90, 20));
 
         checkbox13.setForeground(new java.awt.Color(8, 0, 0));
         checkbox13.setLabel("Kaiser International HealthGroup");
-        jPanel1.add(checkbox13, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 370, 200, 20));
+        jPanel1.add(checkbox13, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 200, 20));
 
         checkbox16.setForeground(new java.awt.Color(8, 0, 0));
         checkbox16.setLabel("Fortune Care");
-        jPanel1.add(checkbox16, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 100, 20));
+        jPanel1.add(checkbox16, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, 100, 20));
 
         checkbox17.setForeground(new java.awt.Color(8, 0, 0));
         checkbox17.setLabel("Healthway Medical");
-        jPanel1.add(checkbox17, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 140, 20));
+        jPanel1.add(checkbox17, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 140, 20));
 
         checkbox18.setForeground(new java.awt.Color(8, 0, 0));
         checkbox18.setLabel("EastWest Healthcare");
-        jPanel1.add(checkbox18, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 150, 20));
+        jPanel1.add(checkbox18, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, 150, 20));
 
         checkbox19.setForeground(new java.awt.Color(8, 0, 0));
         checkbox19.setLabel("Avega Managed Care");
-        jPanel1.add(checkbox19, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, 160, 20));
+        jPanel1.add(checkbox19, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 160, 20));
 
         checkbox20.setForeground(new java.awt.Color(8, 0, 0));
         checkbox20.setLabel("Insular Health Care");
-        jPanel1.add(checkbox20, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 350, 160, 20));
+        jPanel1.add(checkbox20, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, 160, 20));
 
         checkbox21.setForeground(new java.awt.Color(8, 0, 0));
         checkbox21.setLabel("Value Care (ValuCare)");
-        jPanel1.add(checkbox21, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 160, 20));
+        jPanel1.add(checkbox21, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 190, 160, 20));
 
         checkbox22.setForeground(new java.awt.Color(8, 0, 0));
         checkbox22.setLabel("Caritas Health Shield");
-        jPanel1.add(checkbox22, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, 160, 20));
+        jPanel1.add(checkbox22, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 210, 160, 20));
 
         checkbox23.setForeground(new java.awt.Color(8, 0, 0));
         checkbox23.setLabel("Pacific Cross Health Care");
-        jPanel1.add(checkbox23, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 160, 20));
+        jPanel1.add(checkbox23, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 230, 160, 20));
 
         checkbox15.setForeground(new java.awt.Color(8, 0, 0));
         checkbox15.setLabel("MedAsia Philippines");
-        jPanel1.add(checkbox15, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, 160, 20));
+        jPanel1.add(checkbox15, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 160, 20));
 
         checkbox14.setForeground(new java.awt.Color(8, 0, 0));
         checkbox14.setLabel("Cocolife Healthcare");
-        jPanel1.add(checkbox14, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 160, 20));
+        jPanel1.add(checkbox14, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, 160, 20));
 
         jTextField16.setBackground(new java.awt.Color(165, 165, 165));
         jTextField16.setText(" ");
         jTextField16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 340, 150, -1));
+        jPanel1.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 340, 150, -1));
 
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("HOURS: 00:00AM - 00-00PM");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 200, -1, 20));
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 200, -1, 20));
 
         jTextField17.setBackground(new java.awt.Color(165, 165, 165));
         jTextField17.setText(" ");
         jTextField17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 530, 146, -1));
+        jPanel1.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 560, 240, -1));
 
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("Email: ");
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 530, -1, 20));
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 560, -1, 20));
 
+        jComboBox2.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox2.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Gender", "Male", "Female" }));
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 120, 20));
+        jComboBox2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153)));
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 120, 20));
 
         jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Last Name:");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 193, 80, -1));
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 80, 20));
 
         mi.setBackground(new java.awt.Color(165, 165, 165));
         mi.setText(" ");
         mi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
-        jPanel1.add(mi, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 30, 20));
+        jPanel1.add(mi, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 40, 20));
 
         jButton4.setBackground(new java.awt.Color(153, 204, 255));
         jButton4.setForeground(new java.awt.Color(0, 0, 0));

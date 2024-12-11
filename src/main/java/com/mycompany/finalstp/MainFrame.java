@@ -94,6 +94,8 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPasswordField2.setBackground(new java.awt.Color(102, 102, 102));
+        jPasswordField2.setForeground(new java.awt.Color(255, 255, 255));
         jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField2ActionPerformed(evt);
@@ -110,7 +112,7 @@ public class MainFrame extends javax.swing.JFrame {
                 jPasswordField2KeyTyped(evt);
             }
         });
-        jPanel3.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 130, -1));
+        jPanel3.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 150, -1));
 
         jToggleButton2.setBackground(new java.awt.Color(153, 204, 255));
         jToggleButton2.setForeground(new java.awt.Color(0, 0, 0));
@@ -125,40 +127,55 @@ public class MainFrame extends javax.swing.JFrame {
                 jToggleButton2ActionPerformed(evt);
             }
         });
-        jPanel3.add(jToggleButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, -1, 26));
+        jPanel3.add(jToggleButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(278, 80, -1, 26));
 
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("To change admin password, access required.");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 290, 20));
-        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 150, -1));
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 290, 20));
+
+        jTextField1.setBackground(new java.awt.Color(102, 102, 102));
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField1.setText("sasadda");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 150, -1));
 
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Input new Password: ");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 130, -1));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 130, -1));
 
+        jButton2.setBackground(new java.awt.Color(68, 114, 196));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("submit");
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, -1, -1));
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 50, 20));
 
         error1.setForeground(new java.awt.Color(0, 0, 0));
         error1.setText("Password Error");
-        jPanel3.add(error1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 100, 20));
+        jPanel3.add(error1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 100, 20));
 
         showPass2.setForeground(new java.awt.Color(51, 51, 51));
         showPass2.setText(" ");
         jPanel3.add(showPass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 100, 20));
 
+        jButton3.setBackground(new java.awt.Color(68, 114, 196));
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("cancel");
+        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 50, 20));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 450, 250));
 
@@ -511,6 +528,10 @@ public class MainFrame extends javax.swing.JFrame {
         fd.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_button5ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -16,6 +16,8 @@ public class newRecord extends javax.swing.JFrame implements submit{
     /**
      * Creates new form newRecord
      */
+    
+    String patLoc = "C:\\Users\\nicol\\Desktop\\Database\\Patient";
     public newRecord() {
         initComponents();
         jButton1.setEnabled(false);
@@ -36,8 +38,6 @@ public class newRecord extends javax.swing.JFrame implements submit{
         day1 = new javax.swing.JComboBox<>();
         year1 = new javax.swing.JComboBox<>();
         namelabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        concern1 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         diag1 = new javax.swing.JTextArea();
@@ -60,6 +60,8 @@ public class newRecord extends javax.swing.JFrame implements submit{
         jLabel8 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        concern1 = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1092, 702));
@@ -105,12 +107,6 @@ public class newRecord extends javax.swing.JFrame implements submit{
         namelabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         namelabel1.setForeground(new java.awt.Color(0, 0, 0));
         namelabel1.setText("Patient Name");
-
-        concern1.setBackground(new java.awt.Color(165, 165, 165));
-        concern1.setColumns(20);
-        concern1.setRows(5);
-        concern1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 51, 153), null));
-        jScrollPane1.setViewportView(concern1);
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -236,6 +232,8 @@ public class newRecord extends javax.swing.JFrame implements submit{
             }
         });
 
+        jScrollPane4.setViewportView(concern1);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -259,11 +257,10 @@ public class newRecord extends javax.swing.JFrame implements submit{
                                             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
-                                            .addComponent(jScrollPane2)))
-                                    .addComponent(namelabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 448, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -281,13 +278,19 @@ public class newRecord extends javax.swing.JFrame implements submit{
                                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(0, 0, Short.MAX_VALUE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(68, 68, 68))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(120, 120, 120)
+                                        .addComponent(checkbox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(126, 126, 126)
+                                        .addComponent(namelabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 448, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -304,10 +307,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
                                                 .addComponent(day2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(10, 10, 10)
                                                 .addComponent(year2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(120, 120, 120)
-                                        .addComponent(checkbox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -324,15 +324,13 @@ public class newRecord extends javax.swing.JFrame implements submit{
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(namelabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(7, 7, 7)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -354,6 +352,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
                         .addComponent(checkbox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(72, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -370,7 +369,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30))))
+                        .addGap(268, 268, 268))))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1092, 702));
@@ -410,26 +409,36 @@ public class newRecord extends javax.swing.JFrame implements submit{
 
         try {
             String FileName = date + ".txt";
-            File parentDir = new File("C:\\Users\\nicol\\Desktop\\Database\\Patient\\" + namelabel1.getText());
+            File parentDir = new File(patLoc+"\\" + namelabel1.getText());
             parentDir.mkdir();
-
-           // new File("C:\\Users\\nicol\\Desktop\\Database\\Patient\\" + namelabel1.getText()).mkdirs();
 
             File file = new File(parentDir, FileName);
             file.createNewFile();
 
-            FileWriter writer = new FileWriter("C:\\Users\\nicol\\Desktop\\Database\\Patient\\" + namelabel1.getText() +"\\"+ FileName);
-            writer.write("Date of Visit: " + date);
-            writer.write("\nConcern: " + concern1.getText());
-            writer.write("\nMedical Diagnosis: " + diag1.getText());
-            writer.write("\nPrescription/Medical Advice: " + presc1.getText());
-            writer.write("\nLaboratory Request: " + lab1.getSelectedItem().toString());
-            writer.write("\nNext Appointment: " + newAp);
-            writer.write("\nAgenda: " + agenda1.getText().toString());
+            FileWriter writer = new FileWriter(patLoc+"\\" + namelabel1.getText() +"\\"+ FileName);
+            writer.write("Date of Visit: ");
+              writer.write("\n"+date);
+            writer.write("\nConcern: " );
+              writer.write("\n"+concern1.getText());
+            writer.write("\nMedical Diagnosis: " );
+                  writer.write("\n"+diag1.getText().replace(",","|"));
+            writer.write("\nPrescription/Medical Advice: " );
+                  writer.write("\n"+presc1.getText().replace(",", "|"));
+            writer.write("\nLaboratory Request: " );
+                  writer.write("\n"+lab1.getSelectedItem().toString());
+            writer.write("\nNext Appointment: ");
+                writer.write("\n"+newAp);
+            writer.write("\nAgenda: " );
+                 writer.write("\n"+agenda1.getText().toString());
             writer.close();
             
         } catch (Exception e) {
         }
+        sub sub = new sub();
+        sub.setVisible(true);
+        sub.setLocationRelativeTo(null);
+        sub.setResizable(false);
+        this.dispose();
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -474,7 +483,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
 
         try {
             String FileName = date + ".txt";
-            File parentDir = new File("C:\\Users\\nicol\\Desktop\\Database\\Patient\\" + namelabel1.getText());
+            File parentDir = new File(patLoc+"\\" + namelabel1.getText());
             parentDir.mkdir();
 
            // new File("C:\\Users\\nicol\\Desktop\\Database\\Patient\\" + namelabel1.getText()).mkdirs();
@@ -482,7 +491,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
             File file = new File(parentDir, FileName);
             file.createNewFile();
 
-            FileWriter writer = new FileWriter("C:\\Users\\nicol\\Desktop\\Database\\Patient\\" + namelabel1.getText() +"\\"+ FileName);
+            FileWriter writer = new FileWriter(patLoc+"\\" + namelabel1.getText() +"\\"+ FileName);
             writer.write("Date of Visit: " + date);
             writer.write("\nConcern: " + concern1.getText());
             writer.write("\nMedical Diagnosis: " + diag1.getText());
@@ -552,7 +561,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea agenda1;
     private java.awt.Checkbox checkbox1;
-    private javax.swing.JTextArea concern1;
+    private javax.swing.JTextPane concern1;
     private javax.swing.JComboBox<String> day1;
     private javax.swing.JComboBox<String> day2;
     private javax.swing.JTextArea diag1;
@@ -568,9 +577,9 @@ public class newRecord extends javax.swing.JFrame implements submit{
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JComboBox<String> lab1;
     private javax.swing.JComboBox<String> month1;

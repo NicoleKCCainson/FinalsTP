@@ -24,7 +24,7 @@ public class ChangePass extends javax.swing.JFrame {
      * Creates new form ChangePass
      */
     String pass;
-
+    String fileLoc = "C:\\Users\\nicol\\Desktop\\Database\\Patient";
     public ChangePass() {
         initComponents();
         showNewPass.setVisible(false);
@@ -216,7 +216,7 @@ public class ChangePass extends javax.swing.JFrame {
 
                 try {
 
-                    File path = new File("C:\\Users\\nicol\\Desktop\\Database\\Patient" + "\\" + cpPatientName.getText().toString() + ".txt");
+                    File path = new File(fileLoc + "\\" + cpPatientName.getText().toString() + ".txt");
                     String fileName = path.toString();
 
                     BufferedReader b = new BufferedReader(new FileReader(fileName));
@@ -308,7 +308,7 @@ public class ChangePass extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField2KeyReleased
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.dispose();        // TODO add your handling code here:
+        this.dispose(); 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

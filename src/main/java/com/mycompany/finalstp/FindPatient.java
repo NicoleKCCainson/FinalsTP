@@ -103,29 +103,38 @@ public class FindPatient extends javax.swing.JFrame implements find{
         jLabel1.setText("Find Patient Information");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 33, -1, -1));
 
+        jButton2.setBackground(new java.awt.Color(68, 114, 196));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Done");
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 680, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 680, 60, 30));
 
+        jButton4.setBackground(new java.awt.Color(68, 114, 196));
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Copy");
+        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 630, -1, -1));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 640, 60, 30));
 
+        jButton5.setBackground(new java.awt.Color(68, 114, 196));
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("back");
+        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 60, 30));
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
@@ -254,13 +263,16 @@ public class FindPatient extends javax.swing.JFrame implements find{
         });
         jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(949, 193, 233, -1));
 
+        jButton7.setBackground(new java.awt.Color(68, 114, 196));
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Find");
+        jButton7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1188, 193, -1, -1));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1188, 193, 40, -1));
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Enter Patient Name:");
@@ -273,7 +285,10 @@ public class FindPatient extends javax.swing.JFrame implements find{
         BloodType.setAlignmentX(0.5F);
         jPanel1.add(BloodType, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 254, 34));
 
+        jButton3.setBackground(new java.awt.Color(68, 114, 196));
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Edit Patient Information");
+        jButton3.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, null));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -281,7 +296,10 @@ public class FindPatient extends javax.swing.JFrame implements find{
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 340, 280, 30));
 
+        jButton6.setBackground(new java.awt.Color(68, 114, 196));
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("View Patient Records");
+        jButton6.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, null));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -289,7 +307,10 @@ public class FindPatient extends javax.swing.JFrame implements find{
         });
         jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 240, 280, 30));
 
+        jButton8.setBackground(new java.awt.Color(68, 114, 196));
+        jButton8.setForeground(new java.awt.Color(255, 255, 255));
         jButton8.setText("Add New Record");
+        jButton8.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, null));
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
