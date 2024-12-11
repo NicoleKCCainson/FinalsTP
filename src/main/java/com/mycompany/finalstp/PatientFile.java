@@ -19,20 +19,30 @@ import javax.swing.JOptionPane;
  *
  * @author nicol
  */
-public class PatientFile extends javax.swing.JFrame implements find{
+public class PatientFile extends javax.swing.JFrame implements find {
 
     /**
      * Creates new form PatientFile
      */
-   
     String fileLocPat = "C:\\Users\\nicol\\Desktop\\Database\\Patient";
+
     public PatientFile() {
-   
-     initComponents();
-   
+        
+        initComponents();
+        Concern.setEditable(false);
+        Concern.setFocusable(false);
+        Diag.setEditable(false);
+        Diag.setFocusable(false);
+        Presc.setEditable(false);
+        Presc.setFocusable(false);
+        Agenda.setEditable(false);
+        Agenda.setFocusable(false);
+        LabTest.setEditable(false);
+        LabTest.setFocusable(false);
+        NextApp.setEditable(false);
+        NextApp.setFocusable(false);
         
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -119,7 +129,7 @@ public class PatientFile extends javax.swing.JFrame implements find{
 
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Requested Laboratory Test");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 210, -1, -1));
 
         Agenda.setBackground(new java.awt.Color(165, 165, 165));
         Agenda.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -173,7 +183,7 @@ public class PatientFile extends javax.swing.JFrame implements find{
         LabTest.setForeground(new java.awt.Color(0, 0, 0));
         jScrollPane8.setViewportView(LabTest);
 
-        jPanel1.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 240, 308, 33));
+        jPanel1.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 230, 308, 70));
 
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Next Appointment Date:");
@@ -219,7 +229,7 @@ public class PatientFile extends javax.swing.JFrame implements find{
         // TODO add your handling code here:
         
         FindPatient fp = new FindPatient();
-       fp.jComboBox2.getEditor().setItem(jLabel1.getText().toString());
+        fp.jComboBox2.getEditor().setItem(jLabel1.getText().toString());
         
         fp.setVisible(true);
         fp.setLocationRelativeTo(null);
@@ -230,92 +240,87 @@ public class PatientFile extends javax.swing.JFrame implements find{
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-     copy();
+        copy();
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-    find();
+        find();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
         // TODO add your handling code here:
         
-    itemSelect();
+        itemSelect();
         
-        
+
     }//GEN-LAST:event_jList1ValueChanged
     @Override
- public void find(){
-       String name = jLabel1.getText();
+    public void find() {
+        String name = jLabel1.getText();
         System.out.println(name);
         setName(name);
         
         System.out.println(getName());
-        File path = new File(fileLocPat+"\\" + name);
+        File path = new File(fileLocPat + "\\" + name);
         File[] files = path.listFiles();
         ArrayList<String> arr = new ArrayList();
         
-        DefaultListModel mod = new DefaultListModel();    
+        DefaultListModel mod = new DefaultListModel();        
         jList1.setModel(mod);
         
-       for (int i = 0; i < files.length;) {
-                if (files[i].isFile()) {
-                    try {
-
-                        BufferedReader buff = new BufferedReader(new FileReader(files[i]));
-                        String s;
-                        Arrays.sort(files);
-
-                        
-                           
-                                int n = 0;
-                                String fileName = files[i].getName().toString().replace(".txt", "");
-                                arr.add(fileName);
-                                String nn = fileName.split(",")[n];
-                            System.out.println(nn);
-                             mod.addElement(nn);
-                                n++;
-
-                        
-                        buff.close();
-
-                    } catch (Exception e) {
-
-                    }
+        for (int i = 0; i < files.length;) {
+            if (files[i].isFile()) {
+                try {
+                    
+                    BufferedReader buff = new BufferedReader(new FileReader(files[i]));
+                    String s;
+                    Arrays.sort(files);
+                    
+                    int n = 0;
+                    String fileName = files[i].getName().toString().replace(".txt", "");
+                    arr.add(fileName);
+                    String nn = fileName.split(",")[n];
+                    System.out.println(nn);
+                    mod.addElement(nn);
+                    n++;
+                    
+                    buff.close();
+                    
+                } catch (Exception e) {
+                    
                 }
-                i++;
-
+            }
+            i++;
             
         }
- }
- 
+    }
+    
     @Override
-    public void itemSelect(){
-          
+    public void itemSelect() {
         
         try {
             
             String fileDate = jList1.getSelectedValue().toString();
-            File path2 = new File(fileLocPat+"\\"+jLabel1.getText()+"\\"+ fileDate + ".txt");
+            File path2 = new File(fileLocPat + "\\" + jLabel1.getText() + "\\" + fileDate + ".txt");
             String fileName = path2.toString();
-
+            
             BufferedReader b = new BufferedReader(new FileReader(fileName));
             String s;
-
+            
             ArrayList<String> files = new ArrayList<>();
-
+            
             while ((s = b.readLine()) != null) {
-                files.add(s);
+                files.add(s.replace("|", ","));
             }
-
+            
             String c = files.toString();
             String Concern1 = c.split(",")[3];
-            String Diag1 = c.split(",")[5].replace("|", ",");
-            String Presc1 =c.split(",")[7].replace("|",",");
+            String Diag1 = c.split(",")[5];
+            String Presc1 = c.split(",")[7];
             String LabReq = c.split(",")[9];
             String nextAp = c.split(",")[11];
-            String agenda= c.split(",")[13];
+            String agenda = c.split(",")[13].replace("]", "");
             
             Concern.setText(Concern1);
             Diag.setText(Diag1);
@@ -323,60 +328,56 @@ public class PatientFile extends javax.swing.JFrame implements find{
             NextApp.setText(nextAp);
             Agenda.setText(agenda);
             Presc.setText(Presc1);
-
-        }catch(Exception e){
-                
-                
-                
-                }
+            
+        } catch (Exception e) {
+            
+        }
         
     }
     
     @Override
-    public void copy(){
-             try {
+    public void copy() {
+        try {
             
             String fileDate = jList1.getSelectedValue().toString();
-            File path2 = new File(fileLocPat+"\\"+jLabel1.getText()+"\\"+ fileDate + ".txt");
+            File path2 = new File(fileLocPat + "\\" + jLabel1.getText() + "\\" + fileDate + ".txt");
             String fileName = path2.toString();
-
+            
             BufferedReader b = new BufferedReader(new FileReader(fileName));
             String s;
-
+            
             ArrayList<String> files = new ArrayList<>();
-
+            
             while ((s = b.readLine()) != null) {
                 files.add(s);
             }
-
+            
             String c = files.toString();
-            String date = c.split (",")[0];
+            String date = c.split(",")[0];
             String con = c.split(",")[2];
             String Concern1 = c.split(",")[3];
             String dia = c.split(",")[4];
             String Diag1 = c.split(",")[5];
             String Pre = c.split(",")[6];
-            String Presc1 =c.split(",")[7];
+            String Presc1 = c.split(",")[7];
             String lr = c.split(",")[10];
             String LabReq = c.split(",")[9];
             String nA = c.split(",")[10];
             String nextAp = c.split(",")[11];
             String ag = c.split(",")[12];
-            String agenda= c.split(",")[13];
+            String agenda = c.split(",")[13];
             
-          
-            StringSelection copier = new StringSelection(date + "\n" +con +"\n" + Concern1 +"\n" + dia +"\n" +Diag1 +"\n" + Pre +"\n" + Presc1 +"\n" + lr +"\n" + LabReq +"\n" + nA +"\n" + nextAp +"\n" + ag  +"\n" +agenda
+            StringSelection copier = new StringSelection(date + "\n" + con + "\n" + Concern1 + "\n" + dia + "\n" + Diag1 + "\n" + Pre + "\n" + Presc1 + "\n" + lr + "\n" + LabReq + "\n" + nA + "\n" + nextAp + "\n" + ag + "\n" + agenda
             );
             Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
             cb.setContents(copier, null);
-
-        }catch(Exception e){
-                
-                
-                
-                }
+            
+        } catch (Exception e) {
+            
+        }
         
     }
+
     /**
      * @param args the command line arguments
      */

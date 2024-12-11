@@ -11,7 +11,7 @@ import java.awt.datatransfer.Clipboard;
 import java.util.Arrays;
 import javax.swing.BorderFactory;
 
-public class FindDoctor extends javax.swing.JFrame {
+public class FindDoctor extends javax.swing.JFrame implements find {
 
     String Doctor;
     String fileLoc = "C:\\Users\\nicol\\Desktop\\Database\\Doctor";
@@ -19,7 +19,7 @@ public class FindDoctor extends javax.swing.JFrame {
     public FindDoctor() {
 
         initComponents();
-
+allDoc();
     }
 
     @SuppressWarnings("unchecked")
@@ -111,7 +111,7 @@ public class FindDoctor extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(68, 114, 196));
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("back");
+        jButton5.setText("Back");
         jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,6 +201,7 @@ public class FindDoctor extends javax.swing.JFrame {
         jComboBox2.setBackground(new java.awt.Color(165, 165, 165));
         jComboBox2.setEditable(true);
         jComboBox2.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NO DOCTOR SELECTED" }));
         jComboBox2.setBorder(null);
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -287,46 +288,10 @@ public class FindDoctor extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    //copy
+
+   
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-
-        try {
-            File path2 = new File(fileLoc + "\\" + jComboBox2.getSelectedItem().toString() + ".txt");
-            String fileName = path2.toString();
-
-            BufferedReader b = new BufferedReader(new FileReader(fileName));
-            String s;
-
-            ArrayList<String> files = new ArrayList<>();
-
-            while ((s = b.readLine()) != null) {
-                files.add(s);
-            }
-
-            String c = files.toString();
-
-            String name = c.split(",")[1];
-            String age = c.split(",")[2];
-            String department = c.split(",")[3];
-            String Gender = c.split(",")[4];
-            String contactNo = c.split(",")[5];
-            String Room = c.split(",")[6];
-            String hmos = c.split(",")[7];
-            String avail = c.split(",")[8];
-            String email = c.split(",")[9];
-            String secName = c.split(",")[11];
-            String secNum = c.split(",")[12];
-            String secEmail = c.split(",")[13];
-
-            
-              StringSelection copier = new StringSelection( name + "\n" +age + "\n" + department + "\n" + Gender + "\n" + contactNo + "\n" + Room + "\n" + hmos + "\n" + avail + "\n" + secName + "\n" + secNum+ 
-        "\n" + secEmail  );
-        Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
-          cb.setContents(copier, null);  
-            } catch (Exception e) {
-
-        }
-
+        copy();
 
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -343,7 +308,91 @@ public class FindDoctor extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        find();
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+       itemSelect();
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jComboBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox7ActionPerformed
+        // TODO add your handling code here:
+        //Department Chosen
+
+  
+    }//GEN-LAST:event_jComboBox7ActionPerformed
+
+    private void jComboBox7ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox7ItemStateChanged
+        // TODO add your handling code here:
+        dep();
+       
+    }//GEN-LAST:event_jComboBox7ItemStateChanged
+    
+      public void dep() {
+
+        File path = new File(fileLoc);
+        File[] files = path.listFiles();
+        ArrayList<String> fileArray = new ArrayList<>();
+        jComboBox2.removeAllItems();
+        for (int i = 0; i < files.length;) {
+
+            if (files[i].isFile()) {
+                try {
+                    BufferedReader br = new BufferedReader(new FileReader(files[i]));
+                    String s;
+                    Arrays.sort(files);
+
+                    while ((s = br.readLine()) != null) {
+                        if (s.trim().contains(jComboBox7.getSelectedItem().toString())) {
+                            int num = 0;
+                            String n = files[i].getName().toString().replace("-", " ");
+                            fileArray.add(n);
+                            String aa = n.split(",")[num].replace(".txt", "");
+                            jComboBox2.addItem(aa);
+                            num++;
+                            System.out.println(n);
+                        }
+
+                    }
+                    br.close();
+
+                } catch (Exception e) {
+
+                }
+            }
+            i++;
+        }
+      }
+     public void allDoc(){
+    
+            File path = new File(fileLoc);
+        File[] files = path.listFiles();
+        ArrayList<String> fileArray = new ArrayList<>();
+
+        for (int i = 0; i < files.length;) {
+
+            if (files[i].isFile()) {
+                try {
+                   
+                    Arrays.sort(files);
+                            int num = 0;
+                            String n = files[i].getName().toString();
+                            fileArray.add(n);
+                            String aa = n.split(",")[num].replace(".txt", "");
+                            jComboBox2.addItem(aa);
+                            num++;
+                            System.out.println(n);
+
+                } catch (Exception e) {
+
+                }
+            }
+            i++;
+        }
         
+    }
+   public void find(){
         
             String word = jComboBox2.getEditor().getItem().toString().toUpperCase();
         File path = new File(fileLoc);
@@ -387,12 +436,9 @@ public class FindDoctor extends javax.swing.JFrame {
 
         }
         
-
-    }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-        try {
+   }
+    public void itemSelect(){
+      try {
             File path2 = new File(fileLoc + "\\" + jComboBox2.getSelectedItem().toString() + ".txt");
             String fileName = path2.toString();
 
@@ -459,58 +505,46 @@ public class FindDoctor extends javax.swing.JFrame {
         } catch (Exception e) {
 
         }
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }
+    public void copy(){
+             try {
+            File path2 = new File(fileLoc + "\\" + jComboBox2.getSelectedItem().toString() + ".txt");
+            String fileName = path2.toString();
 
-    private void jComboBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox7ActionPerformed
-        // TODO add your handling code here:
-        //Department Chosen
+            BufferedReader b = new BufferedReader(new FileReader(fileName));
+            String s;
 
-  
-    }//GEN-LAST:event_jComboBox7ActionPerformed
+            ArrayList<String> files = new ArrayList<>();
 
-    private void jComboBox7ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox7ItemStateChanged
-        // TODO add your handling code here:
-        dep();
-       
-    }//GEN-LAST:event_jComboBox7ItemStateChanged
-    
-      public void dep() {
-
-        File path = new File("C:\\Users\\nicol\\Desktop\\Database\\Doctor");
-        File[] files = path.listFiles();
-        ArrayList<String> fileArray = new ArrayList<>();
-        jComboBox2.removeAllItems();
-        for (int i = 0; i < files.length;) {
-
-            if (files[i].isFile()) {
-                try {
-                    BufferedReader br = new BufferedReader(new FileReader(files[i]));
-                    String s;
-                    Arrays.sort(files);
-
-                    while ((s = br.readLine()) != null) {
-                        if (s.trim().contains(jComboBox7.getSelectedItem().toString())) {
-                            int num = 0;
-                            String n = files[i].getName().toString().replace("-", " ");
-                            fileArray.add(n);
-                            String aa = n.split(",")[num].replace(".txt", "");
-                            jComboBox2.addItem(aa);
-                            num++;
-                            System.out.println(n);
-                        }
-
-                    }
-                    br.close();
-
-                } catch (Exception e) {
-
-                }
+            while ((s = b.readLine()) != null) {
+                files.add(s.replace(",", "|"));
             }
-            i++;
+
+            String c = files.toString();
+
+            String name = c.split(",")[1];
+            String age = c.split(",")[2];
+            String department = c.split(",")[3];
+            String Gender = c.split(",")[4];
+            String contactNo = c.split(",")[5];
+            String Room = c.split(",")[6];
+            String hmos = c.split(",")[7];
+            String avail = c.split(",")[8];
+            String email = c.split(",")[9];
+            String secName = c.split(",")[11];
+            String secNum = c.split(",")[12];
+            String secEmail = c.split(",")[13];
+
+            
+              StringSelection copier = new StringSelection( name + "\n" +age + "\n" + department + "\n" + Gender + "\n" + contactNo + "\n" + Room + "\n" + hmos.replace("|", ",") + "\n" + avail.replace("|", ",") +"\n"+email+ "\n" + secName + "\n" + secNum+ 
+        "\n" + secEmail.replace("]", "")  );
+        Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
+          cb.setContents(copier, null);  
+            } catch (Exception e) {
+
         }
-      }
     
-    
+    }
     public static void main(String[] args) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {

@@ -39,20 +39,14 @@ public class newRecord extends javax.swing.JFrame implements submit{
         year1 = new javax.swing.JComboBox<>();
         namelabel1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        diag1 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        presc1 = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
         month2 = new javax.swing.JComboBox<>();
         day2 = new javax.swing.JComboBox<>();
         year2 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        agenda1 = new javax.swing.JTextArea();
         lab1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         checkbox1 = new java.awt.Checkbox();
@@ -60,8 +54,10 @@ public class newRecord extends javax.swing.JFrame implements submit{
         jLabel8 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        concern1 = new javax.swing.JTextPane();
+        concern1 = new javax.swing.JTextField();
+        diag1 = new javax.swing.JTextField();
+        presc1 = new javax.swing.JTextField();
+        agenda1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1092, 702));
@@ -70,72 +66,54 @@ public class newRecord extends javax.swing.JFrame implements submit{
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setPreferredSize(new java.awt.Dimension(1092, 702));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         month1.setBackground(new java.awt.Color(165, 165, 165));
         month1.setEditable(true);
         month1.setForeground(new java.awt.Color(0, 0, 0));
         month1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Month", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
         month1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        month1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                month1ActionPerformed(evt);
-            }
-        });
+        jPanel1.add(month1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 170, 80, -1));
 
         day1.setBackground(new java.awt.Color(165, 165, 165));
         day1.setEditable(true);
         day1.setForeground(new java.awt.Color(0, 0, 0));
         day1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
         day1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        day1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                day1ActionPerformed(evt);
-            }
-        });
+        jPanel1.add(day1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 170, 60, -1));
 
         year1.setBackground(new java.awt.Color(165, 165, 165));
         year1.setEditable(true);
         year1.setForeground(new java.awt.Color(0, 0, 0));
         year1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040", "2041", "2042", "2043", "2044", "2045", "2046", "2047", "2048", "2049", "2050" }));
         year1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        year1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                year1ActionPerformed(evt);
-            }
-        });
+        jPanel1.add(year1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 170, -1, -1));
 
         namelabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         namelabel1.setForeground(new java.awt.Color(0, 0, 0));
         namelabel1.setText("Patient Name");
+        jPanel1.add(namelabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 112, 448, -1));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Concern");
-
-        diag1.setBackground(new java.awt.Color(165, 165, 165));
-        diag1.setColumns(20);
-        diag1.setRows(5);
-        diag1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 51, 153), null));
-        jScrollPane2.setViewportView(diag1);
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 168, 60, 20));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Medical Diagnosis");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 120, 30));
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Prescription");
-
-        presc1.setBackground(new java.awt.Color(165, 165, 165));
-        presc1.setColumns(20);
-        presc1.setRows(5);
-        presc1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jScrollPane3.setViewportView(presc1);
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, 76, 20));
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Laboratory Request");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 120, 20));
 
         month2.setBackground(new java.awt.Color(165, 165, 165));
         month2.setForeground(new java.awt.Color(0, 0, 0));
@@ -146,6 +124,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
                 month2ActionPerformed(evt);
             }
         });
+        jPanel1.add(month2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 90, -1));
 
         day2.setBackground(new java.awt.Color(165, 165, 165));
         day2.setForeground(new java.awt.Color(0, 0, 0));
@@ -156,6 +135,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
                 day2ActionPerformed(evt);
             }
         });
+        jPanel1.add(day2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 60, -1));
 
         year2.setBackground(new java.awt.Color(165, 165, 165));
         year2.setForeground(new java.awt.Color(0, 0, 0));
@@ -166,29 +146,27 @@ public class newRecord extends javax.swing.JFrame implements submit{
                 year2ActionPerformed(evt);
             }
         });
+        jPanel1.add(year2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 70, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Next Appointment");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 100, 20));
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Agenda");
-
-        agenda1.setBackground(new java.awt.Color(165, 165, 165));
-        agenda1.setColumns(20);
-        agenda1.setRows(5);
-        agenda1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 51, 153), null));
-        jScrollPane5.setViewportView(agenda1);
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 480, 50, 20));
 
         lab1.setBackground(new java.awt.Color(165, 165, 165));
         lab1.setForeground(new java.awt.Color(0, 0, 0));
         lab1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "N/A", "Complete Blood Count (CBC)", "Lipid Panel", "Blood Glucose Test", "Liver Function Tests (LFTs)", "Thyroid Function Test", "Urinalysis", "Urine Culture", "Pregnancy Test", "X-Ray", "MRI (Magnetic Resonance Imaging)", "CT Scan (Computed Tomography)", "Ultrasound", "Blood Culture", "Stool Test", "Throat Swab", "Biopsy", "Pap Smear", "DNA Testing", "PCR Test", "Electrocardiogram (ECG/EKG)", "Troponin Test", "Stress Test", "Hormone Panels", "Insulin Test", "Skin Prick Test", "Antibody Tests", "Drug Screening", "Heavy Metal Test." }));
         lab1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
+        jPanel1.add(lab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 350, 20));
 
         jButton1.setBackground(new java.awt.Color(68, 114, 196));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Submit");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 255, 255), null, null));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -196,26 +174,31 @@ public class newRecord extends javax.swing.JFrame implements submit{
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(775, 607, 69, 30));
 
         checkbox1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
-        checkbox1.setLabel("Done");
+        checkbox1.setLabel("Information are correct.");
         checkbox1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 checkbox1ItemStateChanged(evt);
             }
         });
+        jPanel1.add(checkbox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 570, 190, 30));
 
         jLabel7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Date:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 170, 38, 37));
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("    Creating a new record for patient:");
         jLabel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 3));
         jLabel8.setOpaque(true);
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 57, 1080, 37));
 
         jButton2.setBackground(new java.awt.Color(153, 204, 255));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Clear");
         jButton2.setBorder(null);
@@ -224,170 +207,45 @@ public class newRecord extends javax.swing.JFrame implements submit{
                 jButton2ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 607, 69, 30));
 
+        jButton3.setBackground(new java.awt.Color(68, 114, 196));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Back");
+        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 16, 56, 29));
 
-        jScrollPane4.setViewportView(concern1);
+        concern1.setBackground(new java.awt.Color(165, 165, 165));
+        concern1.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(concern1, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 168, 360, 37));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 2, Short.MAX_VALUE)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 1080, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, 0)
-                                        .addComponent(lab1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(171, 171, 171)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(month1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(10, 10, 10)
-                                                .addComponent(day1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(10, 10, 10)
-                                                .addComponent(year1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 0, Short.MAX_VALUE))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(68, 68, 68))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(120, 120, 120)
-                                        .addComponent(checkbox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(126, 126, 126)
-                                        .addComponent(namelabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 448, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(50, 50, 50)
-                                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(month2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(10, 10, 10)
-                                                .addComponent(day2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(10, 10, 10)
-                                                .addComponent(year2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jButton3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(namelabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(7, 7, 7)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lab1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(month2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(day2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(year2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(24, 24, 24)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(10, 10, 10)
-                        .addComponent(checkbox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(72, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(month1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(day1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(year1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(62, 62, 62)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(268, 268, 268))))
-        );
+        diag1.setBackground(new java.awt.Color(165, 165, 165));
+        diag1.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(diag1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 354, 48));
+
+        presc1.setBackground(new java.awt.Color(165, 165, 165));
+        presc1.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(presc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 260, 354, 50));
+
+        agenda1.setBackground(new java.awt.Color(165, 165, 165));
+        agenda1.setForeground(new java.awt.Color(0, 0, 0));
+        agenda1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agenda1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(agenda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 480, 354, 50));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1092, 702));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void month1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_month1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_month1ActionPerformed
-
-    private void day1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_day1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_day1ActionPerformed
-
-    private void year1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_year1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_year1ActionPerformed
 
     private void month2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_month2ActionPerformed
         // TODO add your handling code here:
@@ -419,7 +277,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
             writer.write("Date of Visit: ");
               writer.write("\n"+date);
             writer.write("\nConcern: " );
-              writer.write("\n"+concern1.getText());
+              writer.write("\n"+concern1.getText().replace(",","|"));
             writer.write("\nMedical Diagnosis: " );
                   writer.write("\n"+diag1.getText().replace(",","|"));
             writer.write("\nPrescription/Medical Advice: " );
@@ -429,7 +287,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
             writer.write("\nNext Appointment: ");
                 writer.write("\n"+newAp);
             writer.write("\nAgenda: " );
-                 writer.write("\n"+agenda1.getText().toString());
+                 writer.write("\n"+agenda1.getText().toString().replace(",","|"));
             writer.close();
             
         } catch (Exception e) {
@@ -447,6 +305,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
         if (checkbox1.getState()) {
 
             jButton1.setEnabled(true);
+            afterSub();
 
         } else {
             jButton1.setEnabled(false);
@@ -457,6 +316,8 @@ public class newRecord extends javax.swing.JFrame implements submit{
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        clear();
+        
   
         
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -470,6 +331,10 @@ public class newRecord extends javax.swing.JFrame implements submit{
         fp.jComboBox2.getEditor().setItem(namelabel1.getText());
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void agenda1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agenda1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_agenda1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -507,6 +372,20 @@ public class newRecord extends javax.swing.JFrame implements submit{
     }
     
     public void afterSub(){
+    concern1.setEditable(false);
+    concern1.setFocusable(false);
+    diag1.setEditable(false);
+    diag1.setFocusable(false);
+    agenda1.setEditable(false);
+    agenda1.setFocusable(false);
+    month1.setEnabled(false);
+    day1.setEnabled(false);
+    year1.setEnabled(false);
+    month2.setEnabled(false);
+    day2.setEnabled(false);
+    year2.setEnabled(false);
+    presc1.setEditable(false);
+    presc1.setFocusable(false);
     
     }
     
@@ -559,12 +438,12 @@ public class newRecord extends javax.swing.JFrame implements submit{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea agenda1;
+    private javax.swing.JTextField agenda1;
     private java.awt.Checkbox checkbox1;
-    private javax.swing.JTextPane concern1;
+    private javax.swing.JTextField concern1;
     private javax.swing.JComboBox<String> day1;
     private javax.swing.JComboBox<String> day2;
-    private javax.swing.JTextArea diag1;
+    private javax.swing.JTextField diag1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -577,15 +456,11 @@ public class newRecord extends javax.swing.JFrame implements submit{
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JComboBox<String> lab1;
     private javax.swing.JComboBox<String> month1;
     private javax.swing.JComboBox<String> month2;
     public javax.swing.JLabel namelabel1;
-    private javax.swing.JTextArea presc1;
+    private javax.swing.JTextField presc1;
     private javax.swing.JComboBox<String> year1;
     private javax.swing.JComboBox<String> year2;
     // End of variables declaration//GEN-END:variables

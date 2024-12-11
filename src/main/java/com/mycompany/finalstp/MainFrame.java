@@ -18,7 +18,7 @@ import java.util.Arrays;
  *
  * @author nicol
  */
-public class MainFrame extends javax.swing.JFrame {
+public class MainFrame extends javax.swing.JFrame  {
 
 //MAINFRAME
     /**
@@ -135,7 +135,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         jTextField1.setBackground(new java.awt.Color(102, 102, 102));
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setText("sasadda");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -149,7 +148,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(68, 114, 196));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("submit");
+        jButton2.setText("Submit");
         jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,7 +167,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(68, 114, 196));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("cancel");
+        jButton3.setText("Cancel");
         jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,7 +176,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 50, 20));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 450, 250));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 450, 250));
 
         jLabel1.setBackground(new java.awt.Color(14, 21, 20));
         jLabel1.setFont(new java.awt.Font("Sitka Small", 0, 36)); // NOI18N

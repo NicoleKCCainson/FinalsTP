@@ -112,7 +112,7 @@ public class FindPatient extends javax.swing.JFrame implements find{
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 680, 60, 30));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 640, 60, 30));
 
         jButton4.setBackground(new java.awt.Color(68, 114, 196));
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
@@ -127,7 +127,7 @@ public class FindPatient extends javax.swing.JFrame implements find{
 
         jButton5.setBackground(new java.awt.Color(68, 114, 196));
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("back");
+        jButton5.setText("Back");
         jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -286,7 +286,8 @@ public class FindPatient extends javax.swing.JFrame implements find{
         jPanel1.add(BloodType, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 254, 34));
 
         jButton3.setBackground(new java.awt.Color(68, 114, 196));
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Edit Patient Information");
         jButton3.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, null));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -297,7 +298,8 @@ public class FindPatient extends javax.swing.JFrame implements find{
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 340, 280, 30));
 
         jButton6.setBackground(new java.awt.Color(68, 114, 196));
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.setText("View Patient Records");
         jButton6.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, null));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -308,7 +310,8 @@ public class FindPatient extends javax.swing.JFrame implements find{
         jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 240, 280, 30));
 
         jButton8.setBackground(new java.awt.Color(68, 114, 196));
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
+        jButton8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(0, 0, 0));
         jButton8.setText("Add New Record");
         jButton8.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, null));
         jButton8.addActionListener(new java.awt.event.ActionListener() {

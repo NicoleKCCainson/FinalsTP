@@ -30,6 +30,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
      String fileLoc = "C:\\Users\\nicol\\Desktop\\Database\\Patient";
      String fileLocDoctor = "C:\\Users\\nicol\\Desktop\\Database\\Doctor\\";
      String ageM;
+     String pass;
      boolean a = true;
     public EditPatient() {
         initComponents();
@@ -63,9 +64,6 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         rContact = new javax.swing.JTextField();
         relation = new javax.swing.JTextField();
         rEmail = new javax.swing.JTextField();
-        month = new javax.swing.JComboBox<>();
-        year = new javax.swing.JComboBox<>();
-        day = new javax.swing.JComboBox<>();
         pSex = new javax.swing.JComboBox<>();
         pBloodType = new javax.swing.JComboBox<>();
         pCivilStatus = new javax.swing.JComboBox<>();
@@ -104,6 +102,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
+        birthday = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1092, 702));
@@ -119,11 +118,6 @@ public class EditPatient extends javax.swing.JFrame implements submit{
 
         pName.setBackground(new java.awt.Color(165, 165, 165));
         pName.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        pName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pNameActionPerformed(evt);
-            }
-        });
         jPanel1.add(pName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 350, 20));
 
         pAllergies.setBackground(new java.awt.Color(165, 165, 165));
@@ -132,16 +126,11 @@ public class EditPatient extends javax.swing.JFrame implements submit{
 
         pAge.setBackground(new java.awt.Color(165, 165, 165));
         pAge.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        pAge.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pAgeActionPerformed(evt);
-            }
-        });
         jPanel1.add(pAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 50, 20));
 
         pillness.setBackground(new java.awt.Color(165, 165, 165));
         pillness.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jPanel1.add(pillness, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 220, 40));
+        jPanel1.add(pillness, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 270, 40));
 
         pWeight.setBackground(new java.awt.Color(165, 165, 165));
         pWeight.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -149,7 +138,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
 
         pAddress.setBackground(new java.awt.Color(165, 165, 165));
         pAddress.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        jPanel1.add(pAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, 430, -1));
+        jPanel1.add(pAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 440, -1));
 
         pHeight.setBackground(new java.awt.Color(165, 165, 165));
         pHeight.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -157,11 +146,6 @@ public class EditPatient extends javax.swing.JFrame implements submit{
 
         pContact.setBackground(new java.awt.Color(165, 165, 165));
         pContact.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        pContact.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pContactActionPerformed(evt);
-            }
-        });
         jPanel1.add(pContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 150, -1));
 
         rAddress.setBackground(new java.awt.Color(165, 165, 165));
@@ -185,11 +169,6 @@ public class EditPatient extends javax.swing.JFrame implements submit{
 
         rName.setBackground(new java.awt.Color(165, 165, 165));
         rName.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        rName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rNameActionPerformed(evt);
-            }
-        });
         jPanel1.add(rName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 500, 450, -1));
 
         rContact.setBackground(new java.awt.Color(165, 165, 165));
@@ -205,51 +184,10 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         rEmail.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(rEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 580, 270, 20));
 
-        month.setBackground(new java.awt.Color(165, 165, 165));
-        month.setEditable(true);
-        month.setForeground(new java.awt.Color(0, 0, 0));
-        month.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Month", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
-        month.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        month.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                monthActionPerformed(evt);
-            }
-        });
-        jPanel1.add(month, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 80, 20));
-
-        year.setBackground(new java.awt.Color(165, 165, 165));
-        year.setEditable(true);
-        year.setForeground(new java.awt.Color(0, 0, 0));
-        year.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year", "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1950", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940", "1939", "1938", "1937", "1936", "1935", "1934", "1933", "1932", "1931", "1930", "1929", "1928", "1927", "1926", "1925", "1924", "1923", "1922", "1921", "1920", "1919", "1918", "1917", "1916", "1915", "1914", "1913", "1912", "1911", "1910", "1909", "1908", "1907", "1906", "1905", "1904", "1903", "1902", "1901", "1900" }));
-        year.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        year.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                yearActionPerformed(evt);
-            }
-        });
-        jPanel1.add(year, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 60, 20));
-
-        day.setBackground(new java.awt.Color(165, 165, 165));
-        day.setEditable(true);
-        day.setForeground(new java.awt.Color(0, 0, 0));
-        day.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        day.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        day.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dayActionPerformed(evt);
-            }
-        });
-        jPanel1.add(day, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 60, 20));
-
         pSex.setBackground(new java.awt.Color(165, 165, 165));
         pSex.setForeground(new java.awt.Color(0, 0, 0));
         pSex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "N/A", "Female", "Male" }));
         pSex.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        pSex.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pSexActionPerformed(evt);
-            }
-        });
         jPanel1.add(pSex, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 80, 20));
 
         pBloodType.setBackground(new java.awt.Color(165, 165, 165));
@@ -257,22 +195,12 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         pBloodType.setForeground(new java.awt.Color(0, 0, 0));
         pBloodType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "N/A", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
         pBloodType.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        pBloodType.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pBloodTypeActionPerformed(evt);
-            }
-        });
         jPanel1.add(pBloodType, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 290, 70, 20));
 
         pCivilStatus.setBackground(new java.awt.Color(165, 165, 165));
         pCivilStatus.setForeground(new java.awt.Color(0, 0, 0));
         pCivilStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "N/A", "Single", "Married", "Divorced/Seraparated", "Widowed", "In a Civil Partnership (Live in Partner)" }));
         pCivilStatus.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
-        pCivilStatus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pCivilStatusActionPerformed(evt);
-            }
-        });
         jPanel1.add(pCivilStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 120, 20));
 
         doc.setBackground(new java.awt.Color(165, 165, 165));
@@ -315,7 +243,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                 checkbox1ItemStateChanged(evt);
             }
         });
-        jPanel1.add(checkbox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 540, -1, 30));
+        jPanel1.add(checkbox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 590, -1, 30));
 
         Schedule.setForeground(new java.awt.Color(0, 0, 0));
         Schedule.setText("Schedule");
@@ -405,7 +333,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
 
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Illness:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 40, 20));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 40, 20));
 
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Allergies:");
@@ -413,7 +341,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
 
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Address:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 60, 20));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 60, 20));
 
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Civil Status:");
@@ -479,26 +407,19 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         jLabel24.setOpaque(true);
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 560, 30));
 
+        birthday.setBackground(new java.awt.Color(165, 165, 165));
+        birthday.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
+        birthday.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                birthdayActionPerformed(evt);
+            }
+        });
+        jPanel1.add(birthday, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 140, 20));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 700));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void dayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dayActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dayActionPerformed
-
-    private void yearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yearActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_yearActionPerformed
-
-    private void monthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_monthActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_monthActionPerformed
-
-    private void rNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rNameActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -506,22 +427,6 @@ public class EditPatient extends javax.swing.JFrame implements submit{
   
      find();
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void pNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pNameActionPerformed
-
-    private void pSexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pSexActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pSexActionPerformed
-
-    private void pBloodTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pBloodTypeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pBloodTypeActionPerformed
-
-    private void pCivilStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pCivilStatusActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pCivilStatusActionPerformed
 
     private void docActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_docActionPerformed
         // TODO add your handling code here:
@@ -565,6 +470,8 @@ public class EditPatient extends javax.swing.JFrame implements submit{
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         ifSubmit();
+        
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -578,14 +485,6 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         dep();
     
     }//GEN-LAST:event_departActionPerformed
-
-    private void pContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pContactActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pContactActionPerformed
-
-    private void pAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pAgeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pAgeActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
@@ -609,8 +508,13 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         cp.setLocationRelativeTo(null);
         cp.setResizable(false);
         cp.cpPatientName.setText(patientName.getText());
+        this.dispose();
         
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void birthdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_birthdayActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_birthdayActionPerformed
     public void find(){     
         try {
             
@@ -638,11 +542,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
             pAddress.setText(c.split(",")[9].replace("|", ",").replace("Address:", "").replaceFirst(" ", ""));
             pCivilStatus.setSelectedItem(c.split(",")[10].replace("Civil Status:", "").replaceFirst(" ", ""));
             
-            String bday = c.split(",")[11].replace("Birthday:", "");
-            month.setSelectedItem(bday.split(" ")[1]);
-            day.setSelectedItem(bday.split(" ")[2]);
-            year.setSelectedItem(bday.split(" ")[3]);
-            
+            birthday.setText(c.split(",")[11].replace("Birthday:", ""));
             pContact.setText(c.split(",")[12].replace("Contact Number:", "").replaceFirst(" ", ""));
             pEmail.setText(c.split(",")[13].replace("Email:", "").replaceFirst(" ", ""));
             rName.setText(c.split(",")[16].replace("Name:", "").replaceFirst(" ", ""));
@@ -664,9 +564,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
     public void clear(){
     //clear code
     
-    year.setSelectedIndex(0);
-    month.setSelectedIndex(0);
-    day.setSelectedIndex(0);
+    birthday.setText("");
     doc.setSelectedIndex(0);
     depart.setSelectedIndex(0);
     pBloodType.setSelectedIndex(0);
@@ -700,10 +598,8 @@ public class EditPatient extends javax.swing.JFrame implements submit{
                jButton2.setEnabled(true);
             
             //dito lagay yung para di na maedit 
-            
-    year.setEnabled(false);
-    month.setEnabled(false);
-    day.setEnabled(false);
+    birthday.setEditable(false);
+    birthday.setFocusable(false);
     doc.setEnabled(false);
     depart.setEnabled(false);
     pBloodType.setEnabled(false);
@@ -747,6 +643,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
     
     public void ifSubmit(){
         //no no here dont
+        passwordRead();
        String age = pAge.getText().toString();
         if (!age.isEmpty()) {
             try {
@@ -800,7 +697,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
             writer.write("\nWeight:" + pWeight.getText() + " kg");
             writer.write("\nAddress:" + pAddress.getText().toUpperCase().replace(",", "|"));
             writer.write("\nCivil Status:" + pCivilStatus.getSelectedItem().toString());
-            writer.write("\nBirthday:" + month.getSelectedItem().toString() + " " + day.getSelectedItem().toString() + " " + year.getSelectedItem().toString());
+            writer.write("\nBirthday:" + birthday.getText());
             writer.write("\nContact Number:" + pContact.getText());
             writer.write("\nEmail:" + pEmail.getText().toUpperCase());
             writer.write("\nPatient is " + getAge());
@@ -811,6 +708,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
             writer.write("\nEmail:" + rEmail.getText().toUpperCase());
             writer.write("\nAddress:" + rAddress.getText().toUpperCase());
             writer.write("\nDoctor:" + doc.getSelectedItem().toString());
+            writer.write("\n"+ getPass());
 
             writer.close();
 
@@ -898,6 +796,45 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         return ageM;
     
     }
+    public void passwordRead(){
+    try{
+                    File path = new File(fileLoc + "\\" + patientName.getText().toString() + ".txt");
+                    String fileName = path.toString();
+
+                    BufferedReader b = new BufferedReader(new FileReader(fileName));
+                    String s;
+
+                    ArrayList<String> files = new ArrayList<>();
+
+                    while ((s = b.readLine()) != null) {
+                        files.add(s.replace(",", "|").replace("[", ""));
+                    }
+                    System.out.println(s);
+                    b.close();
+                    String c = files.toString();
+
+                   
+                   String pass1 = c.split(",")[22];
+
+               setPass (pass1.replace("]", ""));
+
+                    
+
+
+                } catch (Exception e) {
+          
+
+                }
+
+          
+    
+    }
+    public void setPass(String pass){
+    this.pass = pass;
+    }
+    public String getPass(){
+        return pass;
+}
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -933,9 +870,9 @@ public class EditPatient extends javax.swing.JFrame implements submit{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Schedule;
     private javax.swing.JLabel assistant;
+    private javax.swing.JTextField birthday;
     private java.awt.Checkbox checkbox1;
     private javax.swing.JLabel contact;
-    private javax.swing.JComboBox<String> day;
     private javax.swing.JComboBox<String> depart;
     private javax.swing.JComboBox<String> doc;
     private javax.swing.JButton jButton1;
@@ -969,7 +906,6 @@ public class EditPatient extends javax.swing.JFrame implements submit{
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JComboBox<String> month;
     private javax.swing.JTextField pAddress;
     private javax.swing.JTextField pAge;
     private javax.swing.JTextField pAllergies;
@@ -988,6 +924,5 @@ public class EditPatient extends javax.swing.JFrame implements submit{
     private javax.swing.JTextField rEmail;
     private javax.swing.JTextField rName;
     private javax.swing.JTextField relation;
-    private javax.swing.JComboBox<String> year;
     // End of variables declaration//GEN-END:variables
 }

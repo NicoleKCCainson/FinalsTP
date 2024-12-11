@@ -503,7 +503,7 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
 
         // TODO add your handling code here:
         ifSubmit();
-        sub2 sub2 = new sub2();
+        sub sub2 = new sub();
         sub2.setVisible(true);
         sub2.setLocationRelativeTo(null);
         sub2.setResizable(false);
@@ -755,21 +755,21 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
         System.out.println(days);
         
         
-        String firstName = jTextField1.getText();
-        String lastName = jTextField4.getText();
-        String middle = mi.getText();
+        String firstName = jTextField1.getText().toUpperCase();
+        String lastName = jTextField4.getText().toUpperCase();
+        String middle = mi.getText().toUpperCase();
         String age = age1.getText();
-        String Gender = jComboBox2.getSelectedItem().toString();
-        String Department = jComboBox1.getSelectedItem().toString();
-        String contactNum = jTextField8.getText();
-        String roomNo = jTextField3.getText();
+        String Gender = jComboBox2.getSelectedItem().toString().toUpperCase();
+        String Department = jComboBox1.getSelectedItem().toString().toUpperCase();
+        String contactNum = jTextField8.getText().toUpperCase();
+        String roomNo = jTextField3.getText().toUpperCase();
         String HMO = HMOs;
         String avai = days; 
-        String email = jTextField5.getText();
+        String email = jTextField5.getText().toUpperCase();
         
-        String secName =jTextField10.getText();
-        String secNum = jTextField9.getText();
-        String secEmail = jTextField17.getText();
+        String secName =jTextField10.getText().toUpperCase();
+        String secNum = jTextField9.getText().toUpperCase();
+        String secEmail = jTextField17.getText().toUpperCase();
         
         String fullname = firstName+" "+middle+" "+ lastName;
         

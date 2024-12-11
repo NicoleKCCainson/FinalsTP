@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
  *
  * @author nicol
  */
-public class ChangePass extends javax.swing.JFrame {
+public class ChangePass extends javax.swing.JFrame implements submit{
 
     /**
      * Creates new form ChangePass
@@ -49,13 +49,13 @@ public class ChangePass extends javax.swing.JFrame {
         jPasswordField2 = new javax.swing.JPasswordField();
         togBut1 = new javax.swing.JToggleButton();
         togBut2 = new javax.swing.JToggleButton();
-        jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         error = new javax.swing.JLabel();
         error1 = new javax.swing.JLabel();
         error2 = new javax.swing.JLabel();
         showConfirmPass = new javax.swing.JLabel();
         showNewPass = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -76,14 +76,14 @@ public class ChangePass extends javax.swing.JFrame {
 
         cpPatientName.setForeground(new java.awt.Color(0, 0, 0));
         cpPatientName.setText("Patient Name");
-        jPanel1.add(cpPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, -1, 30));
+        jPanel1.add(cpPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 190, 30));
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("                                   You are editing password for:");
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 2));
         jLabel5.setOpaque(true);
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 470, 30));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 40, 490, 30));
 
         jPasswordField1.setBackground(new java.awt.Color(165, 165, 165));
         jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -101,19 +101,21 @@ public class ChangePass extends javax.swing.JFrame {
         });
         jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 130, -1));
 
-        togBut1.setBackground(new java.awt.Color(255, 255, 255));
+        togBut1.setBackground(new java.awt.Color(153, 204, 255));
         togBut1.setForeground(new java.awt.Color(0, 0, 0));
         togBut1.setText("👁️");
+        togBut1.setBorder(null);
         togBut1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 togBut1StateChanged(evt);
             }
         });
-        jPanel1.add(togBut1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, -1, 26));
+        jPanel1.add(togBut1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, -1, 26));
 
-        togBut2.setBackground(new java.awt.Color(255, 255, 255));
+        togBut2.setBackground(new java.awt.Color(153, 204, 255));
         togBut2.setForeground(new java.awt.Color(0, 0, 0));
         togBut2.setText("👁️");
+        togBut2.setBorder(null);
         togBut2.setPreferredSize(new java.awt.Dimension(42, 22));
         togBut2.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -125,18 +127,7 @@ public class ChangePass extends javax.swing.JFrame {
                 togBut2ActionPerformed(evt);
             }
         });
-        jPanel1.add(togBut2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, -1, 26));
-
-        jButton1.setBackground(new java.awt.Color(68, 114, 196));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Cancel");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 50, 20));
+        jPanel1.add(togBut2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 50, 26));
 
         jButton3.setBackground(new java.awt.Color(68, 114, 196));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -147,7 +138,7 @@ public class ChangePass extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 50, 20));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 50, 20));
 
         error.setForeground(new java.awt.Color(0, 0, 0));
         error.setText("Error Message");
@@ -161,13 +152,24 @@ public class ChangePass extends javax.swing.JFrame {
         error2.setText("Confirm Password: ");
         jPanel1.add(error2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 130, 30));
 
-        showConfirmPass.setForeground(new java.awt.Color(0, 0, 0));
+        showConfirmPass.setForeground(new java.awt.Color(51, 51, 51));
         showConfirmPass.setText("ShowConfirmPassword");
         jPanel1.add(showConfirmPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, 30));
 
-        showNewPass.setForeground(new java.awt.Color(0, 0, 0));
+        showNewPass.setForeground(new java.awt.Color(51, 51, 51));
         showNewPass.setText("ShowNewPassword");
         jPanel1.add(showNewPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, -1, 20));
+
+        jButton5.setBackground(new java.awt.Color(153, 204, 255));
+        jButton5.setForeground(new java.awt.Color(0, 0, 0));
+        jButton5.setText("Clear");
+        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 50, 20));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 300));
 
@@ -176,6 +178,14 @@ public class ChangePass extends javax.swing.JFrame {
 
     private void togBut1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_togBut1StateChanged
         // TODO add your handling code here:
+            String pass = Arrays.toString(jPasswordField1.getPassword());
+        if (togBut1.isSelected()) {
+            showNewPass.setVisible(true);
+            showNewPass.setText(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""));
+        } else {
+            showNewPass.setText("");
+        }
+         
     }//GEN-LAST:event_togBut1StateChanged
 
     private void togBut2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_togBut2StateChanged
@@ -205,62 +215,8 @@ public class ChangePass extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
 
-        String p1A = Arrays.toString(jPasswordField1.getPassword());
-        String p1 = p1A.toString().replace(",", "").replace("[", "").replace("]", "").replace(" ", "");
-
-        String p2A = Arrays.toString(jPasswordField2.getPassword());
-        String p2 = p2A.toString().replace(",", "").replace("[", "").replace("]", "").replace(" ", "");
-        if (!p1.isBlank() && !p2.isBlank()) {
-
-            if (p1.matches(p2)) {
-
-                try {
-
-                    File path = new File(fileLoc + "\\" + cpPatientName.getText().toString() + ".txt");
-                    String fileName = path.toString();
-
-                    BufferedReader b = new BufferedReader(new FileReader(fileName));
-                    String s;
-
-                    ArrayList<String> files = new ArrayList<>();
-
-                    while ((s = b.readLine()) != null) {
-                        files.add(s.replace(",", "|").replace("[", ""));
-                    }
-                    System.out.println(s);
-                    b.close();
-                    String c = files.toString();
-
-                    FileWriter writer = new FileWriter(path);
-                    for (int i = 0; i < 22;) {
-                        writer.write(c.split(",")[i] + "\n");
-                        System.out.println(c.split(",")[i]);
-                        i++;
-                    }
-
-                    writer.write("Password:" + p2);
-
-                    writer.close();
-
-                    sub sub = new sub();
-                    sub.setVisible(true);
-                    sub.setResizable(false);
-                    sub.setLocationRelativeTo(null);
-                    this.dispose();
-
-                } catch (Exception e) {
-                    errorMessages();
-
-                }
-
-            } else {
-                errorMessages();
-                error.setForeground(Color.red);
-                error.setVisible(true);
-            }
-        } else {
-
-        }
+      ifSubmit();
+    
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jPasswordField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyReleased
@@ -300,7 +256,7 @@ public class ChangePass extends javax.swing.JFrame {
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
 
             if (!getPass().matches(passField2.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""))) {
-                error.setVisible(true);
+               errorMessages();
             }
 
         }
@@ -311,16 +267,85 @@ public class ChangePass extends javax.swing.JFrame {
         this.dispose(); 
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+        clear();
+    }//GEN-LAST:event_jButton5ActionPerformed
     public void setPass(String pass) {
         this.pass = pass;
     }
 
     public String getPass() {
         return pass;
+    }
+    
+    public void ifSubmit(){
+    
+        String p1A = Arrays.toString(jPasswordField1.getPassword());
+        String p1 = getPass().toString().replace(",", "").replace("[", "").replace("]", "").replace(" ", "");
+
+        String p2A = Arrays.toString(jPasswordField2.getPassword());
+        String p2 = p2A.toString().replace(",", "").replace("[", "").replace("]", "").replace(" ", "");
+        if (!p1.isBlank() && !p2.isBlank()) {
+
+            if (p1.matches(p2)) {
+
+                try {
+
+                    File path = new File(fileLoc + "\\" + cpPatientName.getText().toString() + ".txt");
+                    String fileName = path.toString();
+
+                    BufferedReader b = new BufferedReader(new FileReader(fileName));
+                    String s;
+
+                    ArrayList<String> files = new ArrayList<>();
+
+                    while ((s = b.readLine()) != null) {
+                        files.add(s.replace(",", "|").replace("[", ""));
+                    }
+                    System.out.println(s);
+                    b.close();
+                    String c = files.toString();
+
+                    FileWriter writer = new FileWriter(path);
+                    for (int i = 0; i < 22;) {
+                        writer.write(c.split(",")[i] + "\n");
+                        System.out.println(c.split(",")[i]);
+                        i++;
+                    }
+
+                    writer.write("Password:" + p2);
+
+                    writer.close();
+
+                    sub sub = new sub();
+                    sub.setVisible(true);
+                    sub.setResizable(false);
+                    sub.setLocationRelativeTo(null);
+                    afterSub();
+
+                } catch (Exception e) {
+                    errorMessages();
+
+                }
+
+            } else {
+                errorMessages();
+               
+            }
+        } else {
+             errorMessages();
+            
+        }
+    }
+    public void afterSub(){
+    this.dispose();
+    }
+    public void clear(){
+        jPasswordField1.setText("");
+        jPasswordField2.setText("");
+        showNewPass.setText("");
+        showConfirmPass.setText("");
     }
 
     /**
@@ -332,16 +357,15 @@ public class ChangePass extends javax.swing.JFrame {
         int rnd = (int) (Math.random() * 4);
 
         ArrayList<String> ar = new ArrayList<>();
-        ar.add("Password is incorrect. Please try again.");
-        ar.add("  Access denied:Wrong password provided.");
-        ar.add(" Login unsuccessful: Password incorrect.");
+        ar.add("Password does not match. Please try again.");
+        ar.add("  Wrong password provided.");
+        ar.add("  Unsuccessful: Password do not match.");
         ar.add("   Error: Password mismatch.");
 
         String err = ar.toString().split(",")[rnd].replace("[", "").replace("]", "");
         error.setForeground(Color.red);
-        error.setText(err);
         error.setVisible(true);
-
+        error.setText(err);
     }
 
     public static void main(String args[]) {
@@ -382,9 +406,9 @@ public class ChangePass extends javax.swing.JFrame {
     private javax.swing.JLabel error;
     private javax.swing.JLabel error1;
     private javax.swing.JLabel error2;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
