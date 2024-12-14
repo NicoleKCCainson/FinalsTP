@@ -138,7 +138,8 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 60, 30));
 
-        jTextField1.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 280, -1));
         jTextField1.getAccessibleContext().setAccessibleName("thisName");
@@ -225,7 +226,8 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 620, 80, 30));
 
-        jTextField4.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField4.setForeground(new java.awt.Color(0, 0, 0));
         jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 230, -1));
         jTextField4.getAccessibleContext().setAccessibleName("file");
@@ -284,67 +286,79 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
         jLabel13.setOpaque(true);
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 87, 1078, 37));
 
-        jTextField3.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField3.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField3.setForeground(new java.awt.Color(0, 0, 0));
         jTextField3.setText(" ");
         jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 50, -1));
 
-        jTextField5.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField5.setForeground(new java.awt.Color(0, 0, 0));
         jTextField5.setText(" ");
         jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, 230, -1));
 
-        age1.setBackground(new java.awt.Color(165, 165, 165));
+        age1.setBackground(new java.awt.Color(255, 255, 255));
+        age1.setForeground(new java.awt.Color(0, 0, 0));
         age1.setText(" ");
         age1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(age1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 50, 20));
 
-        jTextField8.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField8.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField8.setForeground(new java.awt.Color(0, 0, 0));
         jTextField8.setText(" ");
         jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 100, -1));
 
-        jTextField9.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField9.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField9.setForeground(new java.awt.Color(0, 0, 0));
         jTextField9.setText(" ");
         jTextField9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 560, 120, -1));
 
-        jTextField10.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField10.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField10.setForeground(new java.awt.Color(0, 0, 0));
         jTextField10.setText(" ");
         jTextField10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 520, 470, -1));
 
-        jTextField7.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField7.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField7.setForeground(new java.awt.Color(0, 0, 0));
         jTextField7.setText(" ");
         jTextField7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 220, 150, -1));
 
-        jTextField11.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField11.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField11.setForeground(new java.awt.Color(0, 0, 0));
         jTextField11.setText(" ");
         jTextField11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 240, 150, -1));
 
-        jTextField12.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField12.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField12.setForeground(new java.awt.Color(0, 0, 0));
         jTextField12.setText(" ");
         jTextField12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 260, 150, -1));
 
-        jTextField13.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField13.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField13.setForeground(new java.awt.Color(0, 0, 0));
         jTextField13.setText(" ");
         jTextField13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 280, 150, -1));
 
-        jTextField14.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField14.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField14.setForeground(new java.awt.Color(0, 0, 0));
         jTextField14.setText(" ");
         jTextField14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 300, 150, -1));
 
-        jTextField15.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField15.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField15.setForeground(new java.awt.Color(0, 0, 0));
         jTextField15.setText(" ");
         jTextField15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 320, 150, -1));
 
-        jComboBox1.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox1.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No Department Selected", "General Medicine", "Cardiology", "Neurology", "Pediatrics", "Orthopedics", "Dermatology", "Gynecology", "Urology", "Nephrology", "Pulmonology", "Endocrinology", "Psychiatry", "Gastroenterology", "Hematology", "Oncology", "Radiology", "Anesthesiology", "Ophthalmology", "Otolaryngology (ENT)", "Dentistry", "Rheumatology", "Geriatrics", "Emergency Medicine", "Pathology", "Plastic Surgery", "General Surgery", "Neurosurgery", "Obstetrics", "Sports Medicine", "Palliative Care" }));
         jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153)));
@@ -432,7 +446,8 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
         checkbox14.setLabel("Cocolife Healthcare");
         jPanel1.add(checkbox14, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, 160, 20));
 
-        jTextField16.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField16.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField16.setForeground(new java.awt.Color(0, 0, 0));
         jTextField16.setText(" ");
         jTextField16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 340, 150, -1));
@@ -441,7 +456,8 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
         jLabel16.setText("HOURS: 00:00AM - 00-00PM");
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 200, -1, 20));
 
-        jTextField17.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField17.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField17.setForeground(new java.awt.Color(0, 0, 0));
         jTextField17.setText(" ");
         jTextField17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 560, 240, -1));
@@ -450,7 +466,7 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
         jLabel17.setText("Email: ");
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 560, -1, 20));
 
-        jComboBox2.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox2.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox2.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Gender", "Male", "Female" }));
         jComboBox2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153)));
@@ -460,7 +476,8 @@ public class NewDoctor extends javax.swing.JFrame implements submit {
         jLabel18.setText("Last Name:");
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 80, 20));
 
-        mi.setBackground(new java.awt.Color(165, 165, 165));
+        mi.setBackground(new java.awt.Color(255, 255, 255));
+        mi.setForeground(new java.awt.Color(0, 0, 0));
         mi.setText(" ");
         mi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153), 2));
         jPanel1.add(mi, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 40, 20));

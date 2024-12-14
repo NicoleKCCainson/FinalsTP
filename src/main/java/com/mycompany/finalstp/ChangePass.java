@@ -85,7 +85,8 @@ public class ChangePass extends javax.swing.JFrame implements submit{
         jLabel5.setOpaque(true);
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 40, 490, 30));
 
-        jPasswordField1.setBackground(new java.awt.Color(165, 165, 165));
+        jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
+        jPasswordField1.setForeground(new java.awt.Color(0, 0, 0));
         jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jPasswordField1KeyReleased(evt);
@@ -93,7 +94,8 @@ public class ChangePass extends javax.swing.JFrame implements submit{
         });
         jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 130, -1));
 
-        jPasswordField2.setBackground(new java.awt.Color(165, 165, 165));
+        jPasswordField2.setBackground(new java.awt.Color(255, 255, 255));
+        jPasswordField2.setForeground(new java.awt.Color(0, 0, 0));
         jPasswordField2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jPasswordField2KeyReleased(evt);

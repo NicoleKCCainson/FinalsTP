@@ -68,21 +68,21 @@ public class newRecord extends javax.swing.JFrame implements submit{
         jPanel1.setPreferredSize(new java.awt.Dimension(1092, 702));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        month1.setBackground(new java.awt.Color(165, 165, 165));
+        month1.setBackground(new java.awt.Color(255, 255, 255));
         month1.setEditable(true);
         month1.setForeground(new java.awt.Color(0, 0, 0));
         month1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Month", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
         month1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(month1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 170, 80, -1));
 
-        day1.setBackground(new java.awt.Color(165, 165, 165));
+        day1.setBackground(new java.awt.Color(255, 255, 255));
         day1.setEditable(true);
         day1.setForeground(new java.awt.Color(0, 0, 0));
         day1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
         day1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(day1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 170, 60, -1));
 
-        year1.setBackground(new java.awt.Color(165, 165, 165));
+        year1.setBackground(new java.awt.Color(255, 255, 255));
         year1.setEditable(true);
         year1.setForeground(new java.awt.Color(0, 0, 0));
         year1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040", "2041", "2042", "2043", "2044", "2045", "2046", "2047", "2048", "2049", "2050" }));
@@ -115,7 +115,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
         jLabel4.setText("Laboratory Request");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 120, 20));
 
-        month2.setBackground(new java.awt.Color(165, 165, 165));
+        month2.setBackground(new java.awt.Color(255, 255, 255));
         month2.setForeground(new java.awt.Color(0, 0, 0));
         month2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Month", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
         month2.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -126,7 +126,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
         });
         jPanel1.add(month2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 90, -1));
 
-        day2.setBackground(new java.awt.Color(165, 165, 165));
+        day2.setBackground(new java.awt.Color(255, 255, 255));
         day2.setForeground(new java.awt.Color(0, 0, 0));
         day2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
         day2.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -137,7 +137,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
         });
         jPanel1.add(day2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 60, -1));
 
-        year2.setBackground(new java.awt.Color(165, 165, 165));
+        year2.setBackground(new java.awt.Color(255, 255, 255));
         year2.setForeground(new java.awt.Color(0, 0, 0));
         year2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040", "2041", "2042", "2043", "2044", "2045", "2046", "2047", "2048", "2049", "2050" }));
         year2.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -158,7 +158,7 @@ public class newRecord extends javax.swing.JFrame implements submit{
         jLabel6.setText("Agenda");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 480, 50, 20));
 
-        lab1.setBackground(new java.awt.Color(165, 165, 165));
+        lab1.setBackground(new java.awt.Color(255, 255, 255));
         lab1.setForeground(new java.awt.Color(0, 0, 0));
         lab1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "N/A", "Complete Blood Count (CBC)", "Lipid Panel", "Blood Glucose Test", "Liver Function Tests (LFTs)", "Thyroid Function Test", "Urinalysis", "Urine Culture", "Pregnancy Test", "X-Ray", "MRI (Magnetic Resonance Imaging)", "CT Scan (Computed Tomography)", "Ultrasound", "Blood Culture", "Stool Test", "Throat Swab", "Biopsy", "Pap Smear", "DNA Testing", "PCR Test", "Electrocardiogram (ECG/EKG)", "Troponin Test", "Stress Test", "Hormone Panels", "Insulin Test", "Skin Prick Test", "Antibody Tests", "Drug Screening", "Heavy Metal Test." }));
         lab1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -221,19 +221,19 @@ public class newRecord extends javax.swing.JFrame implements submit{
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 16, 56, 29));
 
-        concern1.setBackground(new java.awt.Color(165, 165, 165));
+        concern1.setBackground(new java.awt.Color(255, 255, 255));
         concern1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(concern1, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 168, 360, 37));
 
-        diag1.setBackground(new java.awt.Color(165, 165, 165));
+        diag1.setBackground(new java.awt.Color(255, 255, 255));
         diag1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(diag1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 354, 48));
 
-        presc1.setBackground(new java.awt.Color(165, 165, 165));
+        presc1.setBackground(new java.awt.Color(255, 255, 255));
         presc1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(presc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 260, 354, 50));
 
-        agenda1.setBackground(new java.awt.Color(165, 165, 165));
+        agenda1.setBackground(new java.awt.Color(255, 255, 255));
         agenda1.setForeground(new java.awt.Color(0, 0, 0));
         agenda1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

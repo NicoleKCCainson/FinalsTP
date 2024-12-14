@@ -73,7 +73,8 @@ public class Password extends javax.swing.JFrame {
         jLabel1.setText("Patient Name");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 210, 30));
 
-        jPasswordField1.setBackground(new java.awt.Color(165, 165, 165));
+        jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
+        jPasswordField1.setForeground(new java.awt.Color(0, 0, 0));
         jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jPasswordField1KeyReleased(evt);

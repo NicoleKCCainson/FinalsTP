@@ -131,7 +131,7 @@ public class PatientFile extends javax.swing.JFrame implements find {
         jLabel6.setText("Requested Laboratory Test");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 210, -1, -1));
 
-        Agenda.setBackground(new java.awt.Color(165, 165, 165));
+        Agenda.setBackground(new java.awt.Color(255, 255, 255));
         Agenda.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         Agenda.setForeground(new java.awt.Color(0, 0, 0));
         jScrollPane6.setViewportView(Agenda);
@@ -149,20 +149,23 @@ public class PatientFile extends javax.swing.JFrame implements find {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 51, 26));
 
-        Concern.setBackground(new java.awt.Color(165, 165, 165));
+        Concern.setBackground(new java.awt.Color(255, 255, 255));
         Concern.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
+        Concern.setForeground(new java.awt.Color(0, 0, 0));
         jScrollPane7.setViewportView(Concern);
 
         jPanel1.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, 306, 86));
 
-        Diag.setBackground(new java.awt.Color(165, 165, 165));
+        Diag.setBackground(new java.awt.Color(255, 255, 255));
         Diag.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
+        Diag.setForeground(new java.awt.Color(0, 0, 0));
         jScrollPane3.setViewportView(Diag);
 
         jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, 308, 90));
 
-        Presc.setBackground(new java.awt.Color(165, 165, 165));
+        Presc.setBackground(new java.awt.Color(255, 255, 255));
         Presc.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
+        Presc.setForeground(new java.awt.Color(0, 0, 0));
         jScrollPane2.setViewportView(Presc);
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 430, 315, 87));
@@ -178,7 +181,7 @@ public class PatientFile extends javax.swing.JFrame implements find {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 620, 45, -1));
 
-        LabTest.setBackground(new java.awt.Color(165, 165, 165));
+        LabTest.setBackground(new java.awt.Color(255, 255, 255));
         LabTest.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         LabTest.setForeground(new java.awt.Color(0, 0, 0));
         jScrollPane8.setViewportView(LabTest);
@@ -189,7 +192,7 @@ public class PatientFile extends javax.swing.JFrame implements find {
         jLabel8.setText("Next Appointment Date:");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 330, -1, -1));
 
-        NextApp.setBackground(new java.awt.Color(165, 165, 165));
+        NextApp.setBackground(new java.awt.Color(255, 255, 255));
         NextApp.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         NextApp.setForeground(new java.awt.Color(0, 0, 0));
         jScrollPane9.setViewportView(NextApp);

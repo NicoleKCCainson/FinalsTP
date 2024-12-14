@@ -28,7 +28,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
      */
     
      String fileLoc = "C:\\Users\\nicol\\Desktop\\Database\\Patient";
-     String fileLocDoctor = "C:\\Users\\nicol\\Desktop\\Database\\Doctor\\";
+     String fileLocDoctor = "C:\\Users\\nicol\\Desktop\\Database\\Doctor";
      String ageM;
      String pass;
      boolean a = true;
@@ -109,6 +109,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         patientName.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -116,43 +117,53 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         patientName.setText("Patient Name ");
         jPanel1.add(patientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 140, 30));
 
-        pName.setBackground(new java.awt.Color(165, 165, 165));
+        pName.setBackground(new java.awt.Color(255, 255, 255));
+        pName.setForeground(new java.awt.Color(0, 0, 0));
         pName.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(pName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 350, 20));
 
-        pAllergies.setBackground(new java.awt.Color(165, 165, 165));
+        pAllergies.setBackground(new java.awt.Color(255, 255, 255));
+        pAllergies.setForeground(new java.awt.Color(0, 0, 0));
         pAllergies.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(pAllergies, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, 250, 40));
 
-        pAge.setBackground(new java.awt.Color(165, 165, 165));
+        pAge.setBackground(new java.awt.Color(255, 255, 255));
+        pAge.setForeground(new java.awt.Color(0, 0, 0));
         pAge.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(pAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 50, 20));
 
-        pillness.setBackground(new java.awt.Color(165, 165, 165));
+        pillness.setBackground(new java.awt.Color(255, 255, 255));
+        pillness.setForeground(new java.awt.Color(0, 0, 0));
         pillness.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(pillness, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 270, 40));
 
-        pWeight.setBackground(new java.awt.Color(165, 165, 165));
+        pWeight.setBackground(new java.awt.Color(255, 255, 255));
+        pWeight.setForeground(new java.awt.Color(0, 0, 0));
         pWeight.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(pWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, 50, -1));
 
-        pAddress.setBackground(new java.awt.Color(165, 165, 165));
+        pAddress.setBackground(new java.awt.Color(255, 255, 255));
+        pAddress.setForeground(new java.awt.Color(0, 0, 0));
         pAddress.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(pAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 440, -1));
 
-        pHeight.setBackground(new java.awt.Color(165, 165, 165));
+        pHeight.setBackground(new java.awt.Color(255, 255, 255));
+        pHeight.setForeground(new java.awt.Color(0, 0, 0));
         pHeight.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(pHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 50, -1));
 
-        pContact.setBackground(new java.awt.Color(165, 165, 165));
+        pContact.setBackground(new java.awt.Color(255, 255, 255));
+        pContact.setForeground(new java.awt.Color(0, 0, 0));
         pContact.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(pContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 150, -1));
 
-        rAddress.setBackground(new java.awt.Color(165, 165, 165));
+        rAddress.setBackground(new java.awt.Color(255, 255, 255));
+        rAddress.setForeground(new java.awt.Color(0, 0, 0));
         rAddress.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(rAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 620, 400, 20));
 
-        pEmail.setBackground(new java.awt.Color(165, 165, 165));
+        pEmail.setBackground(new java.awt.Color(255, 255, 255));
+        pEmail.setForeground(new java.awt.Color(0, 0, 0));
         pEmail.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(pEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 250, -1));
 
@@ -167,43 +178,47 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 20, 60, 20));
 
-        rName.setBackground(new java.awt.Color(165, 165, 165));
+        rName.setBackground(new java.awt.Color(255, 255, 255));
+        rName.setForeground(new java.awt.Color(0, 0, 0));
         rName.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(rName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 500, 450, -1));
 
-        rContact.setBackground(new java.awt.Color(165, 165, 165));
+        rContact.setBackground(new java.awt.Color(255, 255, 255));
+        rContact.setForeground(new java.awt.Color(0, 0, 0));
         rContact.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(rContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 540, 180, -1));
 
-        relation.setBackground(new java.awt.Color(165, 165, 165));
+        relation.setBackground(new java.awt.Color(255, 255, 255));
+        relation.setForeground(new java.awt.Color(0, 0, 0));
         relation.setText(" ");
         relation.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(relation, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 540, 150, 20));
 
-        rEmail.setBackground(new java.awt.Color(165, 165, 165));
+        rEmail.setBackground(new java.awt.Color(255, 255, 255));
+        rEmail.setForeground(new java.awt.Color(0, 0, 0));
         rEmail.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(rEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 580, 270, 20));
 
-        pSex.setBackground(new java.awt.Color(165, 165, 165));
+        pSex.setBackground(new java.awt.Color(255, 255, 255));
         pSex.setForeground(new java.awt.Color(0, 0, 0));
         pSex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "N/A", "Female", "Male" }));
         pSex.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(pSex, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 80, 20));
 
-        pBloodType.setBackground(new java.awt.Color(165, 165, 165));
+        pBloodType.setBackground(new java.awt.Color(255, 255, 255));
         pBloodType.setEditable(true);
         pBloodType.setForeground(new java.awt.Color(0, 0, 0));
         pBloodType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "N/A", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
         pBloodType.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(pBloodType, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 290, 70, 20));
 
-        pCivilStatus.setBackground(new java.awt.Color(165, 165, 165));
+        pCivilStatus.setBackground(new java.awt.Color(255, 255, 255));
         pCivilStatus.setForeground(new java.awt.Color(0, 0, 0));
         pCivilStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "N/A", "Single", "Married", "Divorced/Seraparated", "Widowed", "In a Civil Partnership (Live in Partner)" }));
         pCivilStatus.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(pCivilStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 120, 20));
 
-        doc.setBackground(new java.awt.Color(165, 165, 165));
+        doc.setBackground(new java.awt.Color(255, 255, 255));
         doc.setForeground(new java.awt.Color(0, 0, 0));
         doc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No Doctor Selected" }));
         doc.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -257,7 +272,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         contact.setText("Contact");
         jPanel1.add(contact, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 420, 360, -1));
 
-        depart.setBackground(new java.awt.Color(165, 165, 165));
+        depart.setBackground(new java.awt.Color(255, 255, 255));
         depart.setForeground(new java.awt.Color(0, 0, 0));
         depart.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NO DEPARTMENT SELECTED", "GENERAL MEDICINE", "CARDIOLOGY", "NEUROLOGY", "PEDIATRICS", "ORTHOPEDICS", "DERMATOLOGY", "GYNECOLOGY", "UROLOGY", "NEPHROLOGY", "PULMONOLOGY", "ENDOCRINOLOGY", "PSYCHIATRY", "GASTROENTEROLOGY", "HEMATOLOGY", "ONCOLOGY", "RADIOLOGY", "ANESTHESIOLOGY", "OPHTHALMOLOGY", "OTOLARYNGOLOGY (ENT)", "DENTISTRY", "RHEUMATOLOGY", "GERIATRICS", "EMERGENCY MEDICINE", "PATHOLOGY", "PLASTIC SURGERY", "GENERAL SURGERY", "NEUROSURGERY", "OBSTETRICS", "SPORTS MEDICINE", "PALLIATIVE CARE" }));
         depart.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -407,7 +422,8 @@ public class EditPatient extends javax.swing.JFrame implements submit{
         jLabel24.setOpaque(true);
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 560, 30));
 
-        birthday.setBackground(new java.awt.Color(165, 165, 165));
+        birthday.setBackground(new java.awt.Color(255, 255, 255));
+        birthday.setForeground(new java.awt.Color(0, 0, 0));
         birthday.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         birthday.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -435,7 +451,7 @@ public class EditPatient extends javax.swing.JFrame implements submit{
        contact.setVisible(true);
 
         try {
-            File path2 = new File(fileLocDoctor + doc.getSelectedItem().toString() + ".txt");
+            File path2 = new File(fileLocDoctor +"\\" +doc.getSelectedItem().toString() + ".txt");
                 String paths = path2.toString();
                 BufferedReader br = new BufferedReader(new FileReader(paths));
                 String s;

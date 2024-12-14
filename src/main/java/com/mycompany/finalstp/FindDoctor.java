@@ -198,7 +198,7 @@ allDoc();
         gender.setAlignmentX(0.5F);
         jPanel1.add(gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 130, 30));
 
-        jComboBox2.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox2.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox2.setEditable(true);
         jComboBox2.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NO DOCTOR SELECTED" }));
@@ -246,7 +246,7 @@ allDoc();
         roomnum.setAlignmentX(0.5F);
         jPanel1.add(roomnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 80, 30));
 
-        jComboBox7.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox7.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox7.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NO DEPARTMENT SELECTED", "GENERAL MEDICINE", "CARDIOLOGY", "NEUROLOGY", "PEDIATRICS", "ORTHOPEDICS", "DERMATOLOGY", "GYNECOLOGY", "UROLOGY", "NEPHROLOGY", "PULMONOLOGY", "ENDOCRINOLOGY", "PSYCHIATRY", "GASTROENTEROLOGY", "HEMATOLOGY", "ONCOLOGY", "RADIOLOGY", "ANESTHESIOLOGY", "OPHTHALMOLOGY", "OTOLARYNGOLOGY (ENT)", "DENTISTRY", "RHEUMATOLOGY", "GERIATRICS", "EMERGENCY MEDICINE", "PATHOLOGY", "PLASTIC SURGERY", "GENERAL SURGERY", "NEUROSURGERY", "OBSTETRICS", "SPORTS MEDICINE", "PALLIATIVE CARE" }));
         jComboBox7.setBorder(null);

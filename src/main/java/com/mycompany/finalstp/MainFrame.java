@@ -26,7 +26,7 @@ public class MainFrame extends javax.swing.JFrame  {
      */
     String pass;
     String passLoc = "C:\\Users\\nicol\\Desktop\\Database\\Password.txt";
-
+    int num;
     public MainFrame() {
 
         initComponents();
@@ -37,6 +37,7 @@ public class MainFrame extends javax.swing.JFrame  {
         jTextField1.setVisible(false);
         error1.setVisible(false);
         jButton2.setEnabled(false);
+        jLabel6.setVisible(false);
     }
 
     /**
@@ -60,6 +61,7 @@ public class MainFrame extends javax.swing.JFrame  {
         error1 = new javax.swing.JLabel();
         showPass2 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         button2 = new java.awt.Button();
         button3 = new java.awt.Button();
@@ -94,8 +96,8 @@ public class MainFrame extends javax.swing.JFrame  {
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPasswordField2.setBackground(new java.awt.Color(102, 102, 102));
-        jPasswordField2.setForeground(new java.awt.Color(255, 255, 255));
+        jPasswordField2.setBackground(new java.awt.Color(255, 255, 255));
+        jPasswordField2.setForeground(new java.awt.Color(0, 0, 0));
         jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField2ActionPerformed(evt);
@@ -133,11 +135,16 @@ public class MainFrame extends javax.swing.JFrame  {
         jLabel5.setText("To change admin password, access required.");
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 290, 20));
 
-        jTextField1.setBackground(new java.awt.Color(102, 102, 102));
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
+            }
+        });
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField1KeyReleased(evt);
             }
         });
         jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 150, -1));
@@ -175,6 +182,10 @@ public class MainFrame extends javax.swing.JFrame  {
             }
         });
         jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 50, 20));
+
+        jLabel6.setForeground(new java.awt.Color(102, 0, 0));
+        jLabel6.setText("Password Too Short");
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 150, 20));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 450, 250));
 
@@ -225,6 +236,8 @@ public class MainFrame extends javax.swing.JFrame  {
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
+        jPasswordField1.setForeground(new java.awt.Color(0, 0, 0));
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
@@ -327,19 +340,16 @@ public class MainFrame extends javax.swing.JFrame  {
 
     private void button4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button4ActionPerformed
         //find patienbt
-        FindPatient b1 = new FindPatient();
-        b1.setVisible(true);
-        b1.setLocationRelativeTo(null);
-        this.dispose();
-        b1.setResizable(false);
+        setNum(2);
+        checkPass();
+       jPanel2.setVisible(true);
 
     }//GEN-LAST:event_button4ActionPerformed
 
     private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
-        checkPass();
-        //new doctor
-        jPanel2.setVisible(true);
-
+       setNum(1);
+      checkPass();
+      jPanel2.setVisible(true);
     }//GEN-LAST:event_button3ActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
@@ -383,11 +393,7 @@ public class MainFrame extends javax.swing.JFrame  {
             showPass.setText(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""));
             if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
                 if (getPass().equals(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""))) {
-                    NewDoctor nd = new NewDoctor();
-                    nd.setVisible(true);
-                    nd.setResizable(false);
-                    nd.setLocationRelativeTo(null);
-                    this.dispose();
+               sCase();
                 } else {
                     error.setForeground(Color.red);
                     error.setVisible(true);
@@ -400,12 +406,7 @@ public class MainFrame extends javax.swing.JFrame  {
             String pass = Arrays.toString(jPasswordField1.getPassword());
             if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
                 if (getPass().equals(pass.toString().replace(",", "").replace("]", "").replace("[", "").replace(" ", ""))) {
-                    NewDoctor nd = new NewDoctor();
-                    nd.setVisible(true);
-                    nd.setResizable(false);
-                    nd.setLocationRelativeTo(null);
-                    this.dispose();
-
+                    sCase();
                 } else {
 
                     error.setForeground(Color.red);
@@ -417,6 +418,7 @@ public class MainFrame extends javax.swing.JFrame  {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+  
         checkPass();
         jPanel3.setVisible(true);
 
@@ -502,6 +504,8 @@ public class MainFrame extends javax.swing.JFrame  {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
 
+        if(jTextField1.getText().length() > 8){
+        
         File path = new File(passLoc);
         try {
             FileWriter writer = new FileWriter(passLoc);
@@ -511,12 +515,18 @@ public class MainFrame extends javax.swing.JFrame  {
         } catch (Exception e) {
 
         }
-        jPanel3.setVisible(false);
+        jPanel3.setVisible(false);}else{
+        
+            jLabel6.setVisible(true);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        jPanel3.setVisible(false);
+       MainFrame mf = new MainFrame();
+       mf.setVisible(true);
+       mf.setResizable(false);
+       mf.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void button5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button5ActionPerformed
@@ -531,6 +541,11 @@ public class MainFrame extends javax.swing.JFrame  {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
+        // TODO add your handling code here:
+            jLabel6.setVisible(false);
+    }//GEN-LAST:event_jTextField1KeyReleased
 
     /**
      * @param args the command line arguments
@@ -559,6 +574,34 @@ public class MainFrame extends javax.swing.JFrame  {
         return pass;
     }
 
+    public void setNum(int num){
+    this.num = num;}
+    public int getNum(){
+    return num;
+    }
+    
+    public void sCase(){
+    
+        switch(getNum()){
+            case 1:
+                NewDoctor nd = new NewDoctor();
+                nd.setVisible(true);
+                nd.setResizable(false);
+                nd.setLocationRelativeTo(null);
+                this.dispose();
+                break;
+                
+            case 2:
+                FindPatient fp = new FindPatient();
+                fp.setVisible(true);
+                fp.setLocationRelativeTo(null);
+                fp.setResizable(false);
+                this.dispose();
+                break;
+        }
+    
+    
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -613,6 +656,7 @@ public class MainFrame extends javax.swing.JFrame  {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

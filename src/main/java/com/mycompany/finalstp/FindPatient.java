@@ -254,8 +254,9 @@ public class FindPatient extends javax.swing.JFrame implements find{
         rEmail1.setAlignmentX(0.5F);
         jPanel1.add(rEmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 620, 270, 34));
 
-        jComboBox2.setBackground(new java.awt.Color(204, 204, 204));
+        jComboBox2.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox2.setEditable(true);
+        jComboBox2.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);

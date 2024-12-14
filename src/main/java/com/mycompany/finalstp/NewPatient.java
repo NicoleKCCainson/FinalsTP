@@ -210,7 +210,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 620, 70, 30));
 
-        jTextField1.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 51, 153), null));
         jTextField1.setMinimumSize(new java.awt.Dimension(64, 24));
@@ -237,7 +237,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jLabel3.setText("Address:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 50, 30));
 
-        jTextField4.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
         jTextField4.setForeground(new java.awt.Color(0, 0, 0));
         jTextField4.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 51, 153), null));
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 150, 24));
@@ -248,7 +248,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel1.setText("Last Name:");
         jPanel1.add(namelabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 65, 20));
 
-        jTextField2.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
         jTextField2.setForeground(new java.awt.Color(0, 0, 0));
         jTextField2.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 51, 153), null));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -264,7 +264,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel2.setText("Civil Status:");
         jPanel1.add(namelabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, -1, -1));
 
-        jComboBox1.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox1.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "N/A", "Female", "Male" }));
         jComboBox1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 102), null));
@@ -296,7 +296,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel6.setText("cm.");
         jPanel1.add(namelabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 150, 40, 30));
 
-        jComboBox2.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox2.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox2.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "N/A", "Single", "Married", "Divorced/Seraparated", "Widowed", "In a Civil Partnership (Live in Partner)" }));
         jComboBox2.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
@@ -308,7 +308,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 120, -1, 26));
         jComboBox2.getAccessibleContext().setAccessibleName("CiStatus");
 
-        jComboBox3.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox3.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox3.setEditable(true);
         jComboBox3.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year", "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1950", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940", "1939", "1938", "1937", "1936", "1935", "1934", "1933", "1932", "1931", "1930", "1929", "1928", "1927", "1926", "1925", "1924", "1923", "1922", "1921", "1920", "1919", "1918", "1917", "1916", "1915", "1914", "1913", "1912", "1911", "1910", "1909", "1908", "1907", "1906", "1905", "1904", "1903", "1902", "1901", "1900" }));
@@ -321,7 +321,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 160, 60, -1));
         jComboBox3.getAccessibleContext().setAccessibleName("BdYear");
 
-        jComboBox4.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox4.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox4.setEditable(true);
         jComboBox4.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Month", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
@@ -334,7 +334,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jPanel1.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 160, 80, -1));
         jComboBox4.getAccessibleContext().setAccessibleName("BdMonth");
 
-        jComboBox5.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox5.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox5.setEditable(true);
         jComboBox5.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "N/A", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
@@ -347,13 +347,13 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jPanel1.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 160, 60, -1));
         jComboBox5.getAccessibleContext().setAccessibleName("BdDay");
 
-        jTextField5.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
         jTextField5.setForeground(new java.awt.Color(0, 0, 0));
         jTextField5.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 110, 24));
         jTextField5.getAccessibleContext().setAccessibleName("Weight");
 
-        jTextField6.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField6.setBackground(new java.awt.Color(255, 255, 255));
         jTextField6.setForeground(new java.awt.Color(0, 0, 0));
         jTextField6.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
@@ -364,7 +364,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, 110, 24));
         jTextField6.getAccessibleContext().setAccessibleName("Height");
 
-        jTextPane1.setBackground(new java.awt.Color(165, 165, 165));
+        jTextPane1.setBackground(new java.awt.Color(255, 255, 255));
         jTextPane1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jTextPane1.setForeground(new java.awt.Color(0, 0, 0));
         jScrollPane1.setViewportView(jTextPane1);
@@ -372,7 +372,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 380, 50));
 
-        jTextField7.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField7.setBackground(new java.awt.Color(255, 255, 255));
         jTextField7.setForeground(new java.awt.Color(0, 0, 0));
         jTextField7.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
@@ -388,7 +388,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel8.setText("Create Password: ");
         jPanel1.add(namelabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 290, 120, 20));
 
-        jTextField8.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField8.setBackground(new java.awt.Color(255, 255, 255));
         jTextField8.setForeground(new java.awt.Color(0, 0, 0));
         jTextField8.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jTextField8.addActionListener(new java.awt.event.ActionListener() {
@@ -421,7 +421,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel12.setText("Relation: ");
         jPanel1.add(namelabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, 210, 30));
 
-        jTextField9.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField9.setBackground(new java.awt.Color(255, 255, 255));
         jTextField9.setForeground(new java.awt.Color(0, 0, 0));
         jTextField9.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
@@ -432,13 +432,13 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 200, 230, 24));
         jTextField9.getAccessibleContext().setAccessibleName("Email");
 
-        jTextField10.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField10.setBackground(new java.awt.Color(255, 255, 255));
         jTextField10.setForeground(new java.awt.Color(0, 0, 0));
         jTextField10.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 260, 24));
         jTextField10.getAccessibleContext().setAccessibleName("conName");
 
-        jTextField11.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField11.setBackground(new java.awt.Color(255, 255, 255));
         jTextField11.setForeground(new java.awt.Color(0, 0, 0));
         jTextField11.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jTextField11.addActionListener(new java.awt.event.ActionListener() {
@@ -449,7 +449,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 260, 24));
         jTextField11.getAccessibleContext().setAccessibleName("conContact");
 
-        jTextField12.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField12.setBackground(new java.awt.Color(255, 255, 255));
         jTextField12.setForeground(new java.awt.Color(0, 0, 0));
         jTextField12.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jTextField12.addActionListener(new java.awt.event.ActionListener() {
@@ -491,7 +491,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel16.setText("Contact no. :");
         jPanel1.add(namelabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 190, 80, 50));
 
-        jTextField13.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField13.setBackground(new java.awt.Color(255, 255, 255));
         jTextField13.setForeground(new java.awt.Color(0, 0, 0));
         jTextField13.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jTextField13.addActionListener(new java.awt.event.ActionListener() {
@@ -519,7 +519,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jLabel7.setText("  ");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 110, -1));
 
-        jTextField14.setBackground(new java.awt.Color(165, 165, 165));
+        jTextField14.setBackground(new java.awt.Color(255, 255, 255));
         jTextField14.setForeground(new java.awt.Color(0, 0, 0));
         jTextField14.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         jPanel1.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, 260, 24));
@@ -529,7 +529,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel19.setText("Contact No. :");
         jPanel1.add(namelabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, -1, 30));
 
-        jComboBox6.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox6.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox6.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No Doctor Selected" }));
         jComboBox6.addActionListener(new java.awt.event.ActionListener() {
@@ -539,7 +539,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         });
         jPanel1.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, 190, -1));
 
-        jComboBox7.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox7.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox7.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NO DEPARTMENT SELECTED", "GENERAL MEDICINE", "CARDIOLOGY", "NEUROLOGY", "PEDIATRICS", "ORTHOPEDICS", "DERMATOLOGY", "GYNECOLOGY", "UROLOGY", "NEPHROLOGY", "PULMONOLOGY", "ENDOCRINOLOGY", "PSYCHIATRY", "GASTROENTEROLOGY", "HEMATOLOGY", "ONCOLOGY", "RADIOLOGY", "ANESTHESIOLOGY", "OPHTHALMOLOGY", "OTOLARYNGOLOGY (ENT)", "DENTISTRY", "RHEUMATOLOGY", "GERIATRICS", "EMERGENCY MEDICINE", "PATHOLOGY", "PLASTIC SURGERY", "GENERAL SURGERY", "NEUROSURGERY", "OBSTETRICS", "SPORTS MEDICINE", "PALLIATIVE CARE" }));
         jComboBox7.addActionListener(new java.awt.event.ActionListener() {
@@ -568,7 +568,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel21.setText("Email: ");
         jPanel1.add(namelabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 190, -1, 50));
 
-        jComboBox8.setBackground(new java.awt.Color(165, 165, 165));
+        jComboBox8.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox8.setEditable(true);
         jComboBox8.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
@@ -580,7 +580,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         });
         jPanel1.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 160, 60, -1));
 
-        Allergies.setBackground(new java.awt.Color(165, 165, 165));
+        Allergies.setBackground(new java.awt.Color(255, 255, 255));
         Allergies.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 153), null));
         Allergies.setForeground(new java.awt.Color(0, 0, 0));
         jScrollPane2.setViewportView(Allergies);
@@ -599,7 +599,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jLabel10.setText("Age:");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, -1, 20));
 
-        mi.setBackground(new java.awt.Color(165, 165, 165));
+        mi.setBackground(new java.awt.Color(255, 255, 255));
         mi.setForeground(new java.awt.Color(0, 0, 0));
         mi.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 51, 153), null));
         mi.addActionListener(new java.awt.event.ActionListener() {
@@ -624,7 +624,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         namelabel18.setText("BloodType: ");
         jPanel1.add(namelabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(936, 150, 70, 50));
 
-        pass1.setBackground(new java.awt.Color(165, 165, 165));
+        pass1.setBackground(new java.awt.Color(255, 255, 255));
         pass1.setForeground(new java.awt.Color(0, 0, 0));
         pass1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -638,7 +638,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         });
         jPanel1.add(pass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 290, 130, 20));
 
-        pass2.setBackground(new java.awt.Color(165, 165, 165));
+        pass2.setBackground(new java.awt.Color(255, 255, 255));
         pass2.setForeground(new java.awt.Color(0, 0, 0));
         pass2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -719,7 +719,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         jPanel1.add(confirmed, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 320, -1, 20));
 
         checkbox2.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
-        checkbox2.setLabel(" Choose this doctor");
+        checkbox2.setLabel("Confirm Information");
         checkbox2.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 checkbox2ItemStateChanged(evt);
@@ -1017,7 +1017,7 @@ public class NewPatient extends javax.swing.JFrame implements submit {
         // TODO add your handling code here:
         
        if (checkbox2.getState()) {
-            
+             jButton2.setEnabled(true);
       afterSub();
           
         } else {
